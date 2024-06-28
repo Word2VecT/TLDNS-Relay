@@ -1,65 +1,47 @@
-/**
- * @file      dns_conversion.h
- * @brief     DNS报文格式转换
- * @author    Ziheng Mao
- * @date      2021/4/3
- * @copyright GNU General Public License, version 3 (GPL-3.0)
- *
- * 本文件定义了DNS报文结构体与字节流之间的转换、释放报文结构体空间和复制报文结构体的接口。
-*/
-
 #ifndef DNSR_DNS_CONVERSION_H
 #define DNSR_DNS_CONVERSION_H
 
 #include "dns_structure.h"
 
 /**
- * @brief DNS报文字节流转换到结构体
- *
- * @param pmsg DNS报文结构体
- * @param pstring DNS报文字节流
- * @note 为Header Section、Question Section和Resource Record分配了空间
+ * @brief Convert a byte stream to a DNS message structure
+ * @param pmsg The DNS message structure to populate
+ * @param pstring The byte stream to read from
  */
 void string_to_dnsmsg(Dns_Msg * pmsg, const char * pstring);
 
 /**
- * @brief DNS报文结构体转换到字节流
- *
- * @param pmsg DNS报文结构体
- * @param pstring DNS报文字节流
- * @return 报文字节流的长度
+ * @brief Write a NAME field to a byte stream
+ * @param pname The NAME field
+ * @param pstring The start of the byte stream
+ * @param offset The offset in the byte stream
+ * @note After writing, the offset increases to the position after the NAME field
  */
 unsigned dnsmsg_to_string(const Dns_Msg * pmsg, char * pstring);
 
 /**
- * @brief 释放DNS报文RR结构体的空间
- *
- * @param prr DNS报文RR结构体
+ * @brief Release memory allocated for a Resource Record
+ * @param prr The Resource Record to release
  */
 void destroy_dnsrr(Dns_RR * prr);
 
 /**
- * @brief 释放DNS报文结构体的空间
- *
- * @param pmsg DNS报文结构体
+ * @brief Release memory allocated for a DNS message
+ * @param pmsg The DNS message to release
  */
 void destroy_dnsmsg(Dns_Msg * pmsg);
 
 /**
- * @brief 复制DNS报文RR结构体
- *
- * @param src 源RR结构体
- * @return 复制后的RR结构体
- * @note 为新的RR结构体分配了空间
+ * @brief Copy a Resource Record
+ * @param src The Resource Record to copy
+ * @return A copy of the Resource Record
  */
 Dns_RR * copy_dnsrr(const Dns_RR * src);
 
 /**
- * @brief 复制DNS报文结构体
- *
- * @param src 源结构体
- * @return 复制后的结构体
- * @note 为新的结构体分配了空间
+ * @brief Copy a DNS message
+ * @param src The DNS message to copy
+ * @return A copy of the DNS message
  */
 Dns_Msg * copy_dnsmsg(const Dns_Msg * src);
 

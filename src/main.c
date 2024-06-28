@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
     loop = uv_default_loop();
     cache = new_cache(hosts_file);
     qpool = new_qpool(loop, cache);
-    init_client(loop);
+	init_client(loop);
     init_server(loop);
     return uv_run(loop, UV_RUN_DEFAULT);
 }

@@ -1,17 +1,3 @@
-/**
- * @file      index_pool.h
- * @brief     序号池
- * @author    Ziheng Mao
- * @date      2021/4/5
- * @copyright GNU General Public License, version 3 (GPL-3.0)
- *
- * 本文件中定义了一个序号池，用于分配发送的DNS报文的序号，并将序号和DNS查询对应，定义了判断池满、插入、查询、删除的接口。
- *
- * 当需要分配序号时，用户首先需要创建一个Index结构体，将结构体作为参数传入insert函数，该函数会返回分配的序号。
- *
- * 当序号使用完毕，用户调用delete函数，将该序号从序号池中移除，该函数返回序号对应的Index结构体。
-*/
-
 #ifndef DNSR_INDEX_POOL_H
 #define DNSR_INDEX_POOL_H
 
@@ -21,67 +7,61 @@
 
 #define INDEX_POOL_MAX_SIZE 65535
 
-/// 序号结构体
+/// Index structure
 typedef struct index_
 {
-    uint16_t id; ///< 发送的DNS查询报文的序号
-    uint16_t prev_id; ///< 对应查询的序号
+	uint16_t id; ///< The ID of the sent DNS query message
+	uint16_t prev_id; ///< The corresponding query ID
 } Index;
 
-/// 序号池
+/// Index pool
 typedef struct index_pool
 {
-    Index * pool[INDEX_POOL_MAX_SIZE]; ///< 序号池
-    unsigned short count; ///< 池中序号的数量
-    Queue * queue; ///< 未分配的序号的队列
-    
-    /**
-     * @brief 判断序号池是否已满
-     *
-     * @param ipool 序号池
-     * @return 如果池已满，返回true
-     */
-    bool (* full)(struct index_pool * ipool);
-    
-    /**
-     * @brief 分配一个新序号
-     *
-     * @param ipool 序号池
-     * @param req 序号结构体
-     * @return 分配的新序号
-     */
-    uint16_t (* insert)(struct index_pool * ipool, Index * req);
-    
-    /**
-     * @brief 查询序号是否在序号池中
-     *
-     * @param ipool 序号池
-     * @param index 序号
-     * @return 如果在序号池中，返回true
-     */
-    bool (* query)(struct index_pool * ipool, uint16_t index);
-    
-    /**
-     * @brief 从序号池中删除序号
-     *
-     * @param ipool 序号池
-     * @param index 待删除的序号
-     * @return 删除的序号对应的序号结构体
-     */
-    Index * (* delete)(struct index_pool * ipool, uint16_t index);
-    
-    /**
-     * @brief 销毁序号池
-     *
-     * @param ipool 序号池
-     */
-    void (* destroy)(struct index_pool * ipool);
+	Index * pool[INDEX_POOL_MAX_SIZE]; ///< Index pool
+	unsigned short count; ///< Number of indices in the pool
+	Queue * queue; ///< Queue of unallocated indices
+
+	/**
+	 * @brief Check if the index pool is full
+	 * @param ipool The index pool
+	 * @return True if the index pool is full, false otherwise
+	 */
+	bool (* full)(struct index_pool * ipool);
+
+	/**
+	 * @brief Insert an index into the pool
+	 * @param ipool The index pool
+	 * @param req The index to insert
+	 * @return The ID of the inserted index
+	 */
+	uint16_t (* insert)(struct index_pool * ipool, Index * req);
+
+	/**
+	 * @brief Query if an index exists in the pool
+	 * @param ipool The index pool
+	 * @param index The index to query
+	 * @return True if the index exists, false otherwise
+	 */
+	bool (* query)(struct index_pool * ipool, uint16_t index);
+
+	/**
+	* @brief Delete an index from the pool
+	* @param ipool The index pool
+	* @param index The index to delete
+	* @return The deleted index
+	*/
+	Index * (* delete)(struct index_pool * ipool, uint16_t index);
+
+	/**
+	 * @brief Destroy the index pool
+	 * @param ipool The index pool to destroy
+	 */
+	void (* destroy)(struct index_pool * ipool);
 } Index_Pool;
 
 /**
- * @brief 创建序号池
- *
- * @return 新的序号池
+ * @brief Create a new index pool
+ * @return The new index pool
  */
 Index_Pool * new_ipool();
 

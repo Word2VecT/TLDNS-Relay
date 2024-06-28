@@ -7,7 +7,7 @@
 
 #include "../include/util.h"
 
-char *REMOTE_HOST = "10.3.9.4";
+char *REMOTE_HOST = "8.8.8.8";
 int LOG_MASK = 15;
 int CLIENT_PORT = 0;
 char *HOSTS_PATH = "../dnsrelay.txt";
@@ -22,12 +22,12 @@ void init_config(int argc, char *const *argv) {
 	argc--;
 	argv++;
 
-	printf(" _____ _     ____  _   _ ____    ____      _\n");
-	printf("|_   _| |   |  _ \\| \\ | / ___|  |  _ \\ ___| | __ _ _   _\n");
-	printf("  | | | |   | | | |  \\| \\___ \\  | |_) / _ \\ |/ _` | | | |\n");
-	printf("  | | | |___| |_| | |\\  |___) | |  _ <  __/ | (_| | |_| |\n");
-	printf("  |_| |_____|____/|_| \\_|____/  |_| \\_\\___|_|\\__,_|\\__, |\n");
-	printf("                                                   |___/\n\n");
+	fprintf(stderr, " _____ _     ____  _   _ ____    ____      _\n");
+	fprintf(stderr, "|_   _| |   |  _ \\| \\ | / ___|  |  _ \\ ___| | __ _ _   _\n");
+	fprintf(stderr, "  | | | |   | | | |  \\| \\___ \\  | |_) / _ \\ |/ _` | | | |\n");
+	fprintf(stderr, "  | | | |___| |_| | |\\  |___) | |  _ <  __/ | (_| | |_| |\n");
+	fprintf(stderr, "  |_| |_____|____/|_| \\_|____/  |_| \\_\\___|_|\\__,_|\\__, |\n");
+	fprintf(stderr, "                                                   |___/\n\n");
 
 	if (argc == 1 && strcmp(*argv, "-h") == 0) {
 		printf("Usage:\n");

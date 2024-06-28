@@ -1,21 +1,3 @@
-/**
- * @file      rbtree.h
- * @brief     红黑树
- * @author    Ziheng Mao
- * @date      2021/4/14
- * @copyright GNU General Public License, version 3 (GPL-3.0)
- *
- * 本文件定义了红黑树的结构和接口。
- *
- * 红黑树节点的键为一个无符号整型。由于存在键冲突的可能性，采用拉链法，因此红黑树节点的值为一个链表，链表中的每个节点对应一个特定查询的答案。
- *
- * 红黑树有三个接口：初始化、插入新的键-值，查询键对应的值。
- *
- * 链表中的每个节点定义有过期时间，在查询过程中会检查节点是否过期，如果过期，程序会自动删除链表中的节点；
- *
- * 如果一个红黑树节点的值链表为空，则会删除这个节点。
-*/
-
 #ifndef DNSR_RBTREE_H
 #define DNSR_RBTREE_H
 
@@ -23,107 +5,94 @@
 
 #include "dns_structure.h"
 
-/// 红黑树节点的颜色
-typedef enum
-{
-    BLACK, RED
+/// Red-Black Tree color
+typedef enum {
+	BLACK, RED
 } Color;
 
-/// 红黑树节点链表的节点的值，对应一个特定查询的答案
-typedef struct rbtree_value
-{
-    Dns_RR * rr; ///< 指向一个Dns_RR的链表
-    uint16_t ancount; ///< RR链表中Answer Section的数目
-    uint16_t nscount; ///< RR链表中Authority Section的数目
-    uint16_t arcount; ///< RR链表中Addition Section的数目
-    uint8_t type; ///< RR对应的Question的类型
+/// Value of a Red-Black Tree node's linked list, corresponding to an answer for a specific query
+typedef struct rbtree_value {
+	Dns_RR *rr; ///< Pointer to a linked list of Dns_RR
+	uint16_t ancount; ///< Number of RRs in the Answer Section
+	uint16_t nscount; ///< Number of RRs in the Authority Section
+	uint16_t arcount; ///< Number of RRs in the Additional Section
+	uint8_t type; ///< Type of the Question corresponding to the RR
 } Rbtree_Value;
 
-/// 红黑树节点链表
-typedef struct dns_rr_linklist
-{
-    Rbtree_Value * value; ///< 指向当前链表节点的值
-    time_t expire_time; ///< 过期的时刻
-    struct dns_rr_linklist * next; ///< 链表的下一个节点
-    
-    /**
-     * @brief 向链表中插入结点
-     * @param list 当前节点
-     * @param new_list_node 新节点
-     */
-    void (* insert)(struct dns_rr_linklist * list, struct dns_rr_linklist * new_list_node);
-    
-    /**
-     * @brief 删除链表中当前节点的下一个结点
-     *
-     * @param list 当前节点
-     * @note list不能是链表的尾节点
-     */
-    void (* delete_next)(struct dns_rr_linklist * list);
-    
-    /**
-     * @brief 在链表中查找特定的值
-     *
-     * @param list 链表起始节点
-     * @param qname NAME字段
-     * @param qtype type字段
-     * @return 如果查找到节点，返回该节点在链表中的前驱，否则返回NULL
-     */
-    struct dns_rr_linklist * (* query_next)(struct dns_rr_linklist * list, const uint8_t * qname, const uint16_t qtype);
+/// Linked list of Red-Black Tree nodes
+typedef struct dns_rr_linklist {
+	Rbtree_Value *value; ///< Pointer to the value of the current linked list node
+	time_t expire_time; ///< Expiration time
+	struct dns_rr_linklist *next; ///< Pointer to the next node in the linked list
+
+	/**
+	 * @brief Insert a key-value pair into the red-black tree
+	 * @param tree The red-black tree
+	 * @param key The key
+	 * @param list The value
+	 */
+	void (*insert)(struct dns_rr_linklist *list, struct dns_rr_linklist *new_list_node);
+
+	/**
+	 * @brief Delete the next element in the linked list
+	 * @param list The linked list
+	 */
+	void (*delete_next)(struct dns_rr_linklist *list);
+
+	/**
+	 * @brief Query the next element in the linked list
+	 * @param list The linked list
+	 * @param qname The query name
+	 * @param qtype The query type
+	 * @return The queried element if found, otherwise NULL
+	 */
+	struct dns_rr_linklist *(*query_next)(struct dns_rr_linklist *list, const uint8_t *qname, const uint16_t qtype);
 } Dns_RR_LinkList;
 
-/// 红黑树的节点
-typedef struct rbtree_node
-{
-    unsigned int key; ///< 红黑树节点的键
-    Dns_RR_LinkList * rr_list; ///< 指向当前节点对应的链表
-    Color color; ///< 当前节点的颜色
-    struct rbtree_node * left; ///< 指向当前节点的左子节点
-    struct rbtree_node * right; ///< 指向当前节点的右子节点
-    struct rbtree_node * parent; ///< 指向当前节点的父亲节点
+/// Node of the Red-Black Tree
+typedef struct rbtree_node {
+	unsigned int key; ///< Key of the Red-Black Tree node
+	Dns_RR_LinkList *rr_list; ///< Pointer to the linked list corresponding to the current node
+	Color color; ///< Color of the current node
+	struct rbtree_node *left; ///< Pointer to the left child of the current node
+	struct rbtree_node *right; ///< Pointer to the right child of the current node
+	struct rbtree_node *parent; ///< Pointer to the parent of the current node
 } Rbtree_Node;
 
-/// 红黑树
-typedef struct rbtree
-{
-    Rbtree_Node * root; ///< 指向红黑树的根节点
-    
-    /**
-     * @brief 向红黑树中插入键-值对
-     *
-     * @param tree 红黑树
-     * @param key 键
-     * @param list 值
-     *
-     * 此函数从根节点开始迭代查找插入位置，如果该键对应的节点不存在，则创建一个新节点，并且维护树的平衡；否则在原有节点的链表上插入新元素。
-     */
-    void (* insert)(struct rbtree * tree, unsigned int key, Dns_RR_LinkList * list);
-    
-    /**
-     * @brief 在红黑树中查找键对应的值
-     *
-     * @param tree 红黑树
-     * @param data 键
-     * @return 如果找到了对应的值，返回一个没有头节点的链表；否则返回NULL
-     *
-     * 此函数查找给定键的节点，如果该节点存在，则删去节点链表中已经超时的部分，此时若链表不为空，则返回该链表；否则删除该节点并返回NULL。
-     */
-    Dns_RR_LinkList * (* query)(struct rbtree * tree, unsigned int data);
+/// Red-Black Tree
+typedef struct rbtree {
+	Rbtree_Node *root; ///< Pointer to the root node of the Red-Black Tree
+
+	/**
+	 * @brief Insert a key-value pair into the red-black tree
+	 * @param tree The red-black tree
+	 * @param key The key
+	 * @param list The value
+	 */
+	void (*insert)(struct rbtree *tree, unsigned int key, Dns_RR_LinkList *list);
+
+	/**
+	 * @brief Query the red-black tree for a key
+	 * @param tree The red-black tree
+	 * @param key The key to query
+	 * @return The linked list of the value if found, otherwise NULL
+	 */
+	Dns_RR_LinkList *(*query)(struct rbtree *tree, unsigned int data);
 } Rbtree;
 
 /**
- * @brief 创建链表节点
- *
- * @return 新的链表节点
+ * @brief Create a new linked list
+ * @return The new linked list
  */
-Dns_RR_LinkList * new_linklist();
+Dns_RR_LinkList *new_linklist();
 
 /**
- * @brief 创建红黑树
- *
- * @return 新的红黑树
+ * @brief Initialize a new red-black tree
+ * This function allocates memory for a new red-black tree and its nil node,
+ * and sets up the tree's function pointers for insertion and querying.
+ * @return A pointer to the newly created red-black tree
+ * @note If memory allocation fails, the function will log a fatal error and terminate the program.
  */
-Rbtree * new_rbtree();
+Rbtree *new_rbtree();
 
 #endif //DNSR_RBTREE_H
-
