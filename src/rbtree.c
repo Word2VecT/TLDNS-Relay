@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../include/dns_conversion.h"
+#include "../include/dns_parse.h"
 #include "../include/util.h"
 
 static Rbtree_Node *NIL; ///< Leaf node

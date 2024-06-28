@@ -14,8 +14,8 @@ add_executable(main
         src/config.c
         include/config.h
         include/dns_structure.h
-        src/dns_conversion.c
-        include/dns_conversion.h
+        src/dns_parse.c
+        include/dns_parse.h
         src/dns_client.c
         include/dns_client.h
         src/dns_server.c

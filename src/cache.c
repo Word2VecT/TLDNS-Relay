@@ -5,7 +5,7 @@
 #include <uv.h>
 
 #include "../include/util.h"
-#include "../include/dns_conversion.h"
+#include "../include/dns_parse.h"
 
 /**
  * @brief Compute the hash of a string using the BKDR hash algorithm.

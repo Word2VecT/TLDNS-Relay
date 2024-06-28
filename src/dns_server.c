@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #include "../include/util.h"
-#include "../include/dns_conversion.h"
+#include "../include/dns_parse.h"
 #include "../include/dns_print.h"
 #include "../include/query_pool.h"
 

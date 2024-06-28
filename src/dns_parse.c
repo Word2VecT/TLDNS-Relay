@@ -1,4 +1,4 @@
-#include "../include/dns_conversion.h"
+#include "../include/dns_parse.h"
 
 #include <string.h>
 #include <stdlib.h>

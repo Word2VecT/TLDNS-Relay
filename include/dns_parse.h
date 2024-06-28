@@ -1,5 +1,5 @@
-#ifndef DNSR_DNS_CONVERSION_H
-#define DNSR_DNS_CONVERSION_H
+#ifndef DNSR_DNS_PARSE_H
+#define DNSR_DNS_PARSE_H
 
 #include "dns_structure.h"
 
@@ -45,4 +45,4 @@ Dns_RR * copy_dnsrr(const Dns_RR * src);
  */
 Dns_Msg * copy_dnsmsg(const Dns_Msg * src);
 
-#endif //DNSR_DNS_CONVERSION_H
+#endif //DNSR_DNS_PARSE_H
