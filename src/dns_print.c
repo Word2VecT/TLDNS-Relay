@@ -46,7 +46,6 @@ static void print_rr_AAAA(const uint8_t *rdata) {
 
 /**
  * @brief Print the rdata field of a CNAME type RR
- *
  * @param rdata The rdata field
  */
 static void print_rr_CNAME(const uint8_t *rdata) {

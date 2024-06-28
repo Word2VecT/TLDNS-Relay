@@ -170,7 +170,7 @@ Cache *new_cache(FILE *hosts_file) {
 	Rbtree *tree = new_rbtree();
 	if (hosts_file != NULL) {
 		char ip[DNS_RR_NAME_MAX_SIZE], domain[DNS_RR_NAME_MAX_SIZE];
-		while (fscanf(hosts_file, "%s %s", domain, ip) != EOF) { // Read domain-IP from file
+		while (fscanf(hosts_file, "%s %s", ip, domain) != EOF) { // Read domain-IP from file
 			Dns_RR *rr = (Dns_RR *) calloc(1, sizeof(Dns_RR));
 			if (!rr) {
 				log_fatal("Memory allocation error")
