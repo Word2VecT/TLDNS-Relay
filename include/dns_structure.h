@@ -1,15 +1,3 @@
-/**
- * @file      dns_structure.h
- * @brief     DNS报文结构
- * @author    Ziheng Mao
- * @date      2021/4/3
- * @copyright GNU General Public License, version 3 (GPL-3.0)
- *
- * 本文件定义了DNS报文中部分字段的常量，以及DNS报文结构体。
- *
- * 报文结构体中每个字段长度均与RFC1035中规定的字段长度一致，但是采用小端法存储。
-*/
-
 #ifndef DNSR_DNS_STRUCTURE_H
 #define DNSR_DNS_STRUCTURE_H
 
@@ -41,51 +29,47 @@
 #define DNS_RCODE_OK 0
 #define DNS_RCODE_NXDOMAIN 3
 
-/// 报文Header Section结构体
-typedef struct dns_header
-{
-    uint16_t id;
-    uint8_t qr: 1;
-    uint8_t opcode: 4;
-    uint8_t aa: 1;
-    uint8_t tc: 1;
-    uint8_t rd: 1;
-    uint8_t ra: 1;
-    uint8_t z: 3;
-    uint8_t rcode: 4;
-    uint16_t qdcount;
-    uint16_t ancount;
-    uint16_t nscount;
-    uint16_t arcount;
+/// Header Section structure of DNS message
+typedef struct dns_header {
+	uint16_t id;
+	uint8_t qr: 1;
+	uint8_t opcode: 4;
+	uint8_t aa: 1;
+	uint8_t tc: 1;
+	uint8_t rd: 1;
+	uint8_t ra: 1;
+	uint8_t z: 3;
+	uint8_t rcode: 4;
+	uint16_t qdcount;
+	uint16_t ancount;
+	uint16_t nscount;
+	uint16_t arcount;
 } Dns_Header;
 
-/// 报文Question Section结构体，以链表表示
-typedef struct dns_question
-{
-    uint8_t * qname;
-    uint16_t qtype;
-    uint16_t qclass;
-    struct dns_question * next;
+/// Question Section structure of DNS message, represented as a linked list
+typedef struct dns_question {
+	uint8_t * qname;
+	uint16_t qtype;
+	uint16_t qclass;
+	struct dns_question * next;
 } Dns_Que;
 
-/// 报文Resource Record结构体，以链表表示
-typedef struct dns_rr
-{
-    uint8_t * name;
-    uint16_t type;
-    uint16_t class;
-    uint32_t ttl;
-    uint16_t rdlength;
-    uint8_t * rdata;
-    struct dns_rr * next;
+/// Resource Record structure of DNS message, represented as a linked list
+typedef struct dns_rr {
+	uint8_t * name;
+	uint16_t type;
+	uint16_t class;
+	uint32_t ttl;
+	uint16_t rdlength;
+	uint8_t * rdata;
+	struct dns_rr * next;
 } Dns_RR;
 
-/// DNS报文结构体
-typedef struct dns_msg
-{
-    Dns_Header * header; ///< 指向Header Section
-    Dns_Que * que; ///< 指向Question Section链表的头节点
-    Dns_RR * rr; ///< 指向Resource Record链表的头节点
+/// DNS message structure
+typedef struct dns_msg {
+	Dns_Header * header; ///< Pointer to the Header Section
+	Dns_Que * que; ///< Pointer to the head node of the Question Section linked list
+	Dns_RR * rr; ///< Pointer to the head node of the Resource Record linked list
 } Dns_Msg;
 
 #endif //DNSR_DNS_STRUCTURE_H

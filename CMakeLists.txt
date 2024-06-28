@@ -11,8 +11,8 @@ include_directories(${UV_DIR}/include/)
 add_executable(main
         src/main.c
         include/util.h
-        src/config_jar.c
-        include/config_jar.h
+        src/config.c
+        include/config.h
         include/dns_structure.h
         src/dns_conversion.c
         include/dns_conversion.h

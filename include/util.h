@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 
-#include "config_jar.h"
+#include "config.h"
 
 extern FILE * log_file;
 

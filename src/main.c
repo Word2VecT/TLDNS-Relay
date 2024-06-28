@@ -16,13 +16,6 @@ int main(int argc, char *argv[]) {
     init_config(argc, argv);
     log_file = stderr;
 
-    log_info(" _____ _     ____  _   _ ____    ____      _");
-    log_info("|_   _| |   |  _ \\| \\ | / ___|  |  _ \\ ___| | __ _ _   _");
-    log_info("  | | | |   | | | |  \\| \\___ \\  | |_) / _ \\ |/ _` | | | |");
-    log_info("  | | | |___| |_| | |\\  |___) | |  _ <  __/ | (_| | |_| |");
-    log_info("  |_| |_____|____/|_| \\_|____/  |_| \\_\\___|_|\\__,_|\\__, |");
-    log_info("                                                   |___/");
-
     if (LOG_PATH) {
         log_debug("Opening the log file")
         log_file = fopen(LOG_PATH, "w");
