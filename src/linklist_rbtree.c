@@ -78,8 +78,9 @@ Dns_RR_LinkList *new_linklist() {
  * @return The grandparent node if exists, otherwise NULL
  */
 static inline Rbtree_Node *grandparent(Rbtree_Node *node) {
-	if (node->parent == NULL)
+	if (node == NULL || node->parent == NULL) {
 		return NULL;
+	}
 	return node->parent->parent;
 }
 
@@ -89,10 +90,17 @@ static inline Rbtree_Node *grandparent(Rbtree_Node *node) {
  * @return The uncle node if exists, otherwise NULL
  */
 static inline Rbtree_Node *uncle(Rbtree_Node *node) {
-	if (node->parent == grandparent(node)->right)
-		return grandparent(node)->left;
-	return grandparent(node)->right;
+	Rbtree_Node *gp = grandparent(node);
+	if (gp == NULL) {
+		return NULL;
+	}
+	if (node->parent == gp->left) {
+		return gp->right;
+	}
+	return gp->left;
 }
+
+
 
 /**
  * @brief Get the sibling of a node

@@ -5,6 +5,10 @@
 
 #include "../include/util.h"
 
+#ifdef _WIN32
+#include <winsock2.h>
+#endif
+
 /**
  * @brief Read a 16-bit number in big-endian format from a byte stream
  * @param pstring The start of the byte stream

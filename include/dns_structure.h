@@ -28,6 +28,7 @@
 
 #define DNS_RCODE_OK 0
 #define DNS_RCODE_NXDOMAIN 3
+#define DNS_RCODE_SERVFAIL 2
 
 /// Header Section structure of DNS message
 typedef struct dns_header {
