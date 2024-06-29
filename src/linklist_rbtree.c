@@ -1,4 +1,4 @@
-#include "../include/rbtree.h"
+#include "../include/linklist_rbtree.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -89,8 +89,6 @@ static inline Rbtree_Node *grandparent(Rbtree_Node *node) {
  * @return The uncle node if exists, otherwise NULL
  */
 static inline Rbtree_Node *uncle(Rbtree_Node *node) {
-	if (grandparent(node) == NULL)
-		return NULL;
 	if (node->parent == grandparent(node)->right)
 		return grandparent(node)->left;
 	return grandparent(node)->right;
@@ -102,8 +100,6 @@ static inline Rbtree_Node *uncle(Rbtree_Node *node) {
  * @return The sibling node if exists, otherwise NULL
  */
 static inline Rbtree_Node *sibling(Rbtree_Node *node) {
-	if (node->parent == NULL)
-		return NULL;
 	if (node->parent->left == node)
 		return node->parent->right;
 	else

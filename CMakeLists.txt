@@ -26,8 +26,8 @@ add_executable(main
         include/queue.h
         src/dns_print.c
         include/dns_print.h
-        src/rbtree.c
-        include/rbtree.h
+        src/linklist_rbtree.c
+        include/linklist_rbtree.h
         src/cache.c
         include/cache.h
         src/query_pool.c

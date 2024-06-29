@@ -1,5 +1,5 @@
-#ifndef DNSR_RBTREE_H
-#define DNSR_RBTREE_H
+#ifndef DNSR_LINKLIST_RBTREE_H
+#define DNSR_LINKLIST_RBTREE_H
 
 #include <time.h>
 
@@ -60,7 +60,7 @@ typedef struct rbtree_node {
 } Rbtree_Node;
 
 /// Red-Black Tree
-typedef struct rbtree {
+typedef struct linklist_rbtree {
 	Rbtree_Node *root; ///< Pointer to the root node of the Red-Black Tree
 
 	/**
@@ -69,7 +69,7 @@ typedef struct rbtree {
 	 * @param key The key
 	 * @param list The value
 	 */
-	void (*insert)(struct rbtree *tree, unsigned int key, Dns_RR_LinkList *list);
+	void (*insert)(struct linklist_rbtree *tree, unsigned int key, Dns_RR_LinkList *list);
 
 	/**
 	 * @brief Query the red-black tree for a key
@@ -77,7 +77,7 @@ typedef struct rbtree {
 	 * @param key The key to query
 	 * @return The linked list of the value if found, otherwise NULL
 	 */
-	Dns_RR_LinkList *(*query)(struct rbtree *tree, unsigned int data);
+	Dns_RR_LinkList *(*query)(struct linklist_rbtree *tree, unsigned int data);
 } Rbtree;
 
 /**
@@ -95,4 +95,4 @@ Dns_RR_LinkList *new_linklist();
  */
 Rbtree *new_rbtree();
 
-#endif //DNSR_RBTREE_H
+#endif //DNSR_LINKLIST_RBTREE_H
