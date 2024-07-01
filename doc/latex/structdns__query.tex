@@ -1,0 +1,94 @@
+\doxysection{dns\+\_\+query Struct Reference}
+\hypertarget{structdns__query}{}\label{structdns__query}\index{dns\_query@{dns\_query}}
+
+
+DNS query structure.  
+
+
+
+
+{\ttfamily \#include $<$query\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for dns\+\_\+query\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdns__query__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__query_aed8d19f4123f4da71303ea766e5db61f}{id}}
+\begin{DoxyCompactList}\small\item\em Query ID. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__query_a612d7b86ff1a2599fb7b8b87c9aee2c3}{prev\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Original DNS query message ID. \end{DoxyCompactList}\item 
+struct sockaddr \mbox{\hyperlink{structdns__query_a2881d0b7a98b9dc69a3827dac7bf7cd1}{addr}}
+\begin{DoxyCompactList}\small\item\em Address of the requester. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__query_a2f25acc11e8bf511ce3efc20b80b49ef}{msg}}
+\begin{DoxyCompactList}\small\item\em DNS query message. \end{DoxyCompactList}\item 
+uv\+\_\+timer\+\_\+t \mbox{\hyperlink{structdns__query_aba2f09dd768cc21fdf1b089cdb004789}{timer}}
+\begin{DoxyCompactList}\small\item\em Timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DNS query structure. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structdns__query_a2881d0b7a98b9dc69a3827dac7bf7cd1}\index{dns\_query@{dns\_query}!addr@{addr}}
+\index{addr@{addr}!dns\_query@{dns\_query}}
+\doxysubsubsection{\texorpdfstring{addr}{addr}}
+{\footnotesize\ttfamily \label{structdns__query_a2881d0b7a98b9dc69a3827dac7bf7cd1} 
+struct sockaddr dns\+\_\+query\+::addr}
+
+
+
+Address of the requester. 
+
+\Hypertarget{structdns__query_aed8d19f4123f4da71303ea766e5db61f}\index{dns\_query@{dns\_query}!id@{id}}
+\index{id@{id}!dns\_query@{dns\_query}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{structdns__query_aed8d19f4123f4da71303ea766e5db61f} 
+uint16\+\_\+t dns\+\_\+query\+::id}
+
+
+
+Query ID. 
+
+\Hypertarget{structdns__query_a2f25acc11e8bf511ce3efc20b80b49ef}\index{dns\_query@{dns\_query}!msg@{msg}}
+\index{msg@{msg}!dns\_query@{dns\_query}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily \label{structdns__query_a2f25acc11e8bf511ce3efc20b80b49ef} 
+\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}}\texorpdfstring{$\ast$}{*} dns\+\_\+query\+::msg}
+
+
+
+DNS query message. 
+
+\Hypertarget{structdns__query_a612d7b86ff1a2599fb7b8b87c9aee2c3}\index{dns\_query@{dns\_query}!prev\_id@{prev\_id}}
+\index{prev\_id@{prev\_id}!dns\_query@{dns\_query}}
+\doxysubsubsection{\texorpdfstring{prev\_id}{prev\_id}}
+{\footnotesize\ttfamily \label{structdns__query_a612d7b86ff1a2599fb7b8b87c9aee2c3} 
+uint16\+\_\+t dns\+\_\+query\+::prev\+\_\+id}
+
+
+
+Original DNS query message ID. 
+
+\Hypertarget{structdns__query_aba2f09dd768cc21fdf1b089cdb004789}\index{dns\_query@{dns\_query}!timer@{timer}}
+\index{timer@{timer}!dns\_query@{dns\_query}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily \label{structdns__query_aba2f09dd768cc21fdf1b089cdb004789} 
+uv\+\_\+timer\+\_\+t dns\+\_\+query\+::timer}
+
+
+
+Timer. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{query__pool_8h}{query\+\_\+pool.\+h}}\end{DoxyCompactItemize}

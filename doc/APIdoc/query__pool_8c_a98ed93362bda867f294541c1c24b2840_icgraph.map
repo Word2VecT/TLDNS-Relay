@@ -1,0 +1,7 @@
+<map id="qpool_full" name="qpool_full">
+<area shape="rect" id="Node000001" title="Check if the query pool is full." alt="" coords="234,5,310,31"/>
+<area shape="rect" id="Node000002" href="$query__pool_8c.html#a56b4eafae4e30f85d101675ef2aaeead" title="Create a new query pool This function initializes a new query pool and returns a pointer to it." alt="" coords="103,5,186,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,21,186,21,186,16,218,16"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

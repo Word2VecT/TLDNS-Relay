@@ -1,0 +1,15 @@
+<map id="print_dns_rr" name="print_dns_rr">
+<area shape="rect" id="Node000001" title="Print the Resource Record." alt="" coords="5,105,95,131"/>
+<area shape="rect" id="Node000002" href="$dns__print_8c.html#ac21f9aaff6cb58fc94996ab28134dd4e" title="Print the rdata field of an A type RR." alt="" coords="156,5,234,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,103,97,73,141,40,148,36,151,41,144,44,101,77,66,107"/>
+<area shape="rect" id="Node000003" href="$dns__print_8c.html#a1762e54b4c8f5b77fd05f11a587c668e" title="Print the rdata field of an AAAA type RR." alt="" coords="143,55,247,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,102,141,83,143,88,90,107"/>
+<area shape="rect" id="Node000004" href="$dns__print_8c.html#a51cb3312021d99b0f9d1f3f680750baf" title="Print the rdata field of a CNAME type RR." alt="" coords="295,156,412,182"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="95,120,247,141,287,149,286,154,247,146,95,125"/>
+<area shape="rect" id="Node000005" href="$dns__print_8c.html#a7d2f7aadf05efe5e1736eeae47b4f9b7" title="Print the rdata field of an MX type RR." alt="" coords="151,156,239,182"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="90,129,143,148,141,153,88,134"/>
+<area shape="rect" id="Node000006" href="$dns__print_8c.html#a5bc6e539fe23203d4a35b5ecba60fe7c" title="Print the rdata field of an SOA type RR." alt="" coords="147,205,243,231"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="66,129,101,160,144,192,151,196,148,200,141,196,97,164,63,133"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="239,166,279,166,279,172,239,172"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="238,202,294,184,296,189,240,207"/>
+</map>

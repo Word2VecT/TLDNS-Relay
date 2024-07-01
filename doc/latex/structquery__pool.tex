@@ -1,0 +1,185 @@
+\doxysection{query\+\_\+pool Struct Reference}
+\hypertarget{structquery__pool}{}\label{structquery__pool}\index{query\_pool@{query\_pool}}
+
+
+DNS query pool.  
+
+
+
+
+{\ttfamily \#include $<$query\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for query\+\_\+pool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structquery__pool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36}{Dns\+\_\+\+Query}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a7f9f953747a71094cb8d56e4a034e2af}{pool}} \mbox{[}\mbox{\hyperlink{query__pool_8h_ac92c63ca2d642f94c4ce70367b172f0b}{QUERY\+\_\+\+POOL\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Query pool. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{structquery__pool_a3bb533ff216fb17d67d1cf6571176750}{count}}
+\begin{DoxyCompactList}\small\item\em Number of queries in the pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue_8h_a8560ae2ddf510ea6643f85a929bffa48}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a2a4264b4238f5a6e65cb0eceadb97736}{queue}}
+\begin{DoxyCompactList}\small\item\em Queue of unassigned query IDs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a69aa7a98cbcba537a4e41aa96ddca5a4}{ipool}}
+\begin{DoxyCompactList}\small\item\em Index pool. \end{DoxyCompactList}\item 
+uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a978d7fe82bc7edb1089fc5642062fd66}{loop}}
+\begin{DoxyCompactList}\small\item\em Event loop. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_aef1a374ebd2f9080b03bb20c618565d7}{cache}}
+\begin{DoxyCompactList}\small\item\em Cache. \end{DoxyCompactList}\item 
+bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a5a713b0ec1429d9c019ddfff562ecdea}{full}} )(struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}})
+\begin{DoxyCompactList}\small\item\em Check if the query pool is full. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a6302249a25719dc18f725c4b19555da8}{insert}} )(struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, const struct sockaddr \texorpdfstring{$\ast$}{*}addr, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Insert a new query into the query pool This function creates a new query and inserts it into the query pool. If the query is found in the cache, it is immediately processed and sent to the local client. Otherwise, it is sent to the remote DNS server and a timeout timer is started. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a2779e835edd34265fa9d0cf89ae7465a}{finish}} )(struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Finish processing a query This function is called when a response is received for a query. It processes the response, updates the cache if necessary, and sends the response to the local client. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structquery__pool_a989f35457d5e3c08c38c35bbc70db2a4}{delete}} )(struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Delete a query from the query pool This function deletes a query from the query pool and frees the associated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DNS query pool. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structquery__pool_aef1a374ebd2f9080b03bb20c618565d7}\index{query\_pool@{query\_pool}!cache@{cache}}
+\index{cache@{cache}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{cache}{cache}}
+{\footnotesize\ttfamily \label{structquery__pool_aef1a374ebd2f9080b03bb20c618565d7} 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}}\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::cache}
+
+
+
+Cache. 
+
+\Hypertarget{structquery__pool_a3bb533ff216fb17d67d1cf6571176750}\index{query\_pool@{query\_pool}!count@{count}}
+\index{count@{count}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{structquery__pool_a3bb533ff216fb17d67d1cf6571176750} 
+unsigned short query\+\_\+pool\+::count}
+
+
+
+Number of queries in the pool. 
+
+\Hypertarget{structquery__pool_a989f35457d5e3c08c38c35bbc70db2a4}\index{query\_pool@{query\_pool}!delete@{delete}}
+\index{delete@{delete}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{delete}{delete}}
+{\footnotesize\ttfamily \label{structquery__pool_a989f35457d5e3c08c38c35bbc70db2a4} 
+void(\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::delete) (struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, uint16\+\_\+t id)}
+
+
+
+Delete a query from the query pool This function deletes a query from the query pool and frees the associated resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em id} & The ID of the query to be deleted \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structquery__pool_a2779e835edd34265fa9d0cf89ae7465a}\index{query\_pool@{query\_pool}!finish@{finish}}
+\index{finish@{finish}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{finish}{finish}}
+{\footnotesize\ttfamily \label{structquery__pool_a2779e835edd34265fa9d0cf89ae7465a} 
+void(\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::finish) (struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)}
+
+
+
+Finish processing a query This function is called when a response is received for a query. It processes the response, updates the cache if necessary, and sends the response to the local client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em msg} & The DNS message containing the response \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structquery__pool_a5a713b0ec1429d9c019ddfff562ecdea}\index{query\_pool@{query\_pool}!full@{full}}
+\index{full@{full}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily \label{structquery__pool_a5a713b0ec1429d9c019ddfff562ecdea} 
+bool(\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::full) (struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}})}
+
+
+
+Check if the query pool is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em this} & The query pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the query pool is full, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{structquery__pool_a6302249a25719dc18f725c4b19555da8}\index{query\_pool@{query\_pool}!insert@{insert}}
+\index{insert@{insert}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \label{structquery__pool_a6302249a25719dc18f725c4b19555da8} 
+void(\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::insert) (struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, const struct sockaddr \texorpdfstring{$\ast$}{*}addr, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)}
+
+
+
+Insert a new query into the query pool This function creates a new query and inserts it into the query pool. If the query is found in the cache, it is immediately processed and sent to the local client. Otherwise, it is sent to the remote DNS server and a timeout timer is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em addr} & The address of the client \\
+\hline
+{\em msg} & The DNS message containing the query \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structquery__pool_a69aa7a98cbcba537a4e41aa96ddca5a4}\index{query\_pool@{query\_pool}!ipool@{ipool}}
+\index{ipool@{ipool}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{ipool}{ipool}}
+{\footnotesize\ttfamily \label{structquery__pool_a69aa7a98cbcba537a4e41aa96ddca5a4} 
+\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}}\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::ipool}
+
+
+
+Index pool. 
+
+\Hypertarget{structquery__pool_a978d7fe82bc7edb1089fc5642062fd66}\index{query\_pool@{query\_pool}!loop@{loop}}
+\index{loop@{loop}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily \label{structquery__pool_a978d7fe82bc7edb1089fc5642062fd66} 
+uv\+\_\+loop\+\_\+t\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::loop}
+
+
+
+Event loop. 
+
+\Hypertarget{structquery__pool_a7f9f953747a71094cb8d56e4a034e2af}\index{query\_pool@{query\_pool}!pool@{pool}}
+\index{pool@{pool}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \label{structquery__pool_a7f9f953747a71094cb8d56e4a034e2af} 
+\mbox{\hyperlink{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36}{Dns\+\_\+\+Query}}\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::pool\mbox{[}\mbox{\hyperlink{query__pool_8h_ac92c63ca2d642f94c4ce70367b172f0b}{QUERY\+\_\+\+POOL\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+Query pool. 
+
+\Hypertarget{structquery__pool_a2a4264b4238f5a6e65cb0eceadb97736}\index{query\_pool@{query\_pool}!queue@{queue}}
+\index{queue@{queue}!query\_pool@{query\_pool}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily \label{structquery__pool_a2a4264b4238f5a6e65cb0eceadb97736} 
+\mbox{\hyperlink{queue_8h_a8560ae2ddf510ea6643f85a929bffa48}{Queue}}\texorpdfstring{$\ast$}{*} query\+\_\+pool\+::queue}
+
+
+
+Queue of unassigned query IDs. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{query__pool_8h}{query\+\_\+pool.\+h}}\end{DoxyCompactItemize}

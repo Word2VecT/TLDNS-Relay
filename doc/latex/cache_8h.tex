@@ -1,0 +1,95 @@
+\doxysection{include/cache.h File Reference}
+\hypertarget{cache_8h}{}\label{cache_8h}\index{include/cache.h@{include/cache.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}linklist\+\_\+rbtree.\+h"{}}\newline
+Include dependency graph for cache.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{cache_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcache__}{cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Cash struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cache_8h_a8a6befd630ea1c2ab260266f7466540c}{CACHE\+\_\+\+SIZE}}~30
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structcache__}{cache\+\_\+}} \mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}}
+\begin{DoxyCompactList}\small\item\em Cash struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cache_8h_a558b15d81ce86a0a4afa5a64e6fd8055}{new\+\_\+cache}} (FILE \texorpdfstring{$\ast$}{*}hosts\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Create a new cache and initialize it with data from the hosts file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{cache_8h_a8a6befd630ea1c2ab260266f7466540c}\index{cache.h@{cache.h}!CACHE\_SIZE@{CACHE\_SIZE}}
+\index{CACHE\_SIZE@{CACHE\_SIZE}!cache.h@{cache.h}}
+\doxysubsubsection{\texorpdfstring{CACHE\_SIZE}{CACHE\_SIZE}}
+{\footnotesize\ttfamily \label{cache_8h_a8a6befd630ea1c2ab260266f7466540c} 
+\#define CACHE\+\_\+\+SIZE~30}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{cache_8h_aacb3cd9ae53f433578c171271fb89409}\index{cache.h@{cache.h}!Cache@{Cache}}
+\index{Cache@{Cache}!cache.h@{cache.h}}
+\doxysubsubsection{\texorpdfstring{Cache}{Cache}}
+{\footnotesize\ttfamily \label{cache_8h_aacb3cd9ae53f433578c171271fb89409} 
+typedef struct \mbox{\hyperlink{structcache__}{cache\+\_\+}} \mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}}}
+
+
+
+Cash struct. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{cache_8h_a558b15d81ce86a0a4afa5a64e6fd8055}\index{cache.h@{cache.h}!new\_cache@{new\_cache}}
+\index{new\_cache@{new\_cache}!cache.h@{cache.h}}
+\doxysubsubsection{\texorpdfstring{new\_cache()}{new\_cache()}}
+{\footnotesize\ttfamily \label{cache_8h_a558b15d81ce86a0a4afa5a64e6fd8055} 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*} new\+\_\+cache (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{hosts\+\_\+file}{}\end{DoxyParamCaption})}
+
+
+
+Create a new cache and initialize it with data from the hosts file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hosts\+\_\+file} & The file containing hosts data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created cache. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8h_a558b15d81ce86a0a4afa5a64e6fd8055_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{cache_8h_a558b15d81ce86a0a4afa5a64e6fd8055_icgraph}
+\end{center}
+\end{figure}

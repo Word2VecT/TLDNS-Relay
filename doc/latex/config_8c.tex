@@ -1,0 +1,113 @@
+\doxysection{src/config.c File Reference}
+\hypertarget{config_8c}{}\label{config_8c}\index{src/config.c@{src/config.c}}
+{\ttfamily \#include "{}../include/config.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+Include dependency graph for config.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{config_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{config_8c_ac93dfd9f4c9f842917b45c609c8c2da9}{init\+\_\+config}} (int argc, char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{config_8c_ad3c5e55d6c17521f90d62fb06fd2d77d}{REMOTE\+\_\+\+HOST}} = "{}8.\+8.\+8.\+8"{}
+\begin{DoxyCompactList}\small\item\em Remote DNS server address. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{config_8c_a1ceaf97c18080fa36e2636b7c36b3999}{LOG\+\_\+\+MASK}} = 15
+\begin{DoxyCompactList}\small\item\em Log print level, a four-\/bit binary number where the lowest to highest bits represent FATAL, ERROR, INFO and DEBUG. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{config_8c_a3d269af16502c465a9c5aa13eb8ac90e}{CLIENT\+\_\+\+PORT}} = 0
+\begin{DoxyCompactList}\small\item\em Local DNS client port. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{config_8c_a38f53b19665cd5805e73fb7642671f76}{HOSTS\+\_\+\+PATH}} = "{}../dnsrelay.\+txt"{}
+\begin{DoxyCompactList}\small\item\em Hosts file path. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{config_8c_a1bba0e579808f14a30bdc2e7f9e6481b}{LOG\+\_\+\+PATH}} = NULL
+\begin{DoxyCompactList}\small\item\em Log file path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{config_8c_ac93dfd9f4c9f842917b45c609c8c2da9}\index{config.c@{config.c}!init\_config@{init\_config}}
+\index{init\_config@{init\_config}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{init\_config()}{init\_config()}}
+{\footnotesize\ttfamily \label{config_8c_ac93dfd9f4c9f842917b45c609c8c2da9} 
+void init\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+
+
+Parse command line arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments \\
+\hline
+{\em argv} & Array of argument strings \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{config_8c_ac93dfd9f4c9f842917b45c609c8c2da9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{config_8c_a3d269af16502c465a9c5aa13eb8ac90e}\index{config.c@{config.c}!CLIENT\_PORT@{CLIENT\_PORT}}
+\index{CLIENT\_PORT@{CLIENT\_PORT}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{CLIENT\_PORT}{CLIENT\_PORT}}
+{\footnotesize\ttfamily \label{config_8c_a3d269af16502c465a9c5aa13eb8ac90e} 
+int CLIENT\+\_\+\+PORT = 0}
+
+
+
+Local DNS client port. 
+
+\Hypertarget{config_8c_a38f53b19665cd5805e73fb7642671f76}\index{config.c@{config.c}!HOSTS\_PATH@{HOSTS\_PATH}}
+\index{HOSTS\_PATH@{HOSTS\_PATH}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{HOSTS\_PATH}{HOSTS\_PATH}}
+{\footnotesize\ttfamily \label{config_8c_a38f53b19665cd5805e73fb7642671f76} 
+char\texorpdfstring{$\ast$}{*} HOSTS\+\_\+\+PATH = "{}../dnsrelay.\+txt"{}}
+
+
+
+Hosts file path. 
+
+\Hypertarget{config_8c_a1ceaf97c18080fa36e2636b7c36b3999}\index{config.c@{config.c}!LOG\_MASK@{LOG\_MASK}}
+\index{LOG\_MASK@{LOG\_MASK}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_MASK}{LOG\_MASK}}
+{\footnotesize\ttfamily \label{config_8c_a1ceaf97c18080fa36e2636b7c36b3999} 
+int LOG\+\_\+\+MASK = 15}
+
+
+
+Log print level, a four-\/bit binary number where the lowest to highest bits represent FATAL, ERROR, INFO and DEBUG. 
+
+\Hypertarget{config_8c_a1bba0e579808f14a30bdc2e7f9e6481b}\index{config.c@{config.c}!LOG\_PATH@{LOG\_PATH}}
+\index{LOG\_PATH@{LOG\_PATH}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{LOG\_PATH}{LOG\_PATH}}
+{\footnotesize\ttfamily \label{config_8c_a1bba0e579808f14a30bdc2e7f9e6481b} 
+char\texorpdfstring{$\ast$}{*} LOG\+\_\+\+PATH = NULL}
+
+
+
+Log file path. 
+
+\Hypertarget{config_8c_ad3c5e55d6c17521f90d62fb06fd2d77d}\index{config.c@{config.c}!REMOTE\_HOST@{REMOTE\_HOST}}
+\index{REMOTE\_HOST@{REMOTE\_HOST}!config.c@{config.c}}
+\doxysubsubsection{\texorpdfstring{REMOTE\_HOST}{REMOTE\_HOST}}
+{\footnotesize\ttfamily \label{config_8c_ad3c5e55d6c17521f90d62fb06fd2d77d} 
+char\texorpdfstring{$\ast$}{*} REMOTE\+\_\+\+HOST = "{}8.\+8.\+8.\+8"{}}
+
+
+
+Remote DNS server address. 
+

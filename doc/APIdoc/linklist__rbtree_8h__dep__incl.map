@@ -1,0 +1,19 @@
+<map id="include/linklist_rbtree.h" name="include/linklist_rbtree.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="328,5,482,31"/>
+<area shape="rect" id="Node000002" href="$cache_8h.html" title=" " alt="" coords="277,79,389,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="384,44,347,80,343,77,380,40"/>
+<area shape="rect" id="Node000009" href="$linklist__rbtree_8c.html" title=" " alt="" coords="412,79,544,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="430,40,467,77,464,80,426,44"/>
+<area shape="rect" id="Node000003" href="$query__pool_8h.html" title=" " alt="" coords="193,153,334,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,117,277,154,273,150,309,114"/>
+<area shape="rect" id="Node000008" href="$cache_8c.html" title=" " alt="" coords="357,153,447,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="356,114,392,150,388,154,353,117"/>
+<area shape="rect" id="Node000004" href="$dns__client_8c.html" title=" " alt="" coords="5,226,119,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,186,97,228,95,223,214,181"/>
+<area shape="rect" id="Node000005" href="$dns__server_8c.html" title=" " alt="" coords="143,226,261,252"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="245,192,214,228,210,224,241,188"/>
+<area shape="rect" id="Node000006" href="$main_8c.html" title=" " alt="" coords="285,226,367,252"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="286,188,317,224,313,228,282,192"/>
+<area shape="rect" id="Node000007" href="$query__pool_8c.html" title=" " alt="" coords="391,226,509,252"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="310,182,419,223,417,228,308,187"/>
+</map>

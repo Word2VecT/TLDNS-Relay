@@ -156,12 +156,22 @@ static void qpool_delete(Query_Pool *qpool, uint16_t id) {
 	}
 	log_debug("Deleting query ID: 0x%04x", id)
 	Dns_Query *query = qpool->pool[id % QUERY_POOL_MAX_SIZE];
+	if (!query) {
+		log_error("Query is NULL");
+		return;
+	}
 	qpool->queue->push(qpool->queue, id + QUERY_POOL_MAX_SIZE);
 	qpool->pool[id % QUERY_POOL_MAX_SIZE] = NULL;
 	qpool->count--;
-	uv_timer_stop(&query->timer);
+	log_debug("Deleting query timer: %p", &query->timer);
+	if (query->timer.data) {
+		log_debug("Deleting query timer: %p", &query->timer);
+		uv_timer_stop(&query->timer);
+		free(query->timer.data);
+	} else {
+		log_debug("Query timer data is NULL, skipping uv_timer_stop");
+	}
 	destroy_dnsmsg(query->msg);
-	free(query->timer.data);
 	free(query);
 }
 

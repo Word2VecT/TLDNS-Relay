@@ -1,0 +1,28 @@
+<map id="include/config.h" name="include/config.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="317,5,429,31"/>
+<area shape="rect" id="Node000002" href="$log_8h.html" title=" " alt="" coords="582,79,676,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="431,33,586,76,584,81,430,38"/>
+<area shape="rect" id="Node000004" href="$config_8c.html" title=" " alt="" coords="5,153,95,178"/>
+<area shape="poly" id="edge13_Node000001_Node000004" title=" " alt="" coords="333,40,78,154,76,150,331,35"/>
+<area shape="rect" id="Node000003" href="$cache_8c.html" title=" " alt="" coords="119,153,208,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="567,104,410,126,221,155,209,158,208,152,220,150,409,120,566,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="566,101,362,122,108,155,95,157,95,152,107,150,361,117,566,96"/>
+<area shape="rect" id="Node000005" href="$dns__client_8c.html" title=" " alt="" coords="232,153,345,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="567,109,346,155,345,150,566,104"/>
+<area shape="rect" id="Node000006" href="$dns__parse_8c.html" title=" " alt="" coords="369,153,483,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="581,113,461,155,460,150,579,108"/>
+<area shape="rect" id="Node000007" href="$dns__print_8c.html" title=" " alt="" coords="507,153,614,178"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="609,118,574,154,570,150,605,114"/>
+<area shape="rect" id="Node000008" href="$dns__server_8c.html" title=" " alt="" coords="638,153,755,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="652,114,687,150,683,154,649,118"/>
+<area shape="rect" id="Node000009" href="$index__pool_8c.html" title=" " alt="" coords="780,153,896,178"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="679,108,803,150,801,155,678,113"/>
+<area shape="rect" id="Node000010" href="$linklist__rbtree_8c.html" title=" " alt="" coords="920,153,1052,178"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="692,103,926,149,925,155,691,108"/>
+<area shape="rect" id="Node000011" href="$main_8c.html" title=" " alt="" coords="1076,153,1158,178"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="692,98,860,119,1064,150,1076,152,1075,158,1063,155,859,124,691,103"/>
+<area shape="rect" id="Node000012" href="$query__pool_8c.html" title=" " alt="" coords="1182,153,1299,178"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="691,96,904,118,1170,150,1182,152,1181,157,1170,155,903,123,691,102"/>
+<area shape="rect" id="Node000013" href="$queue_8c.html" title=" " alt="" coords="1324,153,1413,178"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="692,94,962,112,1136,128,1312,150,1324,152,1323,157,1311,155,1135,134,961,117,691,99"/>
+</map>

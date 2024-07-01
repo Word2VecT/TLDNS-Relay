@@ -1,0 +1,32 @@
+<map id="grandparent" name="grandparent">
+<area shape="rect" id="Node000001" title="Get the grandparent of a node." alt="" coords="931,50,1020,76"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a2003ed64d170c0cf2c2b3a9899eb2557" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="659,38,747,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="943,43,914,27,882,15,840,8,797,15,761,26,730,40,728,35,759,21,796,9,840,3,883,9,916,22,945,39"/>
+<area shape="rect" id="Node000007" href="$linklist__rbtree_8c.html#ab62e652e4fc283a274b30e1f1f08c211" title="Rotate a node to the left." alt="" coords="800,74,879,100"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="916,76,880,82,879,77,915,71"/>
+<area shape="rect" id="Node000011" href="$linklist__rbtree_8c.html#aef6fab1149a4f11067237f95c7bdb41f" title="Rotate a node to the right." alt="" coords="796,123,883,149"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="937,86,866,125,864,120,935,81"/>
+<area shape="rect" id="Node000012" href="$linklist__rbtree_8c.html#a06530033a166619f9dfac249ac51e285" title="Get the uncle of a node." alt="" coords="813,25,866,50"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="915,54,866,45,867,40,916,49"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="725,25,718,19,703,17,689,18,681,23,680,29,684,36,679,39,674,29,677,20,687,13,703,11,720,14,729,21"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#ae46c23eec5c1ea21ebab9279843de3a3" title="Insert a key&#45;value pair into the red&#45;black tree." alt="" coords="371,51,465,77"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="643,56,465,65,465,59,643,51"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#a6223e88c82874af7ec915b7fe8240204" title="Initialize a new red&#45;black tree This function allocates memory for a new red&#45;black tree and its nil n..." alt="" coords="238,77,323,102"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="356,78,324,84,323,79,355,73"/>
+<area shape="rect" id="Node000005" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,77,190,102"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="222,92,190,92,190,87,222,87"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,77,55,102"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="87,92,55,92,55,87,87,87"/>
+<area shape="poly" id="edge13_Node000007_Node000002" title=" " alt="" coords="784,75,747,65,748,60,785,70"/>
+<area shape="rect" id="Node000008" href="$linklist__rbtree_8c.html#ac734d64a69533759abbc046c6266e951" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="657,111,748,137"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="785,104,750,114,748,109,784,99"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="725,98,718,92,703,90,689,92,681,96,680,102,684,110,679,112,674,103,677,93,687,87,703,85,720,87,729,94"/>
+<area shape="rect" id="Node000009" href="$linklist__rbtree_8c.html#a787a8de67855978e27d86ddcc1dfc2fc" title="Delete a node from the red&#45;black tree." alt="" coords="513,101,609,126"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="641,122,609,120,609,114,642,117"/>
+<area shape="rect" id="Node000010" href="$linklist__rbtree_8c.html#aec09451763b49da3023b2742685de07f" title="Query the red&#45;black tree for a key." alt="" coords="371,101,465,126"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="497,116,465,116,465,111,497,111"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="355,105,323,99,324,94,356,100"/>
+<area shape="poly" id="edge16_Node000011_Node000002" title=" " alt="" coords="799,117,795,114,747,77,729,66,732,62,750,72,798,110,802,113"/>
+<area shape="poly" id="edge15_Node000011_Node000008" title=" " alt="" coords="780,134,749,131,749,125,781,128"/>
+<area shape="poly" id="edge18_Node000012_Node000002" title=" " alt="" coords="798,44,747,49,747,44,798,39"/>
+</map>

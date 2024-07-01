@@ -1,0 +1,29 @@
+\doxysection{cache.\+h}
+\hypertarget{cache_8h_source}{}\label{cache_8h_source}\index{include/cache.h@{include/cache.h}}
+\mbox{\hyperlink{cache_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DNSR\_CACHE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DNSR\_CACHE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{linklist__rbtree_8h}{linklist\_rbtree.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ CACHE\_SIZE\ 30}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcache__}{cache\_}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{structdns__rr__linklist}{Dns\_RR\_LinkList}}\ *\ \mbox{\hyperlink{structcache___acabce542251947db1f24a053009a6653}{head}};\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{structdns__rr__linklist}{Dns\_RR\_LinkList}}\ *\ \mbox{\hyperlink{structcache___a66c801ed47c1ce6277f74f8303f1877d}{tail}};\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcache___a7bfb881e7c4f491fbab1fe4ff2c2257a}{size}};\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structlinklist__rbtree}{Rbtree}}\ *\ \mbox{\hyperlink{structcache___aa4098344fb51798827908b28800c03ae}{tree}};\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \ \ \ \ void\ (*\ \mbox{\hyperlink{structcache___a002afe5b9b85ef573ff55a88fad7dd10}{insert}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcache__}{cache\_}}\ *\ \mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structdns__msg}{Dns\_Msg}}\ *\ msg);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{structrbtree__value}{Rbtree\_Value}}\ *\ (*\ query)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structcache__}{cache\_}}\ *\ \mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structdns__question}{Dns\_Que}}\ *\ que);}
+\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \mbox{\hyperlink{structcache__}{Cache}}\ *\ \mbox{\hyperlink{cache_8h_a558b15d81ce86a0a4afa5a64e6fd8055}{new\_cache}}(FILE\ *\ hosts\_file);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DNSR\_CACHE\_H}}
+
+\end{DoxyCode}

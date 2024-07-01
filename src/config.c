@@ -29,6 +29,8 @@ void init_config(int argc, char *const *argv) {
 	fprintf(stderr, "  |_| |_____|____/|_| \\_|____/  |_| \\_\\___|_|\\__,_|\\__, |\n");
 	fprintf(stderr, "                                                   |___/\n\n");
 
+	fflush(stderr);
+
 	if (argc == 1 && strcmp(*argv, "-h") == 0) {
 		printf("Usage:\n");
 		printf("    [-a] Use the specified name server\n");
@@ -45,6 +47,7 @@ void init_config(int argc, char *const *argv) {
 		printf("    -d 1101 -l /Users/Code -p 53\n");
 		printf("        Output DEBUG、INFO、and FATAL information\n");
 		printf("        Output debugging information to /Users/Code as a file\n");
+		fflush(stdout);
 		exit(0);
 	}
 

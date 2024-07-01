@@ -1,0 +1,83 @@
+\chapter{TLDNS Relay}
+\hypertarget{index}{}\label{index}\index{TLDNS Relay@{TLDNS Relay}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{System Function Design}{System Function Design}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Basic Tasks}{Basic Tasks}}\label{index_autotoc_md2}
+Design a DNS relay server program that reads a "{}\+Domain Name -\/ IP Address"{} mapping table. When a client queries the IP address corresponding to a domain name, the domain name is searched in the table, resulting in three possible outcomes\+:
+
+
+\begin{DoxyItemize}
+\item If the result is an IP address {\ttfamily 0.\+0.\+0.\+0}, return an error message "{}\+Domain name does not exist"{} to the client instead of returning the IP address {\ttfamily 0.\+0.\+0.\+0}, implementing a malicious website blocking function.
+\item If the result is a regular IP address, return this address to the client, implementing DNS server functionality.
+\item If the domain name is not found in the table, send the query to an Internet DNS server and return the result to the client, implementing DNS relay functionality.
+\end{DoxyItemize}
+
+The implementation must adhere to the DNS protocol specifications to ensure interoperability with Windows and other systems.
+
+Notes\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Concurrent Clients}}\+: Allow concurrent queries from multiple clients (which may be on different computers). This means processing another client\textquotesingle{}s query request even if the first query has not been answered yet (the role of the ID field in the DNS protocol header), requiring message ID translation.
+\item {\bfseries{Timeout Handling}}\+: Consider the unreliability of UDP, and handle situations where the external DNS server (relay) does not respond or responds late.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Additional Functions}{Additional Functions}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Implement LRU mechanism for Cache.
+\item Optimize the dictionary lookup algorithm.
+\item Ensure consistent performance across Windows/\+Linux source code.
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Extra Features}{Extra Features}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Support for IPv6.
+\item Cross-\/platform support for Windows/\+Linux/\+Mac\+OS.
+\item Implement high-\/performance querying using an event-\/driven, non-\/blocking asynchronous I/O model.
+\item Implement query pools and index pools to support concurrent queries.
+\item Support multiple message types, including A, CNAME, SOA, MX, and AAAA.
+\item Provide command-\/line argument parsing and help documentation.
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md5}
+\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item Clone the repository locally and navigate into it\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/Word2VecT/TLDNS-\/Relay.git}
+\DoxyCodeLine{cd\ TLDNS-\/Relay}
+
+\end{DoxyCode}
+
+\item Download and install \href{https://dist.libuv.org/dist/}{\texttt{ libuv}}.
+\item Import the project folder in CLion, compile, and run.
+\item Set your DNS to {\ttfamily 127.\+0.\+0.\+1}.
+\item Enjoy!
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Program Help}{Program Help}}\label{index_autotoc_md7}
+Use the {\ttfamily -\/h} parameter to view the program help documentation. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Usage:}
+\DoxyCodeLine{[-\/a]\ Use\ the\ specified\ name\ server}
+\DoxyCodeLine{[-\/d]\ Debug\ level\ mask,\ a\ 4-\/bit\ binary\ number,\ DEBUG,\ INFO,\ ERROR,\ FATAL\ in\ order}
+\DoxyCodeLine{[-\/f]\ Use\ the\ specified\ DNS\ hosts\ file}
+\DoxyCodeLine{[-\/l]\ Log\ information\ storage\ location}
+\DoxyCodeLine{[-\/p]\ Custom\ listening\ ports}
+\DoxyCodeLine{[-\/h]\ Helpful\ Information}
+\DoxyCodeLine{}
+\DoxyCodeLine{Example:}
+\DoxyCodeLine{-\/d\ 1111\ -\/a\ 192.168.0.1\ -\/f\ c:\(\backslash\)dns-\/table.txt}
+\DoxyCodeLine{Output\ all\ debugging\ information}
+\DoxyCodeLine{Use\ the\ specified\ name\ server\ 192.168.0.1}
+\DoxyCodeLine{Use\ the\ specified\ configuration\ file\ c:\(\backslash\)dns-\/table.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/d\ 1101\ -\/l\ /Users/Code\ -\/p\ 53}
+\DoxyCodeLine{Output\ DEBUG,\ INFO,\ and\ FATAL\ information}
+\DoxyCodeLine{Output\ debugging\ information\ to\ /Users/Code\ as\ a\ file}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Reference}{Reference}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item \href{https://www.rfc-editor.org/info/rfc1034}{\texttt{ Domain names -\/ concepts and facilities}}. RFC 1034, RFC Editor, November 1987, DOI\+: 10.\+17487/\+RFC1034. 55 pages. Abstract\+: This RFC is the revised basic definition of The Domain Name System. It obsoletes RFC-\/882. This memo describes the domain style names and their use for host address look up and electronic mail forwarding. It discusses the clients and servers in the domain name system and the protocol used between them.
+\item \href{https://www.rfc-editor.org/info/rfc1035}{\texttt{ Domain names -\/ implementation and specification}}. RFC 1035, RFC Editor, November 1987, DOI\+: 10.\+17487/\+RFC1035. 55 pages. Abstract\+: This RFC is the revised specification of the protocol and format used in the implementation of the Domain Name System. It obsoletes RFC-\/883. This memo documents the details of the domain name client-\/server communication.
+\item Stroustrup, Bjarne. {\itshape The C++ Programming Language}. Pearson Education, 2013.
+\item Wikipedia. \href{http://zh.wikipedia.org/w/index.php?title=\%E7\%BA\%A2\%E9\%BB\%91\%E6\%A0\%91&oldid=81848547}{\texttt{ 红黑树 --- Wikipedia, The Free Encyclopedia}}. \mbox{[}Online; accessed 01-\/July-\/2024\mbox{]}. 
+\end{DoxyItemize}

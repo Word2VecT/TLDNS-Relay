@@ -1,0 +1,12 @@
+<map id="copy_dnsmsg" name="copy_dnsmsg">
+<area shape="rect" id="Node000001" title="Copy a DNS message." alt="" coords="373,31,476,56"/>
+<area shape="rect" id="Node000002" href="$query__pool_8c.html#ac14d02ff69a3027ad45c2357e6843c76" title="Finish processing a query This function is called when a response is received for a query...." alt="" coords="235,5,325,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,35,325,29,326,23,359,29"/>
+<area shape="rect" id="Node000005" href="$query__pool_8c.html#ae29fc3e8ee2f57c983e01704d4b945ce" title="Insert a new query into the query pool This function creates a new query and inserts it into the quer..." alt="" coords="234,55,325,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="358,57,326,63,325,57,358,52"/>
+<area shape="rect" id="Node000003" href="$query__pool_8c.html#a56b4eafae4e30f85d101675ef2aaeead" title="Create a new query pool This function initializes a new query pool and returns a pointer to it." alt="" coords="103,31,186,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,32,187,38,186,33,219,27"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,46,55,46,55,41,87,41"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="218,59,186,54,187,48,219,54"/>
+</map>

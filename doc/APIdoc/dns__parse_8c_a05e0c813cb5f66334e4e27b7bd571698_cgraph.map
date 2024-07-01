@@ -1,0 +1,9 @@
+<map id="string_to_dnsque" name="string_to_dnsque">
+<area shape="rect" id="Node000001" title="Read a Question Section from a byte stream." alt="" coords="5,7,126,33"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a26eb64cb4cd82b2070e8fe7f000ff6ae" title="Read a 16&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="340,7,428,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,9,173,5,233,3,292,5,325,8,324,14,292,10,233,8,174,10,126,15"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#add1ca591f936273329c3e34668cc7913" title="Read a NAME field from a byte stream." alt="" coords="174,44,292,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,31,159,38,158,43,126,36"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="287,41,324,32,326,37,288,46"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="207,45,202,36,205,26,216,20,233,18,251,20,261,27,258,31,249,25,233,23,217,25,209,29,207,35,211,43"/>
+</map>

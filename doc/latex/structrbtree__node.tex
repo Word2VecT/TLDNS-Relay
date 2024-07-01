@@ -1,0 +1,106 @@
+\doxysection{rbtree\+\_\+node Struct Reference}
+\hypertarget{structrbtree__node}{}\label{structrbtree__node}\index{rbtree\_node@{rbtree\_node}}
+
+
+Node of the Red-\/\+Black Tree.  
+
+
+
+
+{\ttfamily \#include $<$linklist\+\_\+rbtree.\+h$>$}
+
+
+
+Collaboration diagram for rbtree\+\_\+node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{structrbtree__node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{structrbtree__node_abbf3a913a39e9a9a42323e15817c12ad}{key}}
+\begin{DoxyCompactList}\small\item\em Key of the Red-\/\+Black Tree node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrbtree__node_a11295b11d2e7b3b34ae5fa4405b55ec8}{rr\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Pointer to the linked list corresponding to the current node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{structrbtree__node_aadb3636e79df102ba597cbe2a4cde075}{color}}
+\begin{DoxyCompactList}\small\item\em Color of the current node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrbtree__node_a2be587ea37923dea5167e78592c9cb2e}{left}}
+\begin{DoxyCompactList}\small\item\em Pointer to the left child of the current node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrbtree__node_af1547a25a96223bc5b3dbee409177be3}{right}}
+\begin{DoxyCompactList}\small\item\em Pointer to the right child of the current node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrbtree__node_a21c30c17467350315936679e7fe3cedb}{parent}}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent of the current node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node of the Red-\/\+Black Tree. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structrbtree__node_aadb3636e79df102ba597cbe2a4cde075}\index{rbtree\_node@{rbtree\_node}!color@{color}}
+\index{color@{color}!rbtree\_node@{rbtree\_node}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \label{structrbtree__node_aadb3636e79df102ba597cbe2a4cde075} 
+\mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} rbtree\+\_\+node\+::color}
+
+
+
+Color of the current node. 
+
+\Hypertarget{structrbtree__node_abbf3a913a39e9a9a42323e15817c12ad}\index{rbtree\_node@{rbtree\_node}!key@{key}}
+\index{key@{key}!rbtree\_node@{rbtree\_node}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \label{structrbtree__node_abbf3a913a39e9a9a42323e15817c12ad} 
+unsigned int rbtree\+\_\+node\+::key}
+
+
+
+Key of the Red-\/\+Black Tree node. 
+
+\Hypertarget{structrbtree__node_a2be587ea37923dea5167e78592c9cb2e}\index{rbtree\_node@{rbtree\_node}!left@{left}}
+\index{left@{left}!rbtree\_node@{rbtree\_node}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \label{structrbtree__node_a2be587ea37923dea5167e78592c9cb2e} 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}}\texorpdfstring{$\ast$}{*} rbtree\+\_\+node\+::left}
+
+
+
+Pointer to the left child of the current node. 
+
+\Hypertarget{structrbtree__node_a21c30c17467350315936679e7fe3cedb}\index{rbtree\_node@{rbtree\_node}!parent@{parent}}
+\index{parent@{parent}!rbtree\_node@{rbtree\_node}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \label{structrbtree__node_a21c30c17467350315936679e7fe3cedb} 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}}\texorpdfstring{$\ast$}{*} rbtree\+\_\+node\+::parent}
+
+
+
+Pointer to the parent of the current node. 
+
+\Hypertarget{structrbtree__node_af1547a25a96223bc5b3dbee409177be3}\index{rbtree\_node@{rbtree\_node}!right@{right}}
+\index{right@{right}!rbtree\_node@{rbtree\_node}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \label{structrbtree__node_af1547a25a96223bc5b3dbee409177be3} 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}}\texorpdfstring{$\ast$}{*} rbtree\+\_\+node\+::right}
+
+
+
+Pointer to the right child of the current node. 
+
+\Hypertarget{structrbtree__node_a11295b11d2e7b3b34ae5fa4405b55ec8}\index{rbtree\_node@{rbtree\_node}!rr\_list@{rr\_list}}
+\index{rr\_list@{rr\_list}!rbtree\_node@{rbtree\_node}}
+\doxysubsubsection{\texorpdfstring{rr\_list}{rr\_list}}
+{\footnotesize\ttfamily \label{structrbtree__node_a11295b11d2e7b3b34ae5fa4405b55ec8} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}}\texorpdfstring{$\ast$}{*} rbtree\+\_\+node\+::rr\+\_\+list}
+
+
+
+Pointer to the linked list corresponding to the current node. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{linklist__rbtree_8h}{linklist\+\_\+rbtree.\+h}}\end{DoxyCompactItemize}

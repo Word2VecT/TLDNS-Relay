@@ -1,0 +1,117 @@
+\doxysection{queue Struct Reference}
+\hypertarget{structqueue}{}\label{structqueue}\index{queue@{queue}}
+
+
+Circular queue.  
+
+
+
+
+{\ttfamily \#include $<$queue.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structqueue_a9cd43dd08eae37941b48653d00637fdd}{q}} \mbox{[}\mbox{\hyperlink{queue_8h_a4b56a6f23e044affca38eed1834e98dc}{QUEUE\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em The queue. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{structqueue_a35f118a404c9585731eac3a3b1753b3a}{head}}
+\begin{DoxyCompactList}\small\item\em The head of the queue. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{structqueue_af5074b278737ee3c37cb7c32836bd8d5}{tail}}
+\begin{DoxyCompactList}\small\item\em The tail of the queue. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structqueue_ab47a00835dd6f04dc90d516e5579ec2e}{push}} )(struct \mbox{\hyperlink{structqueue}{queue}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structqueue}{queue}}, uint16\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Push a number onto the queue. \end{DoxyCompactList}\item 
+uint16\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structqueue_a6eb893221e4955c0e2691095144c0ec2}{pop}} )(struct \mbox{\hyperlink{structqueue}{queue}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structqueue}{queue}})
+\begin{DoxyCompactList}\small\item\em Pop a number from the queue. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structqueue_a466d795749101c9e1e6cb9497ff6f35a}{destroy}} )(struct \mbox{\hyperlink{structqueue}{queue}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structqueue}{queue}})
+\begin{DoxyCompactList}\small\item\em Destroy the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Circular queue. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structqueue_a466d795749101c9e1e6cb9497ff6f35a}\index{queue@{queue}!destroy@{destroy}}
+\index{destroy@{destroy}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{destroy}{destroy}}
+{\footnotesize\ttfamily \label{structqueue_a466d795749101c9e1e6cb9497ff6f35a} 
+void(\texorpdfstring{$\ast$}{*} queue\+::destroy) (struct \mbox{\hyperlink{structqueue}{queue}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structqueue}{queue}})}
+
+
+
+Destroy the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue to destroy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structqueue_a35f118a404c9585731eac3a3b1753b3a}\index{queue@{queue}!head@{head}}
+\index{head@{head}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \label{structqueue_a35f118a404c9585731eac3a3b1753b3a} 
+unsigned short queue\+::head}
+
+
+
+The head of the queue. 
+
+\Hypertarget{structqueue_a6eb893221e4955c0e2691095144c0ec2}\index{queue@{queue}!pop@{pop}}
+\index{pop@{pop}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily \label{structqueue_a6eb893221e4955c0e2691095144c0ec2} 
+uint16\+\_\+t(\texorpdfstring{$\ast$}{*} queue\+::pop) (struct \mbox{\hyperlink{structqueue}{queue}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structqueue}{queue}})}
+
+
+
+Pop a number from the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number popped from the queue 
+\end{DoxyReturn}
+\Hypertarget{structqueue_ab47a00835dd6f04dc90d516e5579ec2e}\index{queue@{queue}!push@{push}}
+\index{push@{push}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{push}{push}}
+{\footnotesize\ttfamily \label{structqueue_ab47a00835dd6f04dc90d516e5579ec2e} 
+void(\texorpdfstring{$\ast$}{*} queue\+::push) (struct \mbox{\hyperlink{structqueue}{queue}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structqueue}{queue}}, uint16\+\_\+t num)}
+
+
+
+Push a number onto the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & The queue \\
+\hline
+{\em num} & The number to push \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structqueue_a9cd43dd08eae37941b48653d00637fdd}\index{queue@{queue}!q@{q}}
+\index{q@{q}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily \label{structqueue_a9cd43dd08eae37941b48653d00637fdd} 
+uint16\+\_\+t queue\+::q\mbox{[}\mbox{\hyperlink{queue_8h_a4b56a6f23e044affca38eed1834e98dc}{QUEUE\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+The queue. 
+
+\Hypertarget{structqueue_af5074b278737ee3c37cb7c32836bd8d5}\index{queue@{queue}!tail@{tail}}
+\index{tail@{tail}!queue@{queue}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily \label{structqueue_af5074b278737ee3c37cb7c32836bd8d5} 
+unsigned short queue\+::tail}
+
+
+
+The tail of the queue. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{queue_8h}{queue.\+h}}\end{DoxyCompactItemize}

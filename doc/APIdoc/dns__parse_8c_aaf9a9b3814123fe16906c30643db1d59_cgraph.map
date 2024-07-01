@@ -1,0 +1,9 @@
+<map id="dnsrr_to_string" name="dnsrr_to_string">
+<area shape="rect" id="Node000001" title="Write a Resource Record to a byte stream." alt="" coords="5,55,113,80"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a7b904ddd10df7128f7ec9b1aab19b85c" title="Write a NAME field to a byte stream." alt="" coords="161,5,279,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,51,160,33,162,39,104,57"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a892deea8e33cb7ce2c0f336d112abe4e" title="Write a 16&#45;bit number in little&#45;endian format to a byte stream." alt="" coords="174,55,266,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,65,159,65,159,70,113,70"/>
+<area shape="rect" id="Node000004" href="$dns__parse_8c.html#a803502b08c76912cbf1a675d1d3890a5" title="Write a 32&#45;bit number in little&#45;endian format to a byte stream." alt="" coords="174,104,266,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,78,162,96,160,102,103,84"/>
+</map>

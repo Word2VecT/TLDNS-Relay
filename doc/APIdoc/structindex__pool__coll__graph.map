@@ -1,0 +1,7 @@
+<map id="index_pool" name="index_pool">
+<area shape="rect" id="Node000001" title="Index pool." alt="" coords="33,109,117,135"/>
+<area shape="rect" id="Node000002" href="$structindex__.html" title="Index structure." alt="" coords="5,5,65,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="40,46,50,84,66,107,62,110,46,86,35,47"/>
+<area shape="rect" id="Node000003" href="$structqueue.html" title="Circular queue." alt="" coords="88,5,145,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,46,82,110,77,108,103,44"/>
+</map>

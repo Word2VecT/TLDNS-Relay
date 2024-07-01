@@ -1,0 +1,13 @@
+<map id="dns_query" name="dns_query">
+<area shape="rect" id="Node000001" title="DNS query structure." alt="" coords="126,183,208,208"/>
+<area shape="rect" id="Node000002" href="$structdns__msg.html" title="DNS message structure." alt="" coords="130,94,204,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,135,170,182,164,182,164,135"/>
+<area shape="rect" id="Node000003" href="$structdns__header.html" title="Header Section structure of DNS message." alt="" coords="5,5,94,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,38,152,91,149,96,76,43"/>
+<area shape="rect" id="Node000004" href="$structdns__question.html" title="Question Section structure of DNS message, represented as a linked list." alt="" coords="118,5,216,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="170,47,170,94,164,94,164,47"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="233,10,243,18,234,26,217,29,216,24,232,22,237,18,230,14"/>
+<area shape="rect" id="Node000005" href="$structdns__rr.html" title="Resource Record structure of DNS message, represented as a linked list." alt="" coords="293,5,350,31"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="288,41,190,96,187,91,285,36"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="368,9,377,18,368,27,351,29,350,24,366,22,372,18,364,13"/>
+</map>

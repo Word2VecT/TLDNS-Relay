@@ -1,0 +1,22 @@
+<map id="rotate_right" name="rotate_right">
+<area shape="rect" id="Node000001" title="Rotate a node to the right." alt="" coords="796,67,883,92"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#ac734d64a69533759abbc046c6266e951" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="657,29,748,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="780,66,748,57,750,52,782,61"/>
+<area shape="rect" id="Node000008" href="$linklist__rbtree_8c.html#a2003ed64d170c0cf2c2b3a9899eb2557" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="659,103,747,128"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="782,97,748,107,746,101,780,92"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="725,16,718,10,703,8,689,10,681,14,680,20,684,28,679,30,674,21,677,11,687,5,703,3,720,5,729,12"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#a787a8de67855978e27d86ddcc1dfc2fc" title="Delete a node from the red&#45;black tree." alt="" coords="513,36,609,62"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="641,48,609,49,609,44,641,42"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#aec09451763b49da3023b2742685de07f" title="Query the red&#45;black tree for a key." alt="" coords="371,43,465,68"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="497,54,465,56,465,51,497,49"/>
+<area shape="rect" id="Node000005" href="$linklist__rbtree_8c.html#a6223e88c82874af7ec915b7fe8240204" title="Initialize a new red&#45;black tree This function allocates memory for a new red&#45;black tree and its nil n..." alt="" coords="238,68,323,94"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="356,70,324,76,323,70,355,64"/>
+<area shape="rect" id="Node000006" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,68,190,94"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="222,84,190,84,190,78,222,78"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,68,55,94"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="87,84,55,84,55,78,87,78"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="725,90,718,84,703,81,689,83,681,88,680,94,684,101,679,103,674,94,677,85,687,78,703,76,720,79,729,85"/>
+<area shape="rect" id="Node000009" href="$linklist__rbtree_8c.html#ae46c23eec5c1ea21ebab9279843de3a3" title="Insert a key&#45;value pair into the red&#45;black tree." alt="" coords="371,92,465,118"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="643,116,465,109,465,104,643,111"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="355,97,323,91,324,86,356,91"/>
+</map>

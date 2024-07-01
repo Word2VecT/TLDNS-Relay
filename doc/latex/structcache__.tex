@@ -1,0 +1,123 @@
+\doxysection{cache\+\_\+ Struct Reference}
+\hypertarget{structcache__}{}\label{structcache__}\index{cache\_@{cache\_}}
+
+
+Cash struct.  
+
+
+
+
+{\ttfamily \#include $<$cache.\+h$>$}
+
+
+
+Collaboration diagram for cache\+\_\+\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcache____coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcache___acabce542251947db1f24a053009a6653}{head}}
+\begin{DoxyCompactList}\small\item\em LRU header node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcache___a66c801ed47c1ce6277f74f8303f1877d}{tail}}
+\begin{DoxyCompactList}\small\item\em LRU tail node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structcache___a7bfb881e7c4f491fbab1fe4ff2c2257a}{size}}
+\begin{DoxyCompactList}\small\item\em LRU size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcache___aa4098344fb51798827908b28800c03ae}{tree}}
+\begin{DoxyCompactList}\small\item\em Red–black tree. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcache___a002afe5b9b85ef573ff55a88fad7dd10}{insert}} )(struct \mbox{\hyperlink{structcache__}{cache\+\_\+}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Insert a DNS message into the cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structcache___a629f39668da19783770991b3c32144d7}{query}} )(struct \mbox{\hyperlink{structcache__}{cache\+\_\+}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}, const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}que)
+\begin{DoxyCompactList}\small\item\em Query the cache for a DNS question. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cash struct. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structcache___acabce542251947db1f24a053009a6653}\index{cache\_@{cache\_}!head@{head}}
+\index{head@{head}!cache\_@{cache\_}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \label{structcache___acabce542251947db1f24a053009a6653} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}}\texorpdfstring{$\ast$}{*} cache\+\_\+\+::head}
+
+
+
+LRU header node. 
+
+\Hypertarget{structcache___a002afe5b9b85ef573ff55a88fad7dd10}\index{cache\_@{cache\_}!insert@{insert}}
+\index{insert@{insert}!cache\_@{cache\_}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \label{structcache___a002afe5b9b85ef573ff55a88fad7dd10} 
+void(\texorpdfstring{$\ast$}{*} cache\+\_\+\+::insert) (struct \mbox{\hyperlink{structcache__}{cache\+\_\+}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)}
+
+
+
+Insert a DNS message into the cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & The cache where the message will be inserted. \\
+\hline
+{\em msg} & The DNS message to be inserted. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structcache___a629f39668da19783770991b3c32144d7}\index{cache\_@{cache\_}!query@{query}}
+\index{query@{query}!cache\_@{cache\_}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily \label{structcache___a629f39668da19783770991b3c32144d7} 
+\mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} cache\+\_\+\+::query) (struct \mbox{\hyperlink{structcache__}{cache\+\_\+}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}, const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}que)}
+
+
+
+Query the cache for a DNS question. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & The cache to query. \\
+\hline
+{\em que} & The DNS question. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value found in the cache or NULL if not found. 
+\end{DoxyReturn}
+\Hypertarget{structcache___a7bfb881e7c4f491fbab1fe4ff2c2257a}\index{cache\_@{cache\_}!size@{size}}
+\index{size@{size}!cache\_@{cache\_}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{structcache___a7bfb881e7c4f491fbab1fe4ff2c2257a} 
+int cache\+\_\+\+::size}
+
+
+
+LRU size. 
+
+\Hypertarget{structcache___a66c801ed47c1ce6277f74f8303f1877d}\index{cache\_@{cache\_}!tail@{tail}}
+\index{tail@{tail}!cache\_@{cache\_}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily \label{structcache___a66c801ed47c1ce6277f74f8303f1877d} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}}\texorpdfstring{$\ast$}{*} cache\+\_\+\+::tail}
+
+
+
+LRU tail node. 
+
+\Hypertarget{structcache___aa4098344fb51798827908b28800c03ae}\index{cache\_@{cache\_}!tree@{tree}}
+\index{tree@{tree}!cache\_@{cache\_}}
+\doxysubsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily \label{structcache___aa4098344fb51798827908b28800c03ae} 
+\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}}\texorpdfstring{$\ast$}{*} cache\+\_\+\+::tree}
+
+
+
+Red–black tree. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{cache_8h}{cache.\+h}}\end{DoxyCompactItemize}

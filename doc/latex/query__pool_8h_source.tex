@@ -1,0 +1,46 @@
+\doxysection{query\+\_\+pool.\+h}
+\hypertarget{query__pool_8h_source}{}\label{query__pool_8h_source}\index{include/query\_pool.h@{include/query\_pool.h}}
+\mbox{\hyperlink{query__pool_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DNSR\_QUERY\_POOL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DNSR\_QUERY\_POOL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <uv.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dns_8h}{dns.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{index__pool_8h}{index\_pool.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cache_8h}{cache.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ QUERY\_POOL\_MAX\_SIZE\ 256}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__query}{dns\_query}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__query_aed8d19f4123f4da71303ea766e5db61f}{id}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__query_a612d7b86ff1a2599fb7b8b87c9aee2c3}{prev\_id}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }sockaddr\ \mbox{\hyperlink{structdns__query_a2881d0b7a98b9dc69a3827dac7bf7cd1}{addr}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structdns__msg}{Dns\_Msg}}\ *\ \mbox{\hyperlink{structdns__query_a2f25acc11e8bf511ce3efc20b80b49ef}{msg}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ uv\_timer\_t\ \mbox{\hyperlink{structdns__query_aba2f09dd768cc21fdf1b089cdb004789}{timer}};\ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36}{Dns\_Query}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structquery__pool}{query\_pool}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structdns__query}{Dns\_Query}}\ *\ \mbox{\hyperlink{structquery__pool_a7f9f953747a71094cb8d56e4a034e2af}{pool}}[\mbox{\hyperlink{query__pool_8h_ac92c63ca2d642f94c4ce70367b172f0b}{QUERY\_POOL\_MAX\_SIZE}}];\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structquery__pool_a3bb533ff216fb17d67d1cf6571176750}{count}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structqueue}{Queue}}\ *\ \mbox{\hyperlink{structquery__pool_a2a4264b4238f5a6e65cb0eceadb97736}{queue}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structindex__pool}{Index\_Pool}}\ *\ \mbox{\hyperlink{structquery__pool_a69aa7a98cbcba537a4e41aa96ddca5a4}{ipool}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ uv\_loop\_t\ *\ \mbox{\hyperlink{structquery__pool_a978d7fe82bc7edb1089fc5642062fd66}{loop}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structcache__}{Cache}}\ *\ \mbox{\hyperlink{structquery__pool_aef1a374ebd2f9080b03bb20c618565d7}{cache}};\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ bool\ (*\ \mbox{\hyperlink{structquery__pool_a5a713b0ec1429d9c019ddfff562ecdea}{full}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structquery__pool}{query\_pool}}\ *\ \mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00047\ \ \ \ \ void\ (*\ \mbox{\hyperlink{structquery__pool_a6302249a25719dc18f725c4b19555da8}{insert}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structquery__pool}{query\_pool}}\ *\ \mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}},\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct\ }sockaddr\ *\ addr,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structdns__msg}{Dns\_Msg}}\ *\ msg);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ void\ (*\ \mbox{\hyperlink{structquery__pool_a2779e835edd34265fa9d0cf89ae7465a}{finish}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structquery__pool}{query\_pool}}\ *\ \mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structdns__msg}{Dns\_Msg}}\ *\ msg);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ void\ (*\ \textcolor{keyword}{delete})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structquery__pool}{query\_pool}}\ *\ \mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}},\ uint16\_t\ id);}
+\DoxyCodeLine{00065\ \}\ \mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\_Pool}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{structquery__pool}{Query\_Pool}}\ *\mbox{\hyperlink{query__pool_8h_a56b4eafae4e30f85d101675ef2aaeead}{new\_qpool}}(uv\_loop\_t\ *\ \mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}},\ \mbox{\hyperlink{structcache__}{Cache}}\ *\ \mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DNSR\_QUERY\_POOL\_H}}
+
+\end{DoxyCode}

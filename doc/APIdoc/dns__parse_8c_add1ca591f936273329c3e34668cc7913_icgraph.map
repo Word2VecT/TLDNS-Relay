@@ -1,0 +1,22 @@
+<map id="string_to_rrname" name="string_to_rrname">
+<area shape="rect" id="Node000001" title="Read a NAME field from a byte stream." alt="" coords="688,31,806,56"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="775,18,766,12,747,9,730,11,721,16,719,21,723,29,719,32,713,22,717,12,728,6,747,4,768,7,778,13"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a05e0c813cb5f66334e4e27b7bd571698" title="Read a Question Section from a byte stream." alt="" coords="520,5,640,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="672,35,640,30,641,25,673,30"/>
+<area shape="rect" id="Node000009" href="$dns__parse_8c.html#a1cfb0c409e3ec519e218b7f8a709f8bd" title="Read a Resource Record from a byte stream." alt="" coords="526,55,634,80"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="673,57,634,62,633,57,672,52"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a0f89102e256c499ffa19784791cb68f6" title="Convert a byte stream to a DNS message structure." alt="" coords="347,31,472,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="505,32,473,37,472,32,504,27"/>
+<area shape="rect" id="Node000004" href="$dns__client_8c.html#a3f5c9971834e8a6c273a8584c42c46a3" title="Callback function for receiving response messages from the remote server." alt="" coords="232,5,299,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="332,32,299,27,300,21,333,27"/>
+<area shape="rect" id="Node000007" href="$dns__server_8c.html#a3f5c9971834e8a6c273a8584c42c46a3" title="Callback function for receiving query messages from local clients." alt="" coords="232,55,299,80"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="333,59,300,65,299,59,332,54"/>
+<area shape="rect" id="Node000005" href="$dns__client_8c.html#a4976b0d7477e15d42c27429fe3138598" title="Initialize the DNS client." alt="" coords="105,5,182,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="217,21,182,21,182,16,217,16"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="90,33,56,41,55,35,89,28"/>
+<area shape="rect" id="Node000008" href="$dns__server_8c.html#a79a2c087d5c414b08de43d6344a1950a" title="Initialize the DNS server." alt="" coords="103,55,184,80"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="217,70,185,70,185,65,217,65"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="87,58,54,51,55,46,88,53"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="511,60,472,55,472,50,511,55"/>
+</map>

@@ -1,0 +1,66 @@
+\doxysection{dns\+\_\+question Struct Reference}
+\hypertarget{structdns__question}{}\label{structdns__question}\index{dns\_question@{dns\_question}}
+
+
+Question Section structure of DNS message, represented as a linked list.  
+
+
+
+
+{\ttfamily \#include $<$dns.\+h$>$}
+
+
+
+Collaboration diagram for dns\+\_\+question\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{structdns__question__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__question_af73ac9b5a07466a461dd4cd3013db9a6}{qname}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__question_a28612cf31ea9061817c7652d97f68f10}{qtype}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__question_afe96f7c0e33a7f83e289140633217017}{qclass}}
+\item 
+struct \mbox{\hyperlink{structdns__question}{dns\+\_\+question}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__question_a56bb43b72d4dcb451e7348fc8d9b8448}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Question Section structure of DNS message, represented as a linked list. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structdns__question_a56bb43b72d4dcb451e7348fc8d9b8448}\index{dns\_question@{dns\_question}!next@{next}}
+\index{next@{next}!dns\_question@{dns\_question}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{structdns__question_a56bb43b72d4dcb451e7348fc8d9b8448} 
+struct \mbox{\hyperlink{structdns__question}{dns\+\_\+question}}\texorpdfstring{$\ast$}{*} dns\+\_\+question\+::next}
+
+\Hypertarget{structdns__question_afe96f7c0e33a7f83e289140633217017}\index{dns\_question@{dns\_question}!qclass@{qclass}}
+\index{qclass@{qclass}!dns\_question@{dns\_question}}
+\doxysubsubsection{\texorpdfstring{qclass}{qclass}}
+{\footnotesize\ttfamily \label{structdns__question_afe96f7c0e33a7f83e289140633217017} 
+uint16\+\_\+t dns\+\_\+question\+::qclass}
+
+\Hypertarget{structdns__question_af73ac9b5a07466a461dd4cd3013db9a6}\index{dns\_question@{dns\_question}!qname@{qname}}
+\index{qname@{qname}!dns\_question@{dns\_question}}
+\doxysubsubsection{\texorpdfstring{qname}{qname}}
+{\footnotesize\ttfamily \label{structdns__question_af73ac9b5a07466a461dd4cd3013db9a6} 
+uint8\+\_\+t\texorpdfstring{$\ast$}{*} dns\+\_\+question\+::qname}
+
+\Hypertarget{structdns__question_a28612cf31ea9061817c7652d97f68f10}\index{dns\_question@{dns\_question}!qtype@{qtype}}
+\index{qtype@{qtype}!dns\_question@{dns\_question}}
+\doxysubsubsection{\texorpdfstring{qtype}{qtype}}
+{\footnotesize\ttfamily \label{structdns__question_a28612cf31ea9061817c7652d97f68f10} 
+uint16\+\_\+t dns\+\_\+question\+::qtype}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{dns_8h}{dns.\+h}}\end{DoxyCompactItemize}

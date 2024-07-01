@@ -1,0 +1,20 @@
+<map id="rbtree_delete" name="rbtree_delete">
+<area shape="rect" id="Node000001" title="Delete a node from the red&#45;black tree." alt="" coords="5,104,102,130"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#ac734d64a69533759abbc046c6266e951" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="156,55,248,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,101,146,83,148,88,95,106"/>
+<area shape="rect" id="Node000007" href="$linklist__rbtree_8c.html#a05ef0ed79d24a2628b928224a4139c3b" title="Destroy a node in the red&#45;black tree." alt="" coords="152,104,252,130"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="102,114,137,114,137,120,102,120"/>
+<area shape="rect" id="Node000008" href="$linklist__rbtree_8c.html#aa763522130715b07d70cdbcff94c1d2e" title="Get the smallest child node in a subtree." alt="" coords="150,177,254,203"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="83,128,162,168,159,172,80,133"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="177,55,172,46,175,37,185,30,202,28,220,31,229,37,226,42,218,36,202,33,187,35,179,40,178,46,182,53"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#ab62e652e4fc283a274b30e1f1f08c211" title="Rotate a node to the left." alt="" coords="306,5,385,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="241,52,291,34,292,39,242,57"/>
+<area shape="rect" id="Node000005" href="$linklist__rbtree_8c.html#aef6fab1149a4f11067237f95c7bdb41f" title="Rotate a node to the right." alt="" coords="302,55,388,80"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="248,65,287,65,287,70,248,70"/>
+<area shape="rect" id="Node000006" href="$linklist__rbtree_8c.html#afcb59301147f1364f3eaf43fe11430fa" title="Get the sibling of a node." alt="" coords="316,104,374,130"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="242,78,302,99,300,104,241,83"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#ad1b052785e6b7bcc62cba39a7402a1b6" title="Get the grandparent of a node." alt="" coords="436,31,526,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="386,23,421,30,420,35,385,28"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="388,57,420,51,421,57,389,63"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="177,178,172,169,175,159,185,153,202,151,220,153,229,160,226,164,218,158,202,156,187,158,179,162,178,168,182,176"/>
+</map>

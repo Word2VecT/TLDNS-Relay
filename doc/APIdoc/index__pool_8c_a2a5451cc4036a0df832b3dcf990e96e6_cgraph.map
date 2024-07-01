@@ -1,0 +1,21 @@
+<map id="new_ipool" name="new_ipool">
+<area shape="rect" id="Node000001" title="Create a new index pool." alt="" coords="5,129,85,155"/>
+<area shape="rect" id="Node000002" href="$index__pool_8c.html#a6e54238119ca2e613f1a4e164bccf835" title="Delete an index from the pool." alt="" coords="137,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,127,85,86,131,40,135,37,138,41,134,44,89,89,57,130"/>
+<area shape="rect" id="Node000003" href="$index__pool_8c.html#a93abf5419ea71a6b050003b38ffb7ef3" title="Destroy the index pool." alt="" coords="133,55,231,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="67,127,131,89,138,85,141,90,134,94,69,131"/>
+<area shape="rect" id="Node000004" href="$index__pool_8c.html#a8f4fe4d0639c462591edd3247a3ade7c" title="Check if the index pool is full." alt="" coords="146,104,218,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="85,132,130,124,131,129,86,137"/>
+<area shape="rect" id="Node000005" href="$index__pool_8c.html#afa69a2380bfa539177eb075d2f2564e5" title="Insert an index into the pool." alt="" coords="138,153,226,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="86,146,123,153,122,158,85,152"/>
+<area shape="rect" id="Node000006" href="$index__pool_8c.html#aee0d0705b3aaf7312a3fc36875289264" title="Query if an index exists in the pool." alt="" coords="138,203,226,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="70,153,134,189,141,193,138,198,131,194,68,158"/>
+<area shape="rect" id="Node000007" href="$queue_8c.html#ac456192d36cbce97dc2b2c1356ab31f2" title="Create a new queue." alt="" coords="138,252,226,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="57,154,89,194,134,239,138,242,135,246,131,243,85,198,53,157"/>
+<area shape="rect" id="Node000008" href="$queue_8c.html#a8c760f06145555b0d570887ec34bf203" title="Destroy the queue." alt="" coords="279,203,385,228"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="223,249,275,231,277,236,224,254"/>
+<area shape="rect" id="Node000009" href="$queue_8c.html#a3a869f22498176901c490b54847df661" title="Pop a number from the queue." alt="" coords="290,252,374,278"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="226,262,275,262,275,268,226,268"/>
+<area shape="rect" id="Node000010" href="$queue_8c.html#a5ffeb87322621208687bcc72cedd36e8" title="Push a number onto the queue." alt="" coords="287,301,378,327"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="224,276,277,293,275,298,223,281"/>
+</map>

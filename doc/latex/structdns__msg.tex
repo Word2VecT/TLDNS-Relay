@@ -1,0 +1,70 @@
+\doxysection{dns\+\_\+msg Struct Reference}
+\hypertarget{structdns__msg}{}\label{structdns__msg}\index{dns\_msg@{dns\_msg}}
+
+
+DNS message structure.  
+
+
+
+
+{\ttfamily \#include $<$dns.\+h$>$}
+
+
+
+Collaboration diagram for dns\+\_\+msg\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdns__msg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__msg_a34e16e3ddbac4c6bd5edc3ccb4289cf4}{header}}
+\begin{DoxyCompactList}\small\item\em Pointer to the Header Section. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__msg_a62b7956d4a122cf1b4e60031b0daaf8e}{que}}
+\begin{DoxyCompactList}\small\item\em Pointer to the head node of the Question Section linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__msg_a42dbe141ba7d92ec481c209ce55a50b9}{rr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the head node of the Resource Record linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DNS message structure. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structdns__msg_a34e16e3ddbac4c6bd5edc3ccb4289cf4}\index{dns\_msg@{dns\_msg}!header@{header}}
+\index{header@{header}!dns\_msg@{dns\_msg}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily \label{structdns__msg_a34e16e3ddbac4c6bd5edc3ccb4289cf4} 
+\mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}}\texorpdfstring{$\ast$}{*} dns\+\_\+msg\+::header}
+
+
+
+Pointer to the Header Section. 
+
+\Hypertarget{structdns__msg_a62b7956d4a122cf1b4e60031b0daaf8e}\index{dns\_msg@{dns\_msg}!que@{que}}
+\index{que@{que}!dns\_msg@{dns\_msg}}
+\doxysubsubsection{\texorpdfstring{que}{que}}
+{\footnotesize\ttfamily \label{structdns__msg_a62b7956d4a122cf1b4e60031b0daaf8e} 
+\mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}}\texorpdfstring{$\ast$}{*} dns\+\_\+msg\+::que}
+
+
+
+Pointer to the head node of the Question Section linked list. 
+
+\Hypertarget{structdns__msg_a42dbe141ba7d92ec481c209ce55a50b9}\index{dns\_msg@{dns\_msg}!rr@{rr}}
+\index{rr@{rr}!dns\_msg@{dns\_msg}}
+\doxysubsubsection{\texorpdfstring{rr}{rr}}
+{\footnotesize\ttfamily \label{structdns__msg_a42dbe141ba7d92ec481c209ce55a50b9} 
+\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}}\texorpdfstring{$\ast$}{*} dns\+\_\+msg\+::rr}
+
+
+
+Pointer to the head node of the Resource Record linked list. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{dns_8h}{dns.\+h}}\end{DoxyCompactItemize}

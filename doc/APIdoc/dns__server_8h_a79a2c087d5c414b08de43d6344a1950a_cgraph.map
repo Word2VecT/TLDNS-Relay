@@ -1,0 +1,52 @@
+<map id="init_server" name="init_server">
+<area shape="rect" id="Node000001" title="Initialize the DNS server." alt="" coords="5,105,87,131"/>
+<area shape="rect" id="Node000002" href="$dns__server_8c.html#a55af4a4772ee42f239e2befc7b1190c7" title="Allocate space for the buffer." alt="" coords="135,80,223,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,108,119,101,120,107,88,113"/>
+<area shape="rect" id="Node000003" href="$dns__server_8c.html#a3f5c9971834e8a6c273a8584c42c46a3" title="Callback function for receiving query messages from local clients." alt="" coords="145,129,213,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,123,130,131,129,136,87,128"/>
+<area shape="rect" id="Node000004" href="$dns__parse_8c.html#a014b4d840d6c7d7242d7b26ccd32bda8" title="Release memory allocated for a DNS message." alt="" coords="280,31,397,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="203,126,222,116,304,63,307,67,224,120,206,131"/>
+<area shape="rect" id="Node000006" href="$dns__print_8c.html#a33a39397e0f2e1a98b86b6d85321ee79" title="Print the entire DNS message." alt="" coords="271,104,405,130"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="213,134,255,127,256,133,213,139"/>
+<area shape="rect" id="Node000015" href="$dns__print_8c.html#aa26d00d719a693f6d7e0789bee44f22c" title="Print DNS message byte stream." alt="" coords="282,153,395,179"/>
+<area shape="poly" id="edge16_Node000003_Node000015" title=" " alt="" coords="213,145,267,153,266,158,213,150"/>
+<area shape="rect" id="Node000016" href="$dns__parse_8c.html#a0f89102e256c499ffa19784791cb68f6" title="Convert a byte stream to a DNS message structure." alt="" coords="276,303,400,328"/>
+<area shape="poly" id="edge17_Node000003_Node000016" title=" " alt="" coords="194,153,317,289,313,293,190,157"/>
+<area shape="rect" id="Node000005" href="$dns__parse_8c.html#a70f17de617dc9a8a1a87e966b35bf273" title="Release memory allocated for a Resource Record." alt="" coords="468,5,569,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="397,33,453,25,454,30,398,38"/>
+<area shape="rect" id="Node000007" href="$dns__print_8c.html#ac6e3eb285185ea15710afc5bd43296e9" title="Print the Header Section." alt="" coords="458,55,579,80"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="387,101,453,82,455,88,389,106"/>
+<area shape="rect" id="Node000008" href="$dns__print_8c.html#a81671f953008d8cae7d6401e26a2c529" title="Print the Question Section." alt="" coords="453,104,584,130"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="406,114,437,114,437,120,406,120"/>
+<area shape="rect" id="Node000009" href="$dns__print_8c.html#a27420aa71c1505035590b710e06778ad" title="Print the Resource Record." alt="" coords="474,153,563,179"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="389,128,460,147,458,153,387,133"/>
+<area shape="rect" id="Node000010" href="$dns__print_8c.html#ac21f9aaff6cb58fc94996ab28134dd4e" title="Print the rdata field of an A type RR." alt="" coords="657,28,734,54"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="562,152,582,140,598,122,605,103,613,83,630,63,641,55,644,60,633,67,618,86,610,105,602,124,585,144,565,156"/>
+<area shape="rect" id="Node000011" href="$dns__print_8c.html#a1762e54b4c8f5b77fd05f11a587c668e" title="Print the rdata field of an AAAA type RR." alt="" coords="643,77,748,103"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="556,150,583,140,653,108,655,113,585,145,558,155"/>
+<area shape="rect" id="Node000012" href="$dns__print_8c.html#a51cb3312021d99b0f9d1f3f680750baf" title="Print the rdata field of a CNAME type RR." alt="" coords="807,179,924,204"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="564,160,654,158,759,164,804,172,803,177,759,169,654,163,564,166"/>
+<area shape="rect" id="Node000013" href="$dns__print_8c.html#a7d2f7aadf05efe5e1736eeae47b4f9b7" title="Print the rdata field of an MX type RR." alt="" coords="651,179,740,204"/>
+<area shape="poly" id="edge12_Node000009_Node000013" title=" " alt="" coords="564,170,636,180,635,186,563,175"/>
+<area shape="rect" id="Node000014" href="$dns__print_8c.html#a5bc6e539fe23203d4a35b5ecba60fe7c" title="Print the rdata field of an SOA type RR." alt="" coords="647,228,744,254"/>
+<area shape="poly" id="edge14_Node000009_Node000014" title=" " alt="" coords="549,177,633,214,645,219,643,224,631,219,547,182"/>
+<area shape="poly" id="edge13_Node000013_Node000012" title=" " alt="" coords="740,189,792,189,792,194,740,194"/>
+<area shape="poly" id="edge15_Node000014_Node000012" title=" " alt="" coords="742,225,803,207,805,212,743,230"/>
+<area shape="rect" id="Node000017" href="$dns__parse_8c.html#aba15da5b80dcab3ce985bc3f2270d84b" title="Read a Header Section from a byte stream." alt="" coords="632,277,759,303"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="401,308,616,293,616,298,401,314"/>
+<area shape="rect" id="Node000019" href="$dns__parse_8c.html#a05e0c813cb5f66334e4e27b7bd571698" title="Read a Question Section from a byte stream." alt="" coords="458,328,579,354"/>
+<area shape="poly" id="edge20_Node000016_Node000019" title=" " alt="" coords="401,322,443,328,442,333,400,327"/>
+<area shape="rect" id="Node000021" href="$dns__parse_8c.html#a1cfb0c409e3ec519e218b7f8a709f8bd" title="Read a Resource Record from a byte stream." alt="" coords="465,428,572,454"/>
+<area shape="poly" id="edge25_Node000016_Node000021" title=" " alt="" coords="360,327,487,417,484,421,357,331"/>
+<area shape="rect" id="Node000018" href="$dns__parse_8c.html#a26eb64cb4cd82b2070e8fe7f000ff6ae" title="Read a 16&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="822,365,910,391"/>
+<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="724,301,760,320,828,355,825,360,758,325,722,306"/>
+<area shape="poly" id="edge21_Node000019_Node000018" title=" " alt="" coords="580,344,759,364,807,369,806,374,759,369,579,350"/>
+<area shape="rect" id="Node000020" href="$dns__parse_8c.html#add1ca591f936273329c3e34668cc7913" title="Read a NAME field from a byte stream." alt="" coords="636,403,755,428"/>
+<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="552,352,650,394,648,399,550,357"/>
+<area shape="poly" id="edge23_Node000020_Node000018" title=" " alt="" coords="754,400,806,388,807,394,755,405"/>
+<area shape="poly" id="edge24_Node000020_Node000020" title=" " alt="" coords="666,404,661,394,664,384,676,378,695,376,716,379,727,385,724,390,714,384,695,381,678,383,668,388,666,393,671,401"/>
+<area shape="poly" id="edge26_Node000021_Node000018" title=" " alt="" coords="573,446,661,451,710,447,758,438,799,421,835,398,838,403,802,426,760,443,711,453,661,456,573,451"/>
+<area shape="poly" id="edge28_Node000021_Node000020" title=" " alt="" coords="572,431,621,423,622,429,573,436"/>
+<area shape="rect" id="Node000022" href="$dns__parse_8c.html#a8bc6db15347c892e31a6e9162b25fc8b" title="Read a 32&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="651,504,740,530"/>
+<area shape="poly" id="edge27_Node000021_Node000022" title=" " alt="" coords="552,452,651,495,649,500,550,457"/>
+</map>

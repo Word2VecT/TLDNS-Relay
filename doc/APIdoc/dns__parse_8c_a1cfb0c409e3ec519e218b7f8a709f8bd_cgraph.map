@@ -1,0 +1,11 @@
+<map id="string_to_dnsrr" name="string_to_dnsrr">
+<area shape="rect" id="Node000001" title="Read a Resource Record from a byte stream." alt="" coords="5,25,113,50"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a26eb64cb4cd82b2070e8fe7f000ff6ae" title="Read a 16&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="327,37,415,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,21,160,9,220,3,280,9,332,27,330,32,278,15,220,8,161,15,104,27"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a8bc6db15347c892e31a6e9162b25fc8b" title="Read a 32&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="176,25,264,50"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,35,160,35,160,40,113,40"/>
+<area shape="rect" id="Node000004" href="$dns__parse_8c.html#add1ca591f936273329c3e34668cc7913" title="Read a NAME field from a byte stream." alt="" coords="161,98,279,124"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="90,48,177,89,175,93,88,53"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="253,95,322,66,324,71,255,100"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="194,99,189,89,192,80,203,73,220,71,238,74,248,80,245,85,236,79,220,77,204,78,196,83,194,89,198,96"/>
+</map>

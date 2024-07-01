@@ -1,0 +1,114 @@
+\doxysection{include/query\+\_\+pool.h File Reference}
+\hypertarget{query__pool_8h}{}\label{query__pool_8h}\index{include/query\_pool.h@{include/query\_pool.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+{\ttfamily \#include "{}dns.\+h"{}}\newline
+{\ttfamily \#include "{}index\+\_\+pool.\+h"{}}\newline
+{\ttfamily \#include "{}cache.\+h"{}}\newline
+Include dependency graph for query\+\_\+pool.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdns__query}{dns\+\_\+query}}
+\begin{DoxyCompactList}\small\item\em DNS query structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}}
+\begin{DoxyCompactList}\small\item\em DNS query pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{query__pool_8h_ac92c63ca2d642f94c4ce70367b172f0b}{QUERY\+\_\+\+POOL\+\_\+\+MAX\+\_\+\+SIZE}}~256
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdns__query}{dns\+\_\+query}} \mbox{\hyperlink{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36}{Dns\+\_\+\+Query}}
+\begin{DoxyCompactList}\small\item\em DNS query structure. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}}
+\begin{DoxyCompactList}\small\item\em DNS query pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{query__pool_8h_a56b4eafae4e30f85d101675ef2aaeead}{new\+\_\+qpool}} (uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}}, \mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}})
+\begin{DoxyCompactList}\small\item\em Create a new query pool This function initializes a new query pool and returns a pointer to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{query__pool_8h_ac92c63ca2d642f94c4ce70367b172f0b}\index{query\_pool.h@{query\_pool.h}!QUERY\_POOL\_MAX\_SIZE@{QUERY\_POOL\_MAX\_SIZE}}
+\index{QUERY\_POOL\_MAX\_SIZE@{QUERY\_POOL\_MAX\_SIZE}!query\_pool.h@{query\_pool.h}}
+\doxysubsubsection{\texorpdfstring{QUERY\_POOL\_MAX\_SIZE}{QUERY\_POOL\_MAX\_SIZE}}
+{\footnotesize\ttfamily \label{query__pool_8h_ac92c63ca2d642f94c4ce70367b172f0b} 
+\#define QUERY\+\_\+\+POOL\+\_\+\+MAX\+\_\+\+SIZE~256}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36}\index{query\_pool.h@{query\_pool.h}!Dns\_Query@{Dns\_Query}}
+\index{Dns\_Query@{Dns\_Query}!query\_pool.h@{query\_pool.h}}
+\doxysubsubsection{\texorpdfstring{Dns\_Query}{Dns\_Query}}
+{\footnotesize\ttfamily \label{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36} 
+typedef struct \mbox{\hyperlink{structdns__query}{dns\+\_\+query}} \mbox{\hyperlink{query__pool_8h_ad1d0c498b52e34a79840d0a07ba5db36}{Dns\+\_\+\+Query}}}
+
+
+
+DNS query structure. 
+
+\Hypertarget{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}\index{query\_pool.h@{query\_pool.h}!Query\_Pool@{Query\_Pool}}
+\index{Query\_Pool@{Query\_Pool}!query\_pool.h@{query\_pool.h}}
+\doxysubsubsection{\texorpdfstring{Query\_Pool}{Query\_Pool}}
+{\footnotesize\ttfamily \label{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae} 
+typedef struct \mbox{\hyperlink{structquery__pool}{query\+\_\+pool}} \mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}}}
+
+
+
+DNS query pool. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{query__pool_8h_a56b4eafae4e30f85d101675ef2aaeead}\index{query\_pool.h@{query\_pool.h}!new\_qpool@{new\_qpool}}
+\index{new\_qpool@{new\_qpool}!query\_pool.h@{query\_pool.h}}
+\doxysubsubsection{\texorpdfstring{new\_qpool()}{new\_qpool()}}
+{\footnotesize\ttfamily \label{query__pool_8h_a56b4eafae4e30f85d101675ef2aaeead} 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} new\+\_\+qpool (\begin{DoxyParamCaption}\item[{uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}}]{loop}{, }\item[{\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}}]{cache}{}\end{DoxyParamCaption})}
+
+
+
+Create a new query pool This function initializes a new query pool and returns a pointer to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loop} & The libuv event loop \\
+\hline
+{\em cache} & The cache used for storing DNS responses \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created query pool 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8h_a56b4eafae4e30f85d101675ef2aaeead_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{query__pool_8h_a56b4eafae4e30f85d101675ef2aaeead_icgraph}
+\end{center}
+\end{figure}

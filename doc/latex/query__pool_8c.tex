@@ -1,0 +1,238 @@
+\doxysection{src/query\+\_\+pool.c File Reference}
+\hypertarget{query__pool_8c}{}\label{query__pool_8c}\index{src/query\_pool.c@{src/query\_pool.c}}
+{\ttfamily \#include "{}../include/query\+\_\+pool.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+parse.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+client.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+server.\+h"{}}\newline
+Include dependency graph for query\+\_\+pool.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{query__pool_8c_a11c119d460e6f8c5dbb16cd5bdccbc5a}{timeout\+\_\+cb}} (uv\+\_\+timer\+\_\+t \texorpdfstring{$\ast$}{*}timer)
+\begin{DoxyCompactList}\small\item\em Timeout callback function This function is called when a query times out. It stops the timer and deletes the query from the query pool. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{query__pool_8c_a98ed93362bda867f294541c1c24b2840}{qpool\+\_\+full}} (\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}this)
+\begin{DoxyCompactList}\small\item\em Check if the query pool is full. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{query__pool_8c_ae29fc3e8ee2f57c983e01704d4b945ce}{qpool\+\_\+insert}} (\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, const struct sockaddr \texorpdfstring{$\ast$}{*}addr, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Insert a new query into the query pool This function creates a new query and inserts it into the query pool. If the query is found in the cache, it is immediately processed and sent to the local client. Otherwise, it is sent to the remote DNS server and a timeout timer is started. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{query__pool_8c_a6285828da50c58660b6e523ecf3668b5}{qpool\+\_\+query}} (\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Check if a query exists in the query pool. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{query__pool_8c_ac14d02ff69a3027ad45c2357e6843c76}{qpool\+\_\+finish}} (\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Finish processing a query This function is called when a response is received for a query. It processes the response, updates the cache if necessary, and sends the response to the local client. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{query__pool_8c_afe80fdfc4dbed6be1af52c4d86f41815}{qpool\+\_\+delete}} (\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Delete a query from the query pool This function deletes a query from the query pool and frees the associated resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{query__pool_8c_a56b4eafae4e30f85d101675ef2aaeead}{new\+\_\+qpool}} (uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}}, \mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}})
+\begin{DoxyCompactList}\small\item\em Create a new query pool This function initializes a new query pool and returns a pointer to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{query__pool_8c_a56b4eafae4e30f85d101675ef2aaeead}\index{query\_pool.c@{query\_pool.c}!new\_qpool@{new\_qpool}}
+\index{new\_qpool@{new\_qpool}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{new\_qpool()}{new\_qpool()}}
+{\footnotesize\ttfamily \label{query__pool_8c_a56b4eafae4e30f85d101675ef2aaeead} 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} new\+\_\+qpool (\begin{DoxyParamCaption}\item[{uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}}]{loop}{, }\item[{\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}}]{cache}{}\end{DoxyParamCaption})}
+
+
+
+Create a new query pool This function initializes a new query pool and returns a pointer to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loop} & The libuv event loop \\
+\hline
+{\em cache} & The cache used for storing DNS responses \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created query pool 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c_a56b4eafae4e30f85d101675ef2aaeead_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{query__pool_8c_a56b4eafae4e30f85d101675ef2aaeead_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{query__pool_8c_afe80fdfc4dbed6be1af52c4d86f41815}\index{query\_pool.c@{query\_pool.c}!qpool\_delete@{qpool\_delete}}
+\index{qpool\_delete@{qpool\_delete}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{qpool\_delete()}{qpool\_delete()}}
+{\footnotesize\ttfamily \label{query__pool_8c_afe80fdfc4dbed6be1af52c4d86f41815} 
+static void qpool\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{qpool}{, }\item[{uint16\+\_\+t}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete a query from the query pool This function deletes a query from the query pool and frees the associated resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em id} & The ID of the query to be deleted \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c_afe80fdfc4dbed6be1af52c4d86f41815_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{query__pool_8c_afe80fdfc4dbed6be1af52c4d86f41815_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{query__pool_8c_ac14d02ff69a3027ad45c2357e6843c76}\index{query\_pool.c@{query\_pool.c}!qpool\_finish@{qpool\_finish}}
+\index{qpool\_finish@{qpool\_finish}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{qpool\_finish()}{qpool\_finish()}}
+{\footnotesize\ttfamily \label{query__pool_8c_ac14d02ff69a3027ad45c2357e6843c76} 
+static void qpool\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{qpool}{, }\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finish processing a query This function is called when a response is received for a query. It processes the response, updates the cache if necessary, and sends the response to the local client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em msg} & The DNS message containing the response \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c_ac14d02ff69a3027ad45c2357e6843c76_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{query__pool_8c_ac14d02ff69a3027ad45c2357e6843c76_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{query__pool_8c_a98ed93362bda867f294541c1c24b2840}\index{query\_pool.c@{query\_pool.c}!qpool\_full@{qpool\_full}}
+\index{qpool\_full@{qpool\_full}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{qpool\_full()}{qpool\_full()}}
+{\footnotesize\ttfamily \label{query__pool_8c_a98ed93362bda867f294541c1c24b2840} 
+static bool qpool\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{this}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if the query pool is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em this} & The query pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the query pool is full, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{query__pool_8c_a98ed93362bda867f294541c1c24b2840_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{query__pool_8c_ae29fc3e8ee2f57c983e01704d4b945ce}\index{query\_pool.c@{query\_pool.c}!qpool\_insert@{qpool\_insert}}
+\index{qpool\_insert@{qpool\_insert}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{qpool\_insert()}{qpool\_insert()}}
+{\footnotesize\ttfamily \label{query__pool_8c_ae29fc3e8ee2f57c983e01704d4b945ce} 
+static void qpool\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{qpool}{, }\item[{const struct sockaddr \texorpdfstring{$\ast$}{*}}]{addr}{, }\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert a new query into the query pool This function creates a new query and inserts it into the query pool. If the query is found in the cache, it is immediately processed and sent to the local client. Otherwise, it is sent to the remote DNS server and a timeout timer is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em addr} & The address of the client \\
+\hline
+{\em msg} & The DNS message containing the query \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c_ae29fc3e8ee2f57c983e01704d4b945ce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{query__pool_8c_ae29fc3e8ee2f57c983e01704d4b945ce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{query__pool_8c_a6285828da50c58660b6e523ecf3668b5}\index{query\_pool.c@{query\_pool.c}!qpool\_query@{qpool\_query}}
+\index{qpool\_query@{qpool\_query}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{qpool\_query()}{qpool\_query()}}
+{\footnotesize\ttfamily \label{query__pool_8c_a6285828da50c58660b6e523ecf3668b5} 
+static bool qpool\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{qpool}{, }\item[{uint16\+\_\+t}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a query exists in the query pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qpool} & The query pool \\
+\hline
+{\em id} & The ID of the query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the query exists in the query pool, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c_a6285828da50c58660b6e523ecf3668b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{query__pool_8c_a11c119d460e6f8c5dbb16cd5bdccbc5a}\index{query\_pool.c@{query\_pool.c}!timeout\_cb@{timeout\_cb}}
+\index{timeout\_cb@{timeout\_cb}!query\_pool.c@{query\_pool.c}}
+\doxysubsubsection{\texorpdfstring{timeout\_cb()}{timeout\_cb()}}
+{\footnotesize\ttfamily \label{query__pool_8c_a11c119d460e6f8c5dbb16cd5bdccbc5a} 
+static void timeout\+\_\+cb (\begin{DoxyParamCaption}\item[{uv\+\_\+timer\+\_\+t \texorpdfstring{$\ast$}{*}}]{timer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Timeout callback function This function is called when a query times out. It stops the timer and deletes the query from the query pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The timer that timed out \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{query__pool_8c_a11c119d460e6f8c5dbb16cd5bdccbc5a_icgraph}
+\end{center}
+\end{figure}

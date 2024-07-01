@@ -1,0 +1,132 @@
+\doxysection{dns\+\_\+rr\+\_\+linklist Struct Reference}
+\hypertarget{structdns__rr__linklist}{}\label{structdns__rr__linklist}\index{dns\_rr\_linklist@{dns\_rr\_linklist}}
+
+
+Linked list of Red-\/\+Black Tree nodes.  
+
+
+
+
+{\ttfamily \#include $<$linklist\+\_\+rbtree.\+h$>$}
+
+
+
+Collaboration diagram for dns\+\_\+rr\+\_\+linklist\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{structdns__rr__linklist__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr__linklist_a4b4166651ac3380d5a07e79b9c0ab309}{value}}
+\begin{DoxyCompactList}\small\item\em Pointer to the value of the current linked list node. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{structdns__rr__linklist_a66d02cb7e807973430bfd886f6f8950f}{expire\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Expiration time. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr__linklist_a5a9a2df278fdc066438864ee9ccd3654}{next}}
+\begin{DoxyCompactList}\small\item\em Pointer to the next node in the linked list. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr__linklist_abae45b0aeaca4038b755730b3e2a4e4c}{insert}} )(struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}list, struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}new\+\_\+list\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Insert a key-\/value pair into the red-\/black tree. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr__linklist_a54d9bd561cb1e3de763a0c8b14b2a386}{delete\+\_\+next}} )(struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Delete the next element in the linked list. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr__linklist_a834a1aee690329e57bb3fdf0b1ba7efd}{query\+\_\+next}} )(struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}list, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}qname, const uint16\+\_\+t qtype)
+\begin{DoxyCompactList}\small\item\em Query the next element in the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Linked list of Red-\/\+Black Tree nodes. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structdns__rr__linklist_a54d9bd561cb1e3de763a0c8b14b2a386}\index{dns\_rr\_linklist@{dns\_rr\_linklist}!delete\_next@{delete\_next}}
+\index{delete\_next@{delete\_next}!dns\_rr\_linklist@{dns\_rr\_linklist}}
+\doxysubsubsection{\texorpdfstring{delete\_next}{delete\_next}}
+{\footnotesize\ttfamily \label{structdns__rr__linklist_a54d9bd561cb1e3de763a0c8b14b2a386} 
+void(\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+\_\+linklist\+::delete\+\_\+next) (struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}list)}
+
+
+
+Delete the next element in the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The linked list \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structdns__rr__linklist_a66d02cb7e807973430bfd886f6f8950f}\index{dns\_rr\_linklist@{dns\_rr\_linklist}!expire\_time@{expire\_time}}
+\index{expire\_time@{expire\_time}!dns\_rr\_linklist@{dns\_rr\_linklist}}
+\doxysubsubsection{\texorpdfstring{expire\_time}{expire\_time}}
+{\footnotesize\ttfamily \label{structdns__rr__linklist_a66d02cb7e807973430bfd886f6f8950f} 
+time\+\_\+t dns\+\_\+rr\+\_\+linklist\+::expire\+\_\+time}
+
+
+
+Expiration time. 
+
+\Hypertarget{structdns__rr__linklist_abae45b0aeaca4038b755730b3e2a4e4c}\index{dns\_rr\_linklist@{dns\_rr\_linklist}!insert@{insert}}
+\index{insert@{insert}!dns\_rr\_linklist@{dns\_rr\_linklist}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \label{structdns__rr__linklist_abae45b0aeaca4038b755730b3e2a4e4c} 
+void(\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+\_\+linklist\+::insert) (struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}list, struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}new\+\_\+list\+\_\+node)}
+
+
+
+Insert a key-\/value pair into the red-\/black tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The red-\/black tree \\
+\hline
+{\em key} & The key \\
+\hline
+{\em list} & The value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structdns__rr__linklist_a5a9a2df278fdc066438864ee9ccd3654}\index{dns\_rr\_linklist@{dns\_rr\_linklist}!next@{next}}
+\index{next@{next}!dns\_rr\_linklist@{dns\_rr\_linklist}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{structdns__rr__linklist_a5a9a2df278fdc066438864ee9ccd3654} 
+struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}}\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+\_\+linklist\+::next}
+
+
+
+Pointer to the next node in the linked list. 
+
+\Hypertarget{structdns__rr__linklist_a834a1aee690329e57bb3fdf0b1ba7efd}\index{dns\_rr\_linklist@{dns\_rr\_linklist}!query\_next@{query\_next}}
+\index{query\_next@{query\_next}!dns\_rr\_linklist@{dns\_rr\_linklist}}
+\doxysubsubsection{\texorpdfstring{query\_next}{query\_next}}
+{\footnotesize\ttfamily \label{structdns__rr__linklist_a834a1aee690329e57bb3fdf0b1ba7efd} 
+struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+\_\+linklist\+::query\+\_\+next) (struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \texorpdfstring{$\ast$}{*}list, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}qname, const uint16\+\_\+t qtype)}
+
+
+
+Query the next element in the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The linked list \\
+\hline
+{\em qname} & The query name \\
+\hline
+{\em qtype} & The query type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The queried element if found, otherwise NULL 
+\end{DoxyReturn}
+\Hypertarget{structdns__rr__linklist_a4b4166651ac3380d5a07e79b9c0ab309}\index{dns\_rr\_linklist@{dns\_rr\_linklist}!value@{value}}
+\index{value@{value}!dns\_rr\_linklist@{dns\_rr\_linklist}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{structdns__rr__linklist_a4b4166651ac3380d5a07e79b9c0ab309} 
+\mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}}\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+\_\+linklist\+::value}
+
+
+
+Pointer to the value of the current linked list node. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{linklist__rbtree_8h}{linklist\+\_\+rbtree.\+h}}\end{DoxyCompactItemize}

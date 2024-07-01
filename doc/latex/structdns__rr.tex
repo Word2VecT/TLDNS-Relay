@@ -1,0 +1,90 @@
+\doxysection{dns\+\_\+rr Struct Reference}
+\hypertarget{structdns__rr}{}\label{structdns__rr}\index{dns\_rr@{dns\_rr}}
+
+
+Resource Record structure of DNS message, represented as a linked list.  
+
+
+
+
+{\ttfamily \#include $<$dns.\+h$>$}
+
+
+
+Collaboration diagram for dns\+\_\+rr\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{structdns__rr__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr_a4f59cff39a47412a95bde44ac4cb3e88}{name}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__rr_aac42b99d198fdb0bf10a77dc64c18359}{type}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__rr_a98c28bbab3b4c8c6e907e81f910a4e57}{class}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structdns__rr_a14b7df2cdf7cb177122b01a33b5a2f5c}{ttl}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__rr_a64fff8a32df24b70eb95108cadb8095c}{rdlength}}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr_a4ec48268ad471be7cd29ee45238a5a3c}{rdata}}
+\item 
+struct \mbox{\hyperlink{structdns__rr}{dns\+\_\+rr}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdns__rr_a970c25983ca11cec0b3e55aa1b7a1949}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resource Record structure of DNS message, represented as a linked list. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structdns__rr_a98c28bbab3b4c8c6e907e81f910a4e57}\index{dns\_rr@{dns\_rr}!class@{class}}
+\index{class@{class}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{class}{class}}
+{\footnotesize\ttfamily \label{structdns__rr_a98c28bbab3b4c8c6e907e81f910a4e57} 
+uint16\+\_\+t dns\+\_\+rr\+::class}
+
+\Hypertarget{structdns__rr_a4f59cff39a47412a95bde44ac4cb3e88}\index{dns\_rr@{dns\_rr}!name@{name}}
+\index{name@{name}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{structdns__rr_a4f59cff39a47412a95bde44ac4cb3e88} 
+uint8\+\_\+t\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+::name}
+
+\Hypertarget{structdns__rr_a970c25983ca11cec0b3e55aa1b7a1949}\index{dns\_rr@{dns\_rr}!next@{next}}
+\index{next@{next}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{structdns__rr_a970c25983ca11cec0b3e55aa1b7a1949} 
+struct \mbox{\hyperlink{structdns__rr}{dns\+\_\+rr}}\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+::next}
+
+\Hypertarget{structdns__rr_a4ec48268ad471be7cd29ee45238a5a3c}\index{dns\_rr@{dns\_rr}!rdata@{rdata}}
+\index{rdata@{rdata}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{rdata}{rdata}}
+{\footnotesize\ttfamily \label{structdns__rr_a4ec48268ad471be7cd29ee45238a5a3c} 
+uint8\+\_\+t\texorpdfstring{$\ast$}{*} dns\+\_\+rr\+::rdata}
+
+\Hypertarget{structdns__rr_a64fff8a32df24b70eb95108cadb8095c}\index{dns\_rr@{dns\_rr}!rdlength@{rdlength}}
+\index{rdlength@{rdlength}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{rdlength}{rdlength}}
+{\footnotesize\ttfamily \label{structdns__rr_a64fff8a32df24b70eb95108cadb8095c} 
+uint16\+\_\+t dns\+\_\+rr\+::rdlength}
+
+\Hypertarget{structdns__rr_a14b7df2cdf7cb177122b01a33b5a2f5c}\index{dns\_rr@{dns\_rr}!ttl@{ttl}}
+\index{ttl@{ttl}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{ttl}{ttl}}
+{\footnotesize\ttfamily \label{structdns__rr_a14b7df2cdf7cb177122b01a33b5a2f5c} 
+uint32\+\_\+t dns\+\_\+rr\+::ttl}
+
+\Hypertarget{structdns__rr_aac42b99d198fdb0bf10a77dc64c18359}\index{dns\_rr@{dns\_rr}!type@{type}}
+\index{type@{type}!dns\_rr@{dns\_rr}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{structdns__rr_aac42b99d198fdb0bf10a77dc64c18359} 
+uint16\+\_\+t dns\+\_\+rr\+::type}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{dns_8h}{dns.\+h}}\end{DoxyCompactItemize}

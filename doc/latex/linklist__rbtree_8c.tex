@@ -1,0 +1,646 @@
+\doxysection{src/linklist\+\_\+rbtree.c File Reference}
+\hypertarget{linklist__rbtree_8c}{}\label{linklist__rbtree_8c}\index{src/linklist\_rbtree.c@{src/linklist\_rbtree.c}}
+{\ttfamily \#include "{}../include/linklist\+\_\+rbtree.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+parse.\+h"{}}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+Include dependency graph for linklist\+\_\+rbtree.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_a41e95176ba82f906d4ecc38a385f66f7}{linklist\+\_\+insert}} (\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}new\+\_\+list\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Insert a new element into the linked list. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_a8e0bfadc9752f04f500905a85c47e74e}{linklist\+\_\+delete\+\_\+next}} (\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Delete the next element in the linked list. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_afec00073759abba4629e2fa2dcaf9d2e}{linklist\+\_\+query\+\_\+next}} (\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}qname, uint16\+\_\+t qtype)
+\begin{DoxyCompactList}\small\item\em Query the next element in the linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_ac1e7b55e2083949b45865ea07af04f9b}{new\+\_\+linklist}} ()
+\begin{DoxyCompactList}\small\item\em Create a new linked list. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_ad1b052785e6b7bcc62cba39a7402a1b6}{grandparent}} (\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Get the grandparent of a node. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_a06530033a166619f9dfac249ac51e285}{uncle}} (\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Get the uncle of a node. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_afcb59301147f1364f3eaf43fe11430fa}{sibling}} (\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Get the sibling of a node. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_aa763522130715b07d70cdbcff94c1d2e}{smallest\+\_\+child}} (\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Get the smallest child node in a subtree. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_aef6fab1149a4f11067237f95c7bdb41f}{rotate\+\_\+right}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Rotate a node to the right. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_ab62e652e4fc283a274b30e1f1f08c211}{rotate\+\_\+left}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Rotate a node to the left. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_a2003ed64d170c0cf2c2b3a9899eb2557}{insert\+\_\+case}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Adjust the shape of the red-\/black tree to keep it balanced. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_a9e27afd2a9929b02687afda68d8a68b5}{node\+\_\+init}} (unsigned int key, \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}fa)
+\begin{DoxyCompactList}\small\item\em Initialize a node and allocate memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linklist__rbtree_8c_ae46c23eec5c1ea21ebab9279843de3a3}{rbtree\+\_\+insert}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, unsigned int key, \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Insert a key-\/value pair into the red-\/black tree. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_a7a4895b028aba0f94b5b640e085c548e}{rbtree\+\_\+find}} (\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node, unsigned int key)
+\begin{DoxyCompactList}\small\item\em Recursively search for a node with a given key starting from a given node. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_a05ef0ed79d24a2628b928224a4139c3b}{destroy\+\_\+node}} (\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Destroy a node in the red-\/black tree. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_ac734d64a69533759abbc046c6266e951}{delete\+\_\+case}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Adjust the shape of the red-\/black tree to keep it balanced. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{linklist__rbtree_8c_a787a8de67855978e27d86ddcc1dfc2fc}{rbtree\+\_\+delete}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}node)
+\begin{DoxyCompactList}\small\item\em Delete a node from the red-\/black tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_aec09451763b49da3023b2742685de07f}{rbtree\+\_\+query}} (\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}tree, unsigned int key)
+\begin{DoxyCompactList}\small\item\em Query the red-\/black tree for a key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_a6223e88c82874af7ec915b7fe8240204}{new\+\_\+rbtree}} ()
+\begin{DoxyCompactList}\small\item\em Initialize a new red-\/black tree This function allocates memory for a new red-\/black tree and its nil node, and sets up the tree\textquotesingle{}s function pointers for insertion and querying. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8c_a5fe1e8858c48757b2b4f8bb4fd315bf8}{NIL}}
+\begin{DoxyCompactList}\small\item\em Leaf node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{linklist__rbtree_8c_ac734d64a69533759abbc046c6266e951}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!delete\_case@{delete\_case}}
+\index{delete\_case@{delete\_case}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{delete\_case()}{delete\_case()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_ac734d64a69533759abbc046c6266e951} 
+static void delete\+\_\+case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adjust the shape of the red-\/black tree to keep it balanced. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The tree that the node belongs to \\
+\hline
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ac734d64a69533759abbc046c6266e951_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ac734d64a69533759abbc046c6266e951_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a05ef0ed79d24a2628b928224a4139c3b}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!destroy\_node@{destroy\_node}}
+\index{destroy\_node@{destroy\_node}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_node()}{destroy\_node()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a05ef0ed79d24a2628b928224a4139c3b} 
+static void destroy\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Destroy a node in the red-\/black tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The linked list of the node is assumed to be empty (i.\+e., only the head node) 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a05ef0ed79d24a2628b928224a4139c3b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_ad1b052785e6b7bcc62cba39a7402a1b6}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!grandparent@{grandparent}}
+\index{grandparent@{grandparent}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{grandparent()}{grandparent()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_ad1b052785e6b7bcc62cba39a7402a1b6} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} grandparent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the grandparent of a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The grandparent node if exists, otherwise NULL 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ad1b052785e6b7bcc62cba39a7402a1b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a2003ed64d170c0cf2c2b3a9899eb2557}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!insert\_case@{insert\_case}}
+\index{insert\_case@{insert\_case}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{insert\_case()}{insert\_case()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a2003ed64d170c0cf2c2b3a9899eb2557} 
+static void insert\+\_\+case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adjust the shape of the red-\/black tree to keep it balanced. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The tree that the node belongs to \\
+\hline
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a2003ed64d170c0cf2c2b3a9899eb2557_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a2003ed64d170c0cf2c2b3a9899eb2557_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a8e0bfadc9752f04f500905a85c47e74e}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!linklist\_delete\_next@{linklist\_delete\_next}}
+\index{linklist\_delete\_next@{linklist\_delete\_next}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{linklist\_delete\_next()}{linklist\_delete\_next()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a8e0bfadc9752f04f500905a85c47e74e} 
+static void linklist\+\_\+delete\+\_\+next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete the next element in the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The linked list \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{linklist__rbtree_8c_a8e0bfadc9752f04f500905a85c47e74e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a8e0bfadc9752f04f500905a85c47e74e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a41e95176ba82f906d4ecc38a385f66f7}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!linklist\_insert@{linklist\_insert}}
+\index{linklist\_insert@{linklist\_insert}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{linklist\_insert()}{linklist\_insert()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a41e95176ba82f906d4ecc38a385f66f7} 
+static void linklist\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}}]{new\+\_\+list\+\_\+node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert a new element into the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The linked list \\
+\hline
+{\em new\+\_\+list\+\_\+node} & The new element to insert \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a41e95176ba82f906d4ecc38a385f66f7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_afec00073759abba4629e2fa2dcaf9d2e}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!linklist\_query\_next@{linklist\_query\_next}}
+\index{linklist\_query\_next@{linklist\_query\_next}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{linklist\_query\_next()}{linklist\_query\_next()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_afec00073759abba4629e2fa2dcaf9d2e} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} linklist\+\_\+query\+\_\+next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{qname}{, }\item[{uint16\+\_\+t}]{qtype}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Query the next element in the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The linked list \\
+\hline
+{\em qname} & The query name \\
+\hline
+{\em qtype} & The query type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The queried element if found, otherwise NULL 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_afec00073759abba4629e2fa2dcaf9d2e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_ac1e7b55e2083949b45865ea07af04f9b}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!new\_linklist@{new\_linklist}}
+\index{new\_linklist@{new\_linklist}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{new\_linklist()}{new\_linklist()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_ac1e7b55e2083949b45865ea07af04f9b} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} new\+\_\+linklist (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a new linked list. 
+
+\begin{DoxyReturn}{Returns}
+The new linked list 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ac1e7b55e2083949b45865ea07af04f9b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ac1e7b55e2083949b45865ea07af04f9b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a6223e88c82874af7ec915b7fe8240204}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!new\_rbtree@{new\_rbtree}}
+\index{new\_rbtree@{new\_rbtree}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{new\_rbtree()}{new\_rbtree()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a6223e88c82874af7ec915b7fe8240204} 
+\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*} new\+\_\+rbtree (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize a new red-\/black tree This function allocates memory for a new red-\/black tree and its nil node, and sets up the tree\textquotesingle{}s function pointers for insertion and querying. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created red-\/black tree 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If memory allocation fails, the function will log a fatal error and terminate the program. 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a6223e88c82874af7ec915b7fe8240204_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{linklist__rbtree_8c_a6223e88c82874af7ec915b7fe8240204_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a9e27afd2a9929b02687afda68d8a68b5}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!node\_init@{node\_init}}
+\index{node\_init@{node\_init}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{node\_init()}{node\_init()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a9e27afd2a9929b02687afda68d8a68b5} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} node\+\_\+init (\begin{DoxyParamCaption}\item[{unsigned int}]{key}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{fa}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize a node and allocate memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key of the node \\
+\hline
+{\em list} & The value of the node \\
+\hline
+{\em fa} & The parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the new node 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a9e27afd2a9929b02687afda68d8a68b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a9e27afd2a9929b02687afda68d8a68b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a787a8de67855978e27d86ddcc1dfc2fc}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!rbtree\_delete@{rbtree\_delete}}
+\index{rbtree\_delete@{rbtree\_delete}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{rbtree\_delete()}{rbtree\_delete()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a787a8de67855978e27d86ddcc1dfc2fc} 
+static void rbtree\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete a node from the red-\/black tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The tree that the node belongs to \\
+\hline
+{\em node} & The node to delete \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a787a8de67855978e27d86ddcc1dfc2fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a787a8de67855978e27d86ddcc1dfc2fc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a7a4895b028aba0f94b5b640e085c548e}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!rbtree\_find@{rbtree\_find}}
+\index{rbtree\_find@{rbtree\_find}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{rbtree\_find()}{rbtree\_find()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a7a4895b028aba0f94b5b640e085c548e} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} rbtree\+\_\+find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{unsigned int}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Recursively search for a node with a given key starting from a given node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The current node \\
+\hline
+{\em key} & The key to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the node if found, otherwise NULL 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{linklist__rbtree_8c_a7a4895b028aba0f94b5b640e085c548e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a7a4895b028aba0f94b5b640e085c548e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_ae46c23eec5c1ea21ebab9279843de3a3}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!rbtree\_insert@{rbtree\_insert}}
+\index{rbtree\_insert@{rbtree\_insert}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{rbtree\_insert()}{rbtree\_insert()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_ae46c23eec5c1ea21ebab9279843de3a3} 
+void rbtree\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{unsigned int}]{key}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Insert a key-\/value pair into the red-\/black tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The red-\/black tree \\
+\hline
+{\em key} & The key \\
+\hline
+{\em list} & The value \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ae46c23eec5c1ea21ebab9279843de3a3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ae46c23eec5c1ea21ebab9279843de3a3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_aec09451763b49da3023b2742685de07f}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!rbtree\_query@{rbtree\_query}}
+\index{rbtree\_query@{rbtree\_query}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{rbtree\_query()}{rbtree\_query()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_aec09451763b49da3023b2742685de07f} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} rbtree\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{unsigned int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Query the red-\/black tree for a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The red-\/black tree \\
+\hline
+{\em key} & The key to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The linked list of the value if found, otherwise NULL 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_aec09451763b49da3023b2742685de07f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_aec09451763b49da3023b2742685de07f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_ab62e652e4fc283a274b30e1f1f08c211}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!rotate\_left@{rotate\_left}}
+\index{rotate\_left@{rotate\_left}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_left()}{rotate\_left()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_ab62e652e4fc283a274b30e1f1f08c211} 
+static void rotate\+\_\+left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate a node to the left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The tree that the node belongs to \\
+\hline
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{linklist__rbtree_8c_ab62e652e4fc283a274b30e1f1f08c211_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_ab62e652e4fc283a274b30e1f1f08c211_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_aef6fab1149a4f11067237f95c7bdb41f}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!rotate\_right@{rotate\_right}}
+\index{rotate\_right@{rotate\_right}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{rotate\_right()}{rotate\_right()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_aef6fab1149a4f11067237f95c7bdb41f} 
+static void rotate\+\_\+right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*}}]{tree}{, }\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate a node to the right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The tree that the node belongs to \\
+\hline
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{linklist__rbtree_8c_aef6fab1149a4f11067237f95c7bdb41f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_aef6fab1149a4f11067237f95c7bdb41f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_afcb59301147f1364f3eaf43fe11430fa}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!sibling@{sibling}}
+\index{sibling@{sibling}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{sibling()}{sibling()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_afcb59301147f1364f3eaf43fe11430fa} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} sibling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the sibling of a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sibling node if exists, otherwise NULL 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_afcb59301147f1364f3eaf43fe11430fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_aa763522130715b07d70cdbcff94c1d2e}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!smallest\_child@{smallest\_child}}
+\index{smallest\_child@{smallest\_child}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{smallest\_child()}{smallest\_child()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_aa763522130715b07d70cdbcff94c1d2e} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} smallest\+\_\+child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the smallest child node in a subtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The root of the subtree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The smallest child node 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{linklist__rbtree_8c_aa763522130715b07d70cdbcff94c1d2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_aa763522130715b07d70cdbcff94c1d2e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8c_a06530033a166619f9dfac249ac51e285}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!uncle@{uncle}}
+\index{uncle@{uncle}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{uncle()}{uncle()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a06530033a166619f9dfac249ac51e285} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} uncle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the uncle of a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The current node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The uncle node if exists, otherwise NULL 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{linklist__rbtree_8c_a06530033a166619f9dfac249ac51e285_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8c_a06530033a166619f9dfac249ac51e285_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{linklist__rbtree_8c_a5fe1e8858c48757b2b4f8bb4fd315bf8}\index{linklist\_rbtree.c@{linklist\_rbtree.c}!NIL@{NIL}}
+\index{NIL@{NIL}!linklist\_rbtree.c@{linklist\_rbtree.c}}
+\doxysubsubsection{\texorpdfstring{NIL}{NIL}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8c_a5fe1e8858c48757b2b4f8bb4fd315bf8} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}}\texorpdfstring{$\ast$}{*} NIL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Leaf node. 
+

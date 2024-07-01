@@ -1,0 +1,230 @@
+\doxysection{src/dns\+\_\+client.c File Reference}
+\hypertarget{dns__client_8c}{}\label{dns__client_8c}\index{src/dns\_client.c@{src/dns\_client.c}}
+{\ttfamily \#include "{}../include/dns\+\_\+client.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+parse.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+print.\+h"{}}\newline
+{\ttfamily \#include "{}../include/query\+\_\+pool.\+h"{}}\newline
+Include dependency graph for dns\+\_\+client.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{dns__client_8c_a55af4a4772ee42f239e2befc7b1190c7}{alloc\+\_\+buffer}} (uv\+\_\+handle\+\_\+t \texorpdfstring{$\ast$}{*}handle, size\+\_\+t suggested\+\_\+size, uv\+\_\+buf\+\_\+t \texorpdfstring{$\ast$}{*}buf)
+\begin{DoxyCompactList}\small\item\em Allocate space for the buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__client_8c_a3f5c9971834e8a6c273a8584c42c46a3}{on\+\_\+read}} (uv\+\_\+udp\+\_\+t \texorpdfstring{$\ast$}{*}handle, ssize\+\_\+t nread, const uv\+\_\+buf\+\_\+t \texorpdfstring{$\ast$}{*}buf, const struct sockaddr \texorpdfstring{$\ast$}{*}addr, unsigned flags)
+\begin{DoxyCompactList}\small\item\em Callback function for receiving response messages from the remote server. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__client_8c_a10ad14f6993fac66edbf5d2f6a75aa62}{on\+\_\+send}} (uv\+\_\+udp\+\_\+send\+\_\+t \texorpdfstring{$\ast$}{*}req, int status)
+\begin{DoxyCompactList}\small\item\em Callback function for sending query messages to the remote server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__client_8c_a4976b0d7477e15d42c27429fe3138598}{init\+\_\+client}} (uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}})
+\begin{DoxyCompactList}\small\item\em Initialize the DNS client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__client_8c_a83db4163d6fd4b94b1e5e983dd042b28}{send\+\_\+to\+\_\+remote}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Send a DNS query message to the remote server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static uv\+\_\+udp\+\_\+t \mbox{\hyperlink{dns__client_8c_aa44d5e83cc8fd4879bba6f7487aec917}{client\+\_\+socket}}
+\begin{DoxyCompactList}\small\item\em Socket for client communication with the remote server. \end{DoxyCompactList}\item 
+static struct sockaddr\+\_\+in \mbox{\hyperlink{dns__client_8c_abfd7055d6d36d153883e6ba685637515}{local\+\_\+addr}}
+\begin{DoxyCompactList}\small\item\em Local address. \end{DoxyCompactList}\item 
+static struct sockaddr \mbox{\hyperlink{dns__client_8c_a5aeb206957f72a7639fc56bf8c6baada}{send\+\_\+addr}}
+\begin{DoxyCompactList}\small\item\em Remote server address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}
+\begin{DoxyCompactList}\small\item\em Query pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__client_8c_a55af4a4772ee42f239e2befc7b1190c7}\index{dns\_client.c@{dns\_client.c}!alloc\_buffer@{alloc\_buffer}}
+\index{alloc\_buffer@{alloc\_buffer}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{alloc\_buffer()}{alloc\_buffer()}}
+{\footnotesize\ttfamily \label{dns__client_8c_a55af4a4772ee42f239e2befc7b1190c7} 
+static void alloc\+\_\+buffer (\begin{DoxyParamCaption}\item[{uv\+\_\+handle\+\_\+t \texorpdfstring{$\ast$}{*}}]{handle}{, }\item[{size\+\_\+t}]{suggested\+\_\+size}{, }\item[{uv\+\_\+buf\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Allocate space for the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Allocation handle \\
+\hline
+{\em suggested\+\_\+size} & Suggested buffer size \\
+\hline
+{\em buf} & Buffer to be allocated \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{dns__client_8c_a55af4a4772ee42f239e2befc7b1190c7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__client_8c_a4976b0d7477e15d42c27429fe3138598}\index{dns\_client.c@{dns\_client.c}!init\_client@{init\_client}}
+\index{init\_client@{init\_client}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{init\_client()}{init\_client()}}
+{\footnotesize\ttfamily \label{dns__client_8c_a4976b0d7477e15d42c27429fe3138598} 
+void init\+\_\+client (\begin{DoxyParamCaption}\item[{uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}}]{loop}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the DNS client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loop} & The libuv event loop \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8c_a4976b0d7477e15d42c27429fe3138598_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{dns__client_8c_a4976b0d7477e15d42c27429fe3138598_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__client_8c_a3f5c9971834e8a6c273a8584c42c46a3}\index{dns\_client.c@{dns\_client.c}!on\_read@{on\_read}}
+\index{on\_read@{on\_read}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{on\_read()}{on\_read()}}
+{\footnotesize\ttfamily \label{dns__client_8c_a3f5c9971834e8a6c273a8584c42c46a3} 
+static void on\+\_\+read (\begin{DoxyParamCaption}\item[{uv\+\_\+udp\+\_\+t \texorpdfstring{$\ast$}{*}}]{handle}{, }\item[{ssize\+\_\+t}]{nread}{, }\item[{const uv\+\_\+buf\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf}{, }\item[{const struct sockaddr \texorpdfstring{$\ast$}{*}}]{addr}{, }\item[{unsigned}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback function for receiving response messages from the remote server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Query handle \\
+\hline
+{\em nread} & Number of bytes received \\
+\hline
+{\em buf} & Buffer containing the received message \\
+\hline
+{\em addr} & Address of the sender \\
+\hline
+{\em flags} & Flags indicating special conditions for the received data \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8c_a3f5c9971834e8a6c273a8584c42c46a3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{dns__client_8c_a3f5c9971834e8a6c273a8584c42c46a3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__client_8c_a10ad14f6993fac66edbf5d2f6a75aa62}\index{dns\_client.c@{dns\_client.c}!on\_send@{on\_send}}
+\index{on\_send@{on\_send}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{on\_send()}{on\_send()}}
+{\footnotesize\ttfamily \label{dns__client_8c_a10ad14f6993fac66edbf5d2f6a75aa62} 
+static void on\+\_\+send (\begin{DoxyParamCaption}\item[{uv\+\_\+udp\+\_\+send\+\_\+t \texorpdfstring{$\ast$}{*}}]{req}{, }\item[{int}]{status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback function for sending query messages to the remote server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & Send handle \\
+\hline
+{\em status} & Send status, indicating whether the send was successful \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8c_a10ad14f6993fac66edbf5d2f6a75aa62_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__client_8c_a83db4163d6fd4b94b1e5e983dd042b28}\index{dns\_client.c@{dns\_client.c}!send\_to\_remote@{send\_to\_remote}}
+\index{send\_to\_remote@{send\_to\_remote}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{send\_to\_remote()}{send\_to\_remote()}}
+{\footnotesize\ttfamily \label{dns__client_8c_a83db4163d6fd4b94b1e5e983dd042b28} 
+void send\+\_\+to\+\_\+remote (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Send a DNS query message to the remote server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The DNS message to be sent \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8c_a83db4163d6fd4b94b1e5e983dd042b28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8c_a83db4163d6fd4b94b1e5e983dd042b28_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{dns__client_8c_aa44d5e83cc8fd4879bba6f7487aec917}\index{dns\_client.c@{dns\_client.c}!client\_socket@{client\_socket}}
+\index{client\_socket@{client\_socket}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{client\_socket}{client\_socket}}
+{\footnotesize\ttfamily \label{dns__client_8c_aa44d5e83cc8fd4879bba6f7487aec917} 
+uv\+\_\+udp\+\_\+t client\+\_\+socket\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Socket for client communication with the remote server. 
+
+\Hypertarget{dns__client_8c_abfd7055d6d36d153883e6ba685637515}\index{dns\_client.c@{dns\_client.c}!local\_addr@{local\_addr}}
+\index{local\_addr@{local\_addr}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{local\_addr}{local\_addr}}
+{\footnotesize\ttfamily \label{dns__client_8c_abfd7055d6d36d153883e6ba685637515} 
+struct sockaddr\+\_\+in local\+\_\+addr\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Local address. 
+
+\Hypertarget{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6}\index{dns\_client.c@{dns\_client.c}!qpool@{qpool}}
+\index{qpool@{qpool}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{qpool}{qpool}}
+{\footnotesize\ttfamily \label{dns__client_8c_a72e226b504514a1ea5a74389ad36ece6} 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}}\texorpdfstring{$\ast$}{*} qpool\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Query pool. 
+
+\Hypertarget{dns__client_8c_a5aeb206957f72a7639fc56bf8c6baada}\index{dns\_client.c@{dns\_client.c}!send\_addr@{send\_addr}}
+\index{send\_addr@{send\_addr}!dns\_client.c@{dns\_client.c}}
+\doxysubsubsection{\texorpdfstring{send\_addr}{send\_addr}}
+{\footnotesize\ttfamily \label{dns__client_8c_a5aeb206957f72a7639fc56bf8c6baada} 
+struct sockaddr send\+\_\+addr\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remote server address. 
+

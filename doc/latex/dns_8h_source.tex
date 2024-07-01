@@ -1,0 +1,78 @@
+\doxysection{dns.\+h}
+\hypertarget{dns_8h_source}{}\label{dns_8h_source}\index{include/dns.h@{include/dns.h}}
+\mbox{\hyperlink{dns_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DNSR\_DNS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DNSR\_DNS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DNS\_STRING\_MAX\_SIZE\ 8192}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ DNS\_RR\_NAME\_MAX\_SIZE\ 512}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DNS\_QR\_QUERY\ 0}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DNS\_QR\_ANSWER\ 1}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ DNS\_OPCODE\_QUERY\ 0}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DNS\_OPCODE\_IQUERY\ 1}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ DNS\_OPCODE\_STATUS\ 2}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_A\ 1}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_NS\ 2}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_CNAME\ 5}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_SOA\ 6}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_PTR\ 12}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_HINFO\ 13}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_MINFO\ 15}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_MX\ 15}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_TXT\ 16}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ DNS\_TYPE\_AAAA\ 28}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DNS\_CLASS\_IN\ 1}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DNS\_RCODE\_OK\ 0}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ DNS\_RCODE\_NXDOMAIN\ 3}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ DNS\_RCODE\_SERVFAIL\ 2}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__header}{dns\_header}}\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__header_a3991d193b0f2a5353c6065d30ad33aa3}{id}};}
+\DoxyCodeLine{00036\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_ad46e5b9311d45bfbf6869685b0254bfa}{qr}}:\ 1;}
+\DoxyCodeLine{00037\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_a8b6cf6108179b325deb7c6ed7ff4d6ce}{opcode}}:\ 4;}
+\DoxyCodeLine{00038\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_a332740387f401f33e9e68175c5132607}{aa}}:\ 1;}
+\DoxyCodeLine{00039\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_a6c111d6d9f0a5e07df0465abb434241b}{tc}}:\ 1;}
+\DoxyCodeLine{00040\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_ab478da94fb6929e172069e926fbf7743}{rd}}:\ 1;}
+\DoxyCodeLine{00041\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_ab92fcb7d2e8c0db9ae86bbe884edf37b}{ra}}:\ 1;}
+\DoxyCodeLine{00042\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_acdc3183a7dd52107e67f38b50348afdd}{z}}:\ 3;}
+\DoxyCodeLine{00043\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structdns__header_af86ee8a7d4855dd1ca83f9fab8ce060a}{rcode}}:\ 4;}
+\DoxyCodeLine{00044\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__header_a4f0ead2328427239ca074b09ae581a55}{qdcount}};}
+\DoxyCodeLine{00045\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__header_aca00e490df7ef4c00d2f8dc387c99a5d}{ancount}};}
+\DoxyCodeLine{00046\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__header_ab59defbc4f2602673c85b1ff32c988c0}{nscount}};}
+\DoxyCodeLine{00047\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__header_a7b840ee6675cd6935d77f2c89a6f263e}{arcount}};}
+\DoxyCodeLine{00048\ \}\ \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\_Header}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__question}{dns\_question}}\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ uint8\_t\ *\ \mbox{\hyperlink{structdns__question_af73ac9b5a07466a461dd4cd3013db9a6}{qname}};}
+\DoxyCodeLine{00053\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__question_a28612cf31ea9061817c7652d97f68f10}{qtype}};}
+\DoxyCodeLine{00054\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__question_afe96f7c0e33a7f83e289140633217017}{qclass}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__question}{dns\_question}}\ *\ \mbox{\hyperlink{structdns__question_a56bb43b72d4dcb451e7348fc8d9b8448}{next}};}
+\DoxyCodeLine{00056\ \}\ \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\_Que}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr}{dns\_rr}}\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ uint8\_t\ *\ \mbox{\hyperlink{structdns__rr_a4f59cff39a47412a95bde44ac4cb3e88}{name}};}
+\DoxyCodeLine{00061\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__rr_aac42b99d198fdb0bf10a77dc64c18359}{type}};}
+\DoxyCodeLine{00062\ \ \ \ \ uint16\_t\ \textcolor{keyword}{class};}
+\DoxyCodeLine{00063\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structdns__rr_a14b7df2cdf7cb177122b01a33b5a2f5c}{ttl}};}
+\DoxyCodeLine{00064\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structdns__rr_a64fff8a32df24b70eb95108cadb8095c}{rdlength}};}
+\DoxyCodeLine{00065\ \ \ \ \ uint8\_t\ *\ \mbox{\hyperlink{structdns__rr_a4ec48268ad471be7cd29ee45238a5a3c}{rdata}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr}{dns\_rr}}\ *\ \mbox{\hyperlink{structdns__rr_a970c25983ca11cec0b3e55aa1b7a1949}{next}};}
+\DoxyCodeLine{00067\ \}\ \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\_RR}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__msg}{dns\_msg}}\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{structdns__header}{Dns\_Header}}\ *\ \mbox{\hyperlink{structdns__msg_a34e16e3ddbac4c6bd5edc3ccb4289cf4}{header}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{structdns__question}{Dns\_Que}}\ *\ \mbox{\hyperlink{structdns__msg_a62b7956d4a122cf1b4e60031b0daaf8e}{que}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{structdns__rr}{Dns\_RR}}\ *\ \mbox{\hyperlink{structdns__msg_a42dbe141ba7d92ec481c209ce55a50b9}{rr}};\ }
+\DoxyCodeLine{00074\ \}\ \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\_Msg}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DNSR\_DNS\_H}}
+
+\end{DoxyCode}

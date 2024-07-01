@@ -1,0 +1,88 @@
+\doxysection{include/dns\+\_\+server.h File Reference}
+\hypertarget{dns__server_8h}{}\label{dns__server_8h}\index{include/dns\_server.h@{include/dns\_server.h}}
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+{\ttfamily \#include "{}dns.\+h"{}}\newline
+Include dependency graph for dns\+\_\+server.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{dns__server_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__server_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dns__server_8h_a79a2c087d5c414b08de43d6344a1950a}{init\+\_\+server}} (uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}})
+\begin{DoxyCompactList}\small\item\em Initialize the DNS server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__server_8h_a9c27be19d71612df0b60fd5c68d0502a}{send\+\_\+to\+\_\+local}} (const struct sockaddr \texorpdfstring{$\ast$}{*}addr, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Send a DNS response message to local clients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__server_8h_a79a2c087d5c414b08de43d6344a1950a}\index{dns\_server.h@{dns\_server.h}!init\_server@{init\_server}}
+\index{init\_server@{init\_server}!dns\_server.h@{dns\_server.h}}
+\doxysubsubsection{\texorpdfstring{init\_server()}{init\_server()}}
+{\footnotesize\ttfamily \label{dns__server_8h_a79a2c087d5c414b08de43d6344a1950a} 
+void init\+\_\+server (\begin{DoxyParamCaption}\item[{uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}}]{loop}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the DNS server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loop} & The libuv event loop \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__server_8h_a79a2c087d5c414b08de43d6344a1950a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{dns__server_8h_a79a2c087d5c414b08de43d6344a1950a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__server_8h_a9c27be19d71612df0b60fd5c68d0502a}\index{dns\_server.h@{dns\_server.h}!send\_to\_local@{send\_to\_local}}
+\index{send\_to\_local@{send\_to\_local}!dns\_server.h@{dns\_server.h}}
+\doxysubsubsection{\texorpdfstring{send\_to\_local()}{send\_to\_local()}}
+{\footnotesize\ttfamily \label{dns__server_8h_a9c27be19d71612df0b60fd5c68d0502a} 
+void send\+\_\+to\+\_\+local (\begin{DoxyParamCaption}\item[{const struct sockaddr \texorpdfstring{$\ast$}{*}}]{addr}{, }\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Send a DNS response message to local clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & The address of the local client \\
+\hline
+{\em msg} & The DNS message to be sent \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__server_8h_a9c27be19d71612df0b60fd5c68d0502a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__server_8h_a9c27be19d71612df0b60fd5c68d0502a_icgraph}
+\end{center}
+\end{figure}

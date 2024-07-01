@@ -1,0 +1,19 @@
+<map id="cache_" name="cache_">
+<area shape="rect" id="Node000001" title="Cash struct." alt="" coords="72,487,135,513"/>
+<area shape="rect" id="Node000002" href="$structdns__rr__linklist.html" title="Linked list of Red&#45;Black Tree nodes." alt="" coords="92,185,193,211"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,227,108,487,102,487,136,226"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="210,189,219,198,211,206,194,209,193,204,209,201,214,198,207,193"/>
+<area shape="rect" id="Node000005" href="$structlinklist__rbtree.html" title="Red&#45;Black Tree." alt="" coords="141,399,239,424"/>
+<area shape="poly" id="edge10_Node000005_Node000002" title=" " alt="" coords="151,225,190,398,185,399,146,226"/>
+<area shape="rect" id="Node000006" href="$structrbtree__node.html" title="Node of the Red&#45;Black Tree." alt="" coords="226,285,315,311"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="171,218,256,283,253,287,168,222"/>
+<area shape="rect" id="Node000003" href="$structrbtree__value.html" title="Value of a Red&#45;Black Tree node&#39;s linked list, corresponding to an answer for a specific query." alt="" coords="5,94,98,120"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="44,135,37,164,33,196,33,413,38,435,51,455,85,485,81,489,46,458,33,437,28,413,28,196,31,163,39,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,128,132,183,128,187,72,132"/>
+<area shape="rect" id="Node000004" href="$structdns__rr.html" title="Resource Record structure of DNS message, represented as a linked list." alt="" coords="23,5,80,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="54,47,54,94,49,94,49,47"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="98,9,107,18,98,27,81,29,80,24,96,22,102,18,94,13"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="169,437,117,489,114,485,166,433"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="255,325,201,400,197,397,251,322"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="331,288,338,291,341,299,333,308,316,311,315,306,331,303,336,298,335,295,329,292"/>
+</map>

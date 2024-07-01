@@ -1,0 +1,9 @@
+<map id="get_min_ttl" name="get_min_ttl">
+<area shape="rect" id="Node000001" title="Get the smallest TTL (Time&#45;To&#45;Live) value in a list of Resource Records (RRs)." alt="" coords="381,5,467,31"/>
+<area shape="rect" id="Node000002" href="$cache_8c.html#a6ced4e1f620d2e750fb0c2c049962fa8" title="Insert a DNS message into the cache." alt="" coords="238,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="366,21,334,21,334,16,366,16"/>
+<area shape="rect" id="Node000003" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,5,190,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,21,190,21,190,16,223,16"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

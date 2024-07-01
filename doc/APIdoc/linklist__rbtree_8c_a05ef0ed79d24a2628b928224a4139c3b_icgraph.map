@@ -1,0 +1,13 @@
+<map id="destroy_node" name="destroy_node">
+<area shape="rect" id="Node000001" title="Destroy a node in the red&#45;black tree." alt="" coords="657,5,756,31"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a787a8de67855978e27d86ddcc1dfc2fc" title="Delete a node from the red&#45;black tree." alt="" coords="513,5,609,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="641,21,609,21,609,16,641,16"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#aec09451763b49da3023b2742685de07f" title="Query the red&#45;black tree for a key." alt="" coords="371,5,465,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,21,465,21,465,16,497,16"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#a6223e88c82874af7ec915b7fe8240204" title="Initialize a new red&#45;black tree This function allocates memory for a new red&#45;black tree and its nil n..." alt="" coords="238,5,323,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,21,324,21,324,16,356,16"/>
+<area shape="rect" id="Node000005" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,5,190,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

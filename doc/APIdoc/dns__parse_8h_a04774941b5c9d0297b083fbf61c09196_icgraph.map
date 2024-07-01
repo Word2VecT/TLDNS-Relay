@@ -1,0 +1,22 @@
+<map id="copy_dnsrr" name="copy_dnsrr">
+<area shape="rect" id="Node000001" title="Copy a Resource Record." alt="" coords="524,55,609,80"/>
+<area shape="rect" id="Node000002" href="$cache_8c.html#a6ced4e1f620d2e750fb0c2c049962fa8" title="Insert a DNS message into the cache." alt="" coords="377,5,472,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="512,51,463,34,465,29,513,46"/>
+<area shape="rect" id="Node000005" href="$cache_8c.html#a85397655f041915af32d1846796578a4" title="Query the cache for a DNS question." alt="" coords="377,55,472,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="508,70,472,70,472,65,508,65"/>
+<area shape="rect" id="Node000006" href="$dns__parse_8c.html#adf78a5bc6bcf96720bb91633701da6cd" title="Copy a DNS message." alt="" coords="373,104,476,130"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="513,89,465,106,463,101,512,84"/>
+<area shape="rect" id="Node000003" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="236,29,323,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,31,324,38,323,32,361,26"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,55,55,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="221,51,56,68,55,62,220,45"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="361,59,323,52,324,47,362,54"/>
+<area shape="rect" id="Node000007" href="$query__pool_8c.html#ac14d02ff69a3027ad45c2357e6843c76" title="Finish processing a query This function is called when a response is received for a query...." alt="" coords="235,79,325,104"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="358,108,325,102,326,97,359,103"/>
+<area shape="rect" id="Node000009" href="$query__pool_8c.html#ae29fc3e8ee2f57c983e01704d4b945ce" title="Insert a new query into the query pool This function creates a new query and inserts it into the quer..." alt="" coords="234,128,325,154"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="358,130,326,136,325,131,358,125"/>
+<area shape="rect" id="Node000008" href="$query__pool_8c.html#a56b4eafae4e30f85d101675ef2aaeead" title="Create a new query pool This function initializes a new query pool and returns a pointer to it." alt="" coords="103,80,186,106"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="219,95,187,95,186,90,219,89"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="87,83,54,75,55,70,88,78"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="226,125,182,109,184,104,228,120"/>
+</map>

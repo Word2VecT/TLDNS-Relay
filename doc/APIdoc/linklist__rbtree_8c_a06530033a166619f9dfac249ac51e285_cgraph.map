@@ -1,0 +1,5 @@
+<map id="uncle" name="uncle">
+<area shape="rect" id="Node000001" title="Get the uncle of a node." alt="" coords="5,5,58,31"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#ad1b052785e6b7bcc62cba39a7402a1b6" title="Get the grandparent of a node." alt="" coords="106,5,195,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,16,90,16,90,21,58,21"/>
+</map>

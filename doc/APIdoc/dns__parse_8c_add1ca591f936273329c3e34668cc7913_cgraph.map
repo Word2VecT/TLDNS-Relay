@@ -1,0 +1,6 @@
+<map id="string_to_rrname" name="string_to_rrname">
+<area shape="rect" id="Node000001" title="Read a NAME field from a byte stream." alt="" coords="5,29,124,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="38,30,34,21,37,11,47,5,65,3,83,5,93,12,90,16,81,10,64,8,49,10,41,15,39,20,43,28"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a26eb64cb4cd82b2070e8fe7f000ff6ae" title="Read a 16&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="172,29,260,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,40,156,40,156,45,124,45"/>
+</map>

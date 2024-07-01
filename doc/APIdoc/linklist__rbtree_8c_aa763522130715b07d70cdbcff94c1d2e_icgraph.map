@@ -1,0 +1,14 @@
+<map id="smallest_child" name="smallest_child">
+<area shape="rect" id="Node000001" title="Get the smallest child node in a subtree." alt="" coords="657,29,761,55"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="734,16,725,10,709,8,694,10,686,14,684,20,688,28,684,30,679,21,682,11,692,5,709,3,727,5,737,12"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a787a8de67855978e27d86ddcc1dfc2fc" title="Delete a node from the red&#45;black tree." alt="" coords="513,29,609,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="641,45,610,45,610,40,641,40"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#aec09451763b49da3023b2742685de07f" title="Query the red&#45;black tree for a key." alt="" coords="371,29,465,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,45,465,45,465,40,497,40"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#a6223e88c82874af7ec915b7fe8240204" title="Initialize a new red&#45;black tree This function allocates memory for a new red&#45;black tree and its nil n..." alt="" coords="238,29,323,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,45,324,45,324,40,356,40"/>
+<area shape="rect" id="Node000005" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,29,190,55"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,45,190,45,190,40,222,40"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,29,55,55"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

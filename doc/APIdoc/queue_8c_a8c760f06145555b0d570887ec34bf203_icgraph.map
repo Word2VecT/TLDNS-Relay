@@ -1,0 +1,12 @@
+<map id="queue_destroy" name="queue_destroy">
+<area shape="rect" id="Node000001" title="Destroy the queue." alt="" coords="497,31,603,56"/>
+<area shape="rect" id="Node000002" href="$queue_8c.html#ac456192d36cbce97dc2b2c1356ab31f2" title="Create a new queue." alt="" coords="361,31,449,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="481,46,449,46,449,41,481,41"/>
+<area shape="rect" id="Node000003" href="$index__pool_8c.html#a2a5451cc4036a0df832b3dcf990e96e6" title="Create a new index pool." alt="" coords="234,5,313,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,35,313,28,314,23,346,29"/>
+<area shape="rect" id="Node000004" href="$query__pool_8c.html#a56b4eafae4e30f85d101675ef2aaeead" title="Create a new query pool This function initializes a new query pool and returns a pointer to it." alt="" coords="103,31,186,56"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="346,46,187,46,187,41,346,41"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="219,32,187,38,186,33,218,26"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,46,55,46,55,41,87,41"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="on_read" name="on_read">
+<area shape="rect" id="Node000001" title="Callback function for receiving response messages from the remote server." alt="" coords="227,5,294,31"/>
+<area shape="rect" id="Node000002" href="$dns__client_8c.html#a4976b0d7477e15d42c27429fe3138598" title="Initialize the DNS client." alt="" coords="103,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,21,180,21,180,16,212,16"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

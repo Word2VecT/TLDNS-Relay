@@ -1,0 +1,5 @@
+<map id="dnshead_to_string" name="dnshead_to_string">
+<area shape="rect" id="Node000001" title="Write a Header Section to a byte stream." alt="" coords="5,5,133,31"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a892deea8e33cb7ce2c0f336d112abe4e" title="Write a 16&#45;bit number in little&#45;endian format to a byte stream." alt="" coords="181,5,272,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,165,16,165,21,133,21"/>
+</map>

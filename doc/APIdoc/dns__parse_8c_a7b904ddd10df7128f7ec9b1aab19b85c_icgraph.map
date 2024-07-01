@@ -1,0 +1,24 @@
+<map id="rrname_to_string" name="rrname_to_string">
+<area shape="rect" id="Node000001" title="Write a NAME field to a byte stream." alt="" coords="876,31,995,56"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a2b54cf6f19477718d5286330d0cb0cae" title="Write a Question Section to a byte stream." alt="" coords="708,5,828,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="861,35,828,30,829,25,861,30"/>
+<area shape="rect" id="Node000010" href="$dns__parse_8c.html#aaf9a9b3814123fe16906c30643db1d59" title="Write a Resource Record to a byte stream." alt="" coords="715,55,822,80"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="861,57,822,62,822,57,861,52"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#aa893e182a92c2ccf5644c1f8a12fba37" title="Write a NAME field to a byte stream." alt="" coords="536,31,660,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="693,32,661,37,660,32,692,27"/>
+<area shape="rect" id="Node000004" href="$dns__server_8c.html#a9c27be19d71612df0b60fd5c68d0502a" title="Send a DNS response message to local clients." alt="" coords="380,5,481,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="520,34,481,28,482,23,521,29"/>
+<area shape="rect" id="Node000009" href="$dns__client_8c.html#a83db4163d6fd4b94b1e5e983dd042b28" title="Send a DNS query message to the remote server." alt="" coords="373,55,488,80"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="521,57,489,62,488,57,520,52"/>
+<area shape="rect" id="Node000005" href="$query__pool_8c.html#ac14d02ff69a3027ad45c2357e6843c76" title="Finish processing a query This function is called when a response is received for a query...." alt="" coords="235,5,325,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="364,21,325,21,325,16,364,16"/>
+<area shape="rect" id="Node000008" href="$query__pool_8c.html#ae29fc3e8ee2f57c983e01704d4b945ce" title="Insert a new query into the query pool This function creates a new query and inserts it into the quer..." alt="" coords="234,55,325,80"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="375,39,322,57,321,52,374,34"/>
+<area shape="rect" id="Node000006" href="$query__pool_8c.html#a56b4eafae4e30f85d101675ef2aaeead" title="Create a new query pool This function initializes a new query pool and returns a pointer to it." alt="" coords="103,31,186,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="220,32,187,38,186,33,219,27"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,56"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="87,46,55,46,55,41,87,41"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="218,59,186,54,187,48,219,54"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="358,70,326,70,326,65,358,65"/>
+<area shape="poly" id="edge12_Node000010_Node000003" title=" " alt="" coords="699,60,660,55,661,50,700,55"/>
+</map>
