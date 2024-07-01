@@ -1,0 +1,12 @@
+<map id="qpool_query" name="qpool_query">
+<area shape="rect" id="Node000001" title="Check if a query exists in the query pool." alt="" coords="376,31,468,56"/>
+<area shape="rect" id="Node000002" href="$query__pool_8c.html#afe80fdfc4dbed6be1af52c4d86f41815" title="Delete a query from the query pool This function deletes a query from the query pool and frees the as..." alt="" coords="234,5,328,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="360,35,328,29,329,24,361,30"/>
+<area shape="rect" id="Node000005" href="$query__pool_8c.html#ac14d02ff69a3027ad45c2357e6843c76" title="Finish processing a query This function is called when a response is received for a query...." alt="" coords="236,55,326,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="361,56,327,62,326,57,361,51"/>
+<area shape="rect" id="Node000003" href="$query__pool_8c.html#a56b4eafae4e30f85d101675ef2aaeead" title="Create a new query pool This function initializes a new query pool and returns a pointer to it." alt="" coords="103,31,186,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,32,187,38,186,33,218,27"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,46,55,46,55,41,87,41"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="220,60,186,53,187,48,221,54"/>
+</map>

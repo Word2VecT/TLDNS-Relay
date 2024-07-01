@@ -1,0 +1,13 @@
+<map id="BKDRHash" name="BKDRHash">
+<area shape="rect" id="Node000001" title="Compute the hash of a string using the BKDR hash algorithm." alt="" coords="381,56,472,82"/>
+<area shape="rect" id="Node000002" href="$cache_8c.html#a6ced4e1f620d2e750fb0c2c049962fa8" title="Insert a DNS message into the cache." alt="" coords="238,5,333,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,53,322,34,324,29,375,48"/>
+<area shape="rect" id="Node000003" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,56,190,82"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="366,72,191,72,191,66,366,66"/>
+<area shape="rect" id="Node000005" href="$cache_8c.html#a85397655f041915af32d1846796578a4" title="Query the cache for a DNS question." alt="" coords="238,107,333,132"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="375,90,324,109,322,104,373,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,39,185,58,183,53,233,34"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,55,82"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,72,55,72,55,66,87,66"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="233,103,183,85,185,80,235,98"/>
+</map>

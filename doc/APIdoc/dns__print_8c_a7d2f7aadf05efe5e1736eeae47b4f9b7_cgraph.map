@@ -1,0 +1,5 @@
+<map id="print_rr_MX" name="print_rr_MX">
+<area shape="rect" id="Node000001" title="Print the rdata field of an MX type RR." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="Node000002" href="$dns__print_8c.html#a51cb3312021d99b0f9d1f3f680750baf" title="Print the rdata field of a CNAME type RR." alt="" coords="142,5,259,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,126,16,126,21,94,21"/>
+</map>

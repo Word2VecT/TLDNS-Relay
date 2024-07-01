@@ -1,0 +1,89 @@
+\doxysection{linklist\+\_\+rbtree Struct Reference}
+\hypertarget{structlinklist__rbtree}{}\label{structlinklist__rbtree}\index{linklist\_rbtree@{linklist\_rbtree}}
+
+
+Red-\/\+Black Tree.  
+
+
+
+
+{\ttfamily \#include $<$linklist\+\_\+rbtree.\+h$>$}
+
+
+
+Collaboration diagram for linklist\+\_\+rbtree\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{structlinklist__rbtree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlinklist__rbtree_a24d4297c2bba24e6f2528e77a7711529}{root}}
+\begin{DoxyCompactList}\small\item\em Pointer to the root node of the Red-\/\+Black Tree. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlinklist__rbtree_a7bcbdc7d0951a25bb42a654cef59cfc2}{insert}} )(struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}} \texorpdfstring{$\ast$}{*}tree, unsigned int key, \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Insert a key-\/value pair into the red-\/black tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structlinklist__rbtree_ae0f46e42105e5a2d96952bc7ac6d0435}{query}} )(struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}} \texorpdfstring{$\ast$}{*}tree, unsigned int data)
+\begin{DoxyCompactList}\small\item\em Query the red-\/black tree for a key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Red-\/\+Black Tree. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structlinklist__rbtree_a7bcbdc7d0951a25bb42a654cef59cfc2}\index{linklist\_rbtree@{linklist\_rbtree}!insert@{insert}}
+\index{insert@{insert}!linklist\_rbtree@{linklist\_rbtree}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \label{structlinklist__rbtree_a7bcbdc7d0951a25bb42a654cef59cfc2} 
+void(\texorpdfstring{$\ast$}{*} linklist\+\_\+rbtree\+::insert) (struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}} \texorpdfstring{$\ast$}{*}tree, unsigned int key, \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}list)}
+
+
+
+Insert a key-\/value pair into the red-\/black tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The red-\/black tree \\
+\hline
+{\em key} & The key \\
+\hline
+{\em list} & The value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structlinklist__rbtree_ae0f46e42105e5a2d96952bc7ac6d0435}\index{linklist\_rbtree@{linklist\_rbtree}!query@{query}}
+\index{query@{query}!linklist\_rbtree@{linklist\_rbtree}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily \label{structlinklist__rbtree_ae0f46e42105e5a2d96952bc7ac6d0435} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} linklist\+\_\+rbtree\+::query) (struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}} \texorpdfstring{$\ast$}{*}tree, unsigned int data)}
+
+
+
+Query the red-\/black tree for a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & The red-\/black tree \\
+\hline
+{\em key} & The key to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The linked list of the value if found, otherwise NULL 
+\end{DoxyReturn}
+\Hypertarget{structlinklist__rbtree_a24d4297c2bba24e6f2528e77a7711529}\index{linklist\_rbtree@{linklist\_rbtree}!root@{root}}
+\index{root@{root}!linklist\_rbtree@{linklist\_rbtree}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{structlinklist__rbtree_a24d4297c2bba24e6f2528e77a7711529} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}}\texorpdfstring{$\ast$}{*} linklist\+\_\+rbtree\+::root}
+
+
+
+Pointer to the root node of the Red-\/\+Black Tree. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{linklist__rbtree_8h}{linklist\+\_\+rbtree.\+h}}\end{DoxyCompactItemize}

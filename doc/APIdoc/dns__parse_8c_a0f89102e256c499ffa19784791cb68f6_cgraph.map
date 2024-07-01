@@ -1,0 +1,20 @@
+<map id="string_to_dnsmsg" name="string_to_dnsmsg">
+<area shape="rect" id="Node000001" title="Convert a byte stream to a DNS message structure." alt="" coords="5,112,130,138"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#aba15da5b80dcab3ce985bc3f2270d84b" title="Read a Header Section from a byte stream." alt="" coords="346,5,473,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,109,350,34,352,39,112,114"/>
+<area shape="rect" id="Node000004" href="$dns__parse_8c.html#a05e0c813cb5f66334e4e27b7bd571698" title="Read a Question Section from a byte stream." alt="" coords="178,112,298,138"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,122,162,122,162,128,130,128"/>
+<area shape="rect" id="Node000006" href="$dns__parse_8c.html#a1cfb0c409e3ec519e218b7f8a709f8bd" title="Read a Resource Record from a byte stream." alt="" coords="184,161,292,187"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="115,136,177,154,176,159,114,141"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a26eb64cb4cd82b2070e8fe7f000ff6ae" title="Read a 16&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="521,93,610,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,29,475,48,532,82,529,87,472,52,437,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="276,109,346,92,410,87,474,92,506,95,506,100,473,97,410,92,346,97,277,114"/>
+<area shape="rect" id="Node000005" href="$dns__parse_8c.html#add1ca591f936273329c3e34668cc7913" title="Read a NAME field from a byte stream." alt="" coords="351,131,469,156"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="299,129,335,133,335,138,298,134"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="466,127,505,118,507,123,467,133"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="383,132,378,122,381,112,392,106,410,104,429,107,439,113,436,118,427,112,410,109,394,111,385,116,383,121,388,129"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="292,179,378,182,426,177,472,166,508,149,538,127,541,131,511,154,474,171,427,182,378,187,292,184"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="291,162,334,154,335,159,292,167"/>
+<area shape="rect" id="Node000007" href="$dns__parse_8c.html#a8bc6db15347c892e31a6e9162b25fc8b" title="Read a 32&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="366,232,454,258"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="272,185,363,223,361,228,270,190"/>
+</map>

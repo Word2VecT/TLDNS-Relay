@@ -399,7 +399,9 @@ void destroy_dnsrr(Dns_RR *prr) {
  */
 void destroy_dnsmsg(Dns_Msg *pmsg) {
 	log_debug("Releasing DNS message memory ID: 0x%04x", pmsg->header->id)
-	free(pmsg->header);
+	if (pmsg->header) {
+		free(pmsg->header);
+	}
 	Dns_Que *now = pmsg->que;
 	while (now != NULL) {
 		Dns_Que *next = now->next;

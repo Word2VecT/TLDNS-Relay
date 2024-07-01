@@ -1,0 +1,180 @@
+\doxysection{include/linklist\+\_\+rbtree.h File Reference}
+\hypertarget{linklist__rbtree_8h}{}\label{linklist__rbtree_8h}\index{include/linklist\_rbtree.h@{include/linklist\_rbtree.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}dns.\+h"{}}\newline
+Include dependency graph for linklist\+\_\+rbtree.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{linklist__rbtree_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrbtree__value}{rbtree\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em Value of a Red-\/\+Black Tree node\textquotesingle{}s linked list, corresponding to an answer for a specific query. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}}
+\begin{DoxyCompactList}\small\item\em Linked list of Red-\/\+Black Tree nodes. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em Node of the Red-\/\+Black Tree. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}}
+\begin{DoxyCompactList}\small\item\em Red-\/\+Black Tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structrbtree__value}{rbtree\+\_\+value}} \mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}}
+\begin{DoxyCompactList}\small\item\em Value of a Red-\/\+Black Tree node\textquotesingle{}s linked list, corresponding to an answer for a specific query. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}}
+\begin{DoxyCompactList}\small\item\em Linked list of Red-\/\+Black Tree nodes. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}} \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}}
+\begin{DoxyCompactList}\small\item\em Node of the Red-\/\+Black Tree. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}} \mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}}
+\begin{DoxyCompactList}\small\item\em Red-\/\+Black Tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \{ \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}}
+, \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Red-\/\+Black Tree color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8h_ac1e7b55e2083949b45865ea07af04f9b}{new\+\_\+linklist}} ()
+\begin{DoxyCompactList}\small\item\em Create a new linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linklist__rbtree_8h_a6223e88c82874af7ec915b7fe8240204}{new\+\_\+rbtree}} ()
+\begin{DoxyCompactList}\small\item\em Initialize a new red-\/black tree This function allocates memory for a new red-\/black tree and its nil node, and sets up the tree\textquotesingle{}s function pointers for insertion and querying. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!Dns\_RR\_LinkList@{Dns\_RR\_LinkList}}
+\index{Dns\_RR\_LinkList@{Dns\_RR\_LinkList}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{Dns\_RR\_LinkList}{Dns\_RR\_LinkList}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c} 
+typedef struct \mbox{\hyperlink{structdns__rr__linklist}{dns\+\_\+rr\+\_\+linklist}} \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}}}
+
+
+
+Linked list of Red-\/\+Black Tree nodes. 
+
+\Hypertarget{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!Rbtree@{Rbtree}}
+\index{Rbtree@{Rbtree}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{Rbtree}{Rbtree}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759} 
+typedef struct \mbox{\hyperlink{structlinklist__rbtree}{linklist\+\_\+rbtree}} \mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}}}
+
+
+
+Red-\/\+Black Tree. 
+
+\Hypertarget{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!Rbtree\_Node@{Rbtree\_Node}}
+\index{Rbtree\_Node@{Rbtree\_Node}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{Rbtree\_Node}{Rbtree\_Node}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4} 
+typedef struct \mbox{\hyperlink{structrbtree__node}{rbtree\+\_\+node}} \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\+\_\+\+Node}}}
+
+
+
+Node of the Red-\/\+Black Tree. 
+
+\Hypertarget{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!Rbtree\_Value@{Rbtree\_Value}}
+\index{Rbtree\_Value@{Rbtree\_Value}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{Rbtree\_Value}{Rbtree\_Value}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935} 
+typedef struct \mbox{\hyperlink{structrbtree__value}{rbtree\+\_\+value}} \mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}}}
+
+
+
+Value of a Red-\/\+Black Tree node\textquotesingle{}s linked list, corresponding to an answer for a specific query. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!Color@{Color}}
+\index{Color@{Color}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c} 
+enum \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}
+
+
+
+Red-\/\+Black Tree color. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLACK@{BLACK}!linklist\_rbtree.h@{linklist\_rbtree.h}}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!BLACK@{BLACK}}}\Hypertarget{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}\label{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c} 
+BLACK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!linklist\_rbtree.h@{linklist\_rbtree.h}}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!RED@{RED}}}\Hypertarget{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}\label{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c} 
+RED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{linklist__rbtree_8h_ac1e7b55e2083949b45865ea07af04f9b}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!new\_linklist@{new\_linklist}}
+\index{new\_linklist@{new\_linklist}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{new\_linklist()}{new\_linklist()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_ac1e7b55e2083949b45865ea07af04f9b} 
+\mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\+\_\+\+RR\+\_\+\+Link\+List}} \texorpdfstring{$\ast$}{*} new\+\_\+linklist (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a new linked list. 
+
+\begin{DoxyReturn}{Returns}
+The new linked list 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8h_ac1e7b55e2083949b45865ea07af04f9b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8h_ac1e7b55e2083949b45865ea07af04f9b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linklist__rbtree_8h_a6223e88c82874af7ec915b7fe8240204}\index{linklist\_rbtree.h@{linklist\_rbtree.h}!new\_rbtree@{new\_rbtree}}
+\index{new\_rbtree@{new\_rbtree}!linklist\_rbtree.h@{linklist\_rbtree.h}}
+\doxysubsubsection{\texorpdfstring{new\_rbtree()}{new\_rbtree()}}
+{\footnotesize\ttfamily \label{linklist__rbtree_8h_a6223e88c82874af7ec915b7fe8240204} 
+\mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}} \texorpdfstring{$\ast$}{*} new\+\_\+rbtree (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialize a new red-\/black tree This function allocates memory for a new red-\/black tree and its nil node, and sets up the tree\textquotesingle{}s function pointers for insertion and querying. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created red-\/black tree 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If memory allocation fails, the function will log a fatal error and terminate the program. 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linklist__rbtree_8h_a6223e88c82874af7ec915b7fe8240204_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{linklist__rbtree_8h_a6223e88c82874af7ec915b7fe8240204_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,9 @@
+<map id="include/dns_client.h" name="include/dns_client.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,142,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="15,79,60,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,32,53,66,48,64,65,30"/>
+<area shape="rect" id="Node000003" href="$dns_8h.html" title=" " alt="" coords="84,79,138,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,30,100,64,95,66,77,32"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="79,153,143,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="114,105,114,137,108,137,108,105"/>
+</map>

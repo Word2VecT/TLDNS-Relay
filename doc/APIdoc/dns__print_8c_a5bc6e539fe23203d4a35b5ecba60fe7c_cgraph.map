@@ -1,0 +1,5 @@
+<map id="print_rr_SOA" name="print_rr_SOA">
+<area shape="rect" id="Node000001" title="Print the rdata field of an SOA type RR." alt="" coords="5,5,102,31"/>
+<area shape="rect" id="Node000002" href="$dns__print_8c.html#a51cb3312021d99b0f9d1f3f680750baf" title="Print the rdata field of a CNAME type RR." alt="" coords="150,5,267,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
+</map>

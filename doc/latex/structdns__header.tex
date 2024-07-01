@@ -1,0 +1,129 @@
+\doxysection{dns\+\_\+header Struct Reference}
+\hypertarget{structdns__header}{}\label{structdns__header}\index{dns\_header@{dns\_header}}
+
+
+Header Section structure of DNS message.  
+
+
+
+
+{\ttfamily \#include $<$dns.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__header_a3991d193b0f2a5353c6065d30ad33aa3}{id}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_ad46e5b9311d45bfbf6869685b0254bfa}{qr}}\+: 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_a8b6cf6108179b325deb7c6ed7ff4d6ce}{opcode}}\+: 4
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_a332740387f401f33e9e68175c5132607}{aa}}\+: 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_a6c111d6d9f0a5e07df0465abb434241b}{tc}}\+: 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_ab478da94fb6929e172069e926fbf7743}{rd}}\+: 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_ab92fcb7d2e8c0db9ae86bbe884edf37b}{ra}}\+: 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_acdc3183a7dd52107e67f38b50348afdd}{z}}\+: 3
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structdns__header_af86ee8a7d4855dd1ca83f9fab8ce060a}{rcode}}\+: 4
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__header_a4f0ead2328427239ca074b09ae581a55}{qdcount}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__header_aca00e490df7ef4c00d2f8dc387c99a5d}{ancount}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__header_ab59defbc4f2602673c85b1ff32c988c0}{nscount}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structdns__header_a7b840ee6675cd6935d77f2c89a6f263e}{arcount}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header Section structure of DNS message. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structdns__header_a332740387f401f33e9e68175c5132607}\index{dns\_header@{dns\_header}!aa@{aa}}
+\index{aa@{aa}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{aa}{aa}}
+{\footnotesize\ttfamily \label{structdns__header_a332740387f401f33e9e68175c5132607} 
+uint8\+\_\+t dns\+\_\+header\+::aa}
+
+\Hypertarget{structdns__header_aca00e490df7ef4c00d2f8dc387c99a5d}\index{dns\_header@{dns\_header}!ancount@{ancount}}
+\index{ancount@{ancount}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{ancount}{ancount}}
+{\footnotesize\ttfamily \label{structdns__header_aca00e490df7ef4c00d2f8dc387c99a5d} 
+uint16\+\_\+t dns\+\_\+header\+::ancount}
+
+\Hypertarget{structdns__header_a7b840ee6675cd6935d77f2c89a6f263e}\index{dns\_header@{dns\_header}!arcount@{arcount}}
+\index{arcount@{arcount}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{arcount}{arcount}}
+{\footnotesize\ttfamily \label{structdns__header_a7b840ee6675cd6935d77f2c89a6f263e} 
+uint16\+\_\+t dns\+\_\+header\+::arcount}
+
+\Hypertarget{structdns__header_a3991d193b0f2a5353c6065d30ad33aa3}\index{dns\_header@{dns\_header}!id@{id}}
+\index{id@{id}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{structdns__header_a3991d193b0f2a5353c6065d30ad33aa3} 
+uint16\+\_\+t dns\+\_\+header\+::id}
+
+\Hypertarget{structdns__header_ab59defbc4f2602673c85b1ff32c988c0}\index{dns\_header@{dns\_header}!nscount@{nscount}}
+\index{nscount@{nscount}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{nscount}{nscount}}
+{\footnotesize\ttfamily \label{structdns__header_ab59defbc4f2602673c85b1ff32c988c0} 
+uint16\+\_\+t dns\+\_\+header\+::nscount}
+
+\Hypertarget{structdns__header_a8b6cf6108179b325deb7c6ed7ff4d6ce}\index{dns\_header@{dns\_header}!opcode@{opcode}}
+\index{opcode@{opcode}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{opcode}{opcode}}
+{\footnotesize\ttfamily \label{structdns__header_a8b6cf6108179b325deb7c6ed7ff4d6ce} 
+uint8\+\_\+t dns\+\_\+header\+::opcode}
+
+\Hypertarget{structdns__header_a4f0ead2328427239ca074b09ae581a55}\index{dns\_header@{dns\_header}!qdcount@{qdcount}}
+\index{qdcount@{qdcount}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{qdcount}{qdcount}}
+{\footnotesize\ttfamily \label{structdns__header_a4f0ead2328427239ca074b09ae581a55} 
+uint16\+\_\+t dns\+\_\+header\+::qdcount}
+
+\Hypertarget{structdns__header_ad46e5b9311d45bfbf6869685b0254bfa}\index{dns\_header@{dns\_header}!qr@{qr}}
+\index{qr@{qr}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{qr}{qr}}
+{\footnotesize\ttfamily \label{structdns__header_ad46e5b9311d45bfbf6869685b0254bfa} 
+uint8\+\_\+t dns\+\_\+header\+::qr}
+
+\Hypertarget{structdns__header_ab92fcb7d2e8c0db9ae86bbe884edf37b}\index{dns\_header@{dns\_header}!ra@{ra}}
+\index{ra@{ra}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{ra}{ra}}
+{\footnotesize\ttfamily \label{structdns__header_ab92fcb7d2e8c0db9ae86bbe884edf37b} 
+uint8\+\_\+t dns\+\_\+header\+::ra}
+
+\Hypertarget{structdns__header_af86ee8a7d4855dd1ca83f9fab8ce060a}\index{dns\_header@{dns\_header}!rcode@{rcode}}
+\index{rcode@{rcode}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{rcode}{rcode}}
+{\footnotesize\ttfamily \label{structdns__header_af86ee8a7d4855dd1ca83f9fab8ce060a} 
+uint8\+\_\+t dns\+\_\+header\+::rcode}
+
+\Hypertarget{structdns__header_ab478da94fb6929e172069e926fbf7743}\index{dns\_header@{dns\_header}!rd@{rd}}
+\index{rd@{rd}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{rd}{rd}}
+{\footnotesize\ttfamily \label{structdns__header_ab478da94fb6929e172069e926fbf7743} 
+uint8\+\_\+t dns\+\_\+header\+::rd}
+
+\Hypertarget{structdns__header_a6c111d6d9f0a5e07df0465abb434241b}\index{dns\_header@{dns\_header}!tc@{tc}}
+\index{tc@{tc}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{tc}{tc}}
+{\footnotesize\ttfamily \label{structdns__header_a6c111d6d9f0a5e07df0465abb434241b} 
+uint8\+\_\+t dns\+\_\+header\+::tc}
+
+\Hypertarget{structdns__header_acdc3183a7dd52107e67f38b50348afdd}\index{dns\_header@{dns\_header}!z@{z}}
+\index{z@{z}!dns\_header@{dns\_header}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \label{structdns__header_acdc3183a7dd52107e67f38b50348afdd} 
+uint8\+\_\+t dns\+\_\+header\+::z}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{dns_8h}{dns.\+h}}\end{DoxyCompactItemize}

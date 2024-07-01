@@ -1,0 +1,59 @@
+\doxysection{linklist\+\_\+rbtree.\+h}
+\hypertarget{linklist__rbtree_8h_source}{}\label{linklist__rbtree_8h_source}\index{include/linklist\_rbtree.h@{include/linklist\_rbtree.h}}
+\mbox{\hyperlink{linklist__rbtree_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DNSR\_LINKLIST\_RBTREE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DNSR\_LINKLIST\_RBTREE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dns_8h}{dns.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}},\ \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}}
+\DoxyCodeLine{00011\ \}\ \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrbtree__value}{rbtree\_value}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structdns__rr}{Dns\_RR}}\ *\mbox{\hyperlink{structrbtree__value_a980f40ea1a2c1d9c5dfeaef5b22a9333}{rr}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structrbtree__value_a103a6932e7b017ab2bb2f2f0c4371588}{ancount}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structrbtree__value_a1c01903b37bfbc418b7aecfde73def5e}{nscount}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structrbtree__value_a281048e9c9b069cfc1ba51d6933c751e}{arcount}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{structrbtree__value_a3aa193f1c82fe7902ca1999fa0b294d2}{type}};\ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\_Value}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structrbtree__value}{Rbtree\_Value}}\ *\mbox{\hyperlink{structdns__rr__linklist_a4b4166651ac3380d5a07e79b9c0ab309}{value}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ time\_t\ \mbox{\hyperlink{structdns__rr__linklist_a66d02cb7e807973430bfd886f6f8950f}{expire\_time}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ *\mbox{\hyperlink{structdns__rr__linklist_a5a9a2df278fdc066438864ee9ccd3654}{next}};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \ \ \ \ void\ (*\mbox{\hyperlink{structdns__rr__linklist_abae45b0aeaca4038b755730b3e2a4e4c}{insert}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ *list,\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ *new\_list\_node);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ void\ (*\mbox{\hyperlink{structdns__rr__linklist_a54d9bd561cb1e3de763a0c8b14b2a386}{delete\_next}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ *list);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ *(*query\_next)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structdns__rr__linklist}{dns\_rr\_linklist}}\ *list,\ \textcolor{keyword}{const}\ uint8\_t\ *qname,\ \textcolor{keyword}{const}\ uint16\_t\ qtype);}
+\DoxyCodeLine{00050\ \}\ \mbox{\hyperlink{linklist__rbtree_8h_a9d6d4f7021c664e08647db63cd57901c}{Dns\_RR\_LinkList}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrbtree__node}{rbtree\_node}}\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structrbtree__node_abbf3a913a39e9a9a42323e15817c12ad}{key}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{structdns__rr__linklist}{Dns\_RR\_LinkList}}\ *\mbox{\hyperlink{structrbtree__node_a11295b11d2e7b3b34ae5fa4405b55ec8}{rr\_list}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{linklist__rbtree_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ \mbox{\hyperlink{structrbtree__node_aadb3636e79df102ba597cbe2a4cde075}{color}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrbtree__node}{rbtree\_node}}\ *\mbox{\hyperlink{structrbtree__node_a2be587ea37923dea5167e78592c9cb2e}{left}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrbtree__node}{rbtree\_node}}\ *\mbox{\hyperlink{structrbtree__node_af1547a25a96223bc5b3dbee409177be3}{right}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structrbtree__node}{rbtree\_node}}\ *\mbox{\hyperlink{structrbtree__node_a21c30c17467350315936679e7fe3cedb}{parent}};\ }
+\DoxyCodeLine{00060\ \}\ \mbox{\hyperlink{linklist__rbtree_8h_a9f4c64a0ceb81e4fae72a02d213e0ff4}{Rbtree\_Node}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlinklist__rbtree}{linklist\_rbtree}}\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{structrbtree__node}{Rbtree\_Node}}\ *\mbox{\hyperlink{structlinklist__rbtree_a24d4297c2bba24e6f2528e77a7711529}{root}};\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ void\ (*\mbox{\hyperlink{structlinklist__rbtree_a7bcbdc7d0951a25bb42a654cef59cfc2}{insert}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structlinklist__rbtree}{linklist\_rbtree}}\ *tree,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ key,\ \mbox{\hyperlink{structdns__rr__linklist}{Dns\_RR\_LinkList}}\ *list);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{structdns__rr__linklist}{Dns\_RR\_LinkList}}\ *(*query)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structlinklist__rbtree}{linklist\_rbtree}}\ *tree,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00081\ \}\ \mbox{\hyperlink{linklist__rbtree_8h_a49802f8e1ce12c4e25b4de56f326d759}{Rbtree}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \mbox{\hyperlink{structdns__rr__linklist}{Dns\_RR\_LinkList}}\ *\mbox{\hyperlink{linklist__rbtree_8h_ac1e7b55e2083949b45865ea07af04f9b}{new\_linklist}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \mbox{\hyperlink{structlinklist__rbtree}{Rbtree}}\ *\mbox{\hyperlink{linklist__rbtree_8h_a6223e88c82874af7ec915b7fe8240204}{new\_rbtree}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DNSR\_LINKLIST\_RBTREE\_H}}
+
+\end{DoxyCode}

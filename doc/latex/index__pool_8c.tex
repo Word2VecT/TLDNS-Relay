@@ -1,0 +1,185 @@
+\doxysection{src/index\+\_\+pool.c File Reference}
+\hypertarget{index__pool_8c}{}\label{index__pool_8c}\index{src/index\_pool.c@{src/index\_pool.c}}
+{\ttfamily \#include "{}../include/index\+\_\+pool.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+Include dependency graph for index\+\_\+pool.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{index__pool_8c_a8f4fe4d0639c462591edd3247a3ade7c}{ipool\+\_\+full}} (\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}ipool)
+\begin{DoxyCompactList}\small\item\em Check if the index pool is full. \end{DoxyCompactList}\item 
+static uint16\+\_\+t \mbox{\hyperlink{index__pool_8c_afa69a2380bfa539177eb075d2f2564e5}{ipool\+\_\+insert}} (\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}ipool, \mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*}req)
+\begin{DoxyCompactList}\small\item\em Insert an index into the pool. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{index__pool_8c_aee0d0705b3aaf7312a3fc36875289264}{ipool\+\_\+query}} (\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}ipool, uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Query if an index exists in the pool. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{index__pool_8c_a6e54238119ca2e613f1a4e164bccf835}{ipool\+\_\+delete}} (\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}ipool, uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Delete an index from the pool. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{index__pool_8c_a93abf5419ea71a6b050003b38ffb7ef3}{ipool\+\_\+destroy}} (\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}ipool)
+\begin{DoxyCompactList}\small\item\em Destroy the index pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{index__pool_8c_a2a5451cc4036a0df832b3dcf990e96e6}{new\+\_\+ipool}} ()
+\begin{DoxyCompactList}\small\item\em Create a new index pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{index__pool_8c_a6e54238119ca2e613f1a4e164bccf835}\index{index\_pool.c@{index\_pool.c}!ipool\_delete@{ipool\_delete}}
+\index{ipool\_delete@{ipool\_delete}!index\_pool.c@{index\_pool.c}}
+\doxysubsubsection{\texorpdfstring{ipool\_delete()}{ipool\_delete()}}
+{\footnotesize\ttfamily \label{index__pool_8c_a6e54238119ca2e613f1a4e164bccf835} 
+static \mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*} ipool\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{ipool}{, }\item[{uint16\+\_\+t}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete an index from the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+{\em index} & The index to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deleted index 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c_a6e54238119ca2e613f1a4e164bccf835_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{index__pool_8c_a93abf5419ea71a6b050003b38ffb7ef3}\index{index\_pool.c@{index\_pool.c}!ipool\_destroy@{ipool\_destroy}}
+\index{ipool\_destroy@{ipool\_destroy}!index\_pool.c@{index\_pool.c}}
+\doxysubsubsection{\texorpdfstring{ipool\_destroy()}{ipool\_destroy()}}
+{\footnotesize\ttfamily \label{index__pool_8c_a93abf5419ea71a6b050003b38ffb7ef3} 
+static void ipool\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{ipool}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Destroy the index pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool to destroy \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c_a93abf5419ea71a6b050003b38ffb7ef3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{index__pool_8c_a8f4fe4d0639c462591edd3247a3ade7c}\index{index\_pool.c@{index\_pool.c}!ipool\_full@{ipool\_full}}
+\index{ipool\_full@{ipool\_full}!index\_pool.c@{index\_pool.c}}
+\doxysubsubsection{\texorpdfstring{ipool\_full()}{ipool\_full()}}
+{\footnotesize\ttfamily \label{index__pool_8c_a8f4fe4d0639c462591edd3247a3ade7c} 
+static bool ipool\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{ipool}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if the index pool is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the index pool is full, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c_a8f4fe4d0639c462591edd3247a3ade7c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{index__pool_8c_afa69a2380bfa539177eb075d2f2564e5}\index{index\_pool.c@{index\_pool.c}!ipool\_insert@{ipool\_insert}}
+\index{ipool\_insert@{ipool\_insert}!index\_pool.c@{index\_pool.c}}
+\doxysubsubsection{\texorpdfstring{ipool\_insert()}{ipool\_insert()}}
+{\footnotesize\ttfamily \label{index__pool_8c_afa69a2380bfa539177eb075d2f2564e5} 
+static uint16\+\_\+t ipool\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{ipool}{, }\item[{\mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*}}]{req}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert an index into the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+{\em req} & The index to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the inserted index 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c_afa69a2380bfa539177eb075d2f2564e5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{index__pool_8c_aee0d0705b3aaf7312a3fc36875289264}\index{index\_pool.c@{index\_pool.c}!ipool\_query@{ipool\_query}}
+\index{ipool\_query@{ipool\_query}!index\_pool.c@{index\_pool.c}}
+\doxysubsubsection{\texorpdfstring{ipool\_query()}{ipool\_query()}}
+{\footnotesize\ttfamily \label{index__pool_8c_aee0d0705b3aaf7312a3fc36875289264} 
+static bool ipool\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*}}]{ipool}{, }\item[{uint16\+\_\+t}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Query if an index exists in the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+{\em index} & The index to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the index exists, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c_aee0d0705b3aaf7312a3fc36875289264_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{index__pool_8c_a2a5451cc4036a0df832b3dcf990e96e6}\index{index\_pool.c@{index\_pool.c}!new\_ipool@{new\_ipool}}
+\index{new\_ipool@{new\_ipool}!index\_pool.c@{index\_pool.c}}
+\doxysubsubsection{\texorpdfstring{new\_ipool()}{new\_ipool()}}
+{\footnotesize\ttfamily \label{index__pool_8c_a2a5451cc4036a0df832b3dcf990e96e6} 
+\mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} new\+\_\+ipool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a new index pool. 
+
+\begin{DoxyReturn}{Returns}
+The new index pool 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{index__pool_8c_a2a5451cc4036a0df832b3dcf990e96e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{index__pool_8c_a2a5451cc4036a0df832b3dcf990e96e6_icgraph}
+\end{center}
+\end{figure}

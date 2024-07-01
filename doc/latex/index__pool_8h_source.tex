@@ -1,0 +1,41 @@
+\doxysection{index\+\_\+pool.\+h}
+\hypertarget{index__pool_8h_source}{}\label{index__pool_8h_source}\index{include/index\_pool.h@{include/index\_pool.h}}
+\mbox{\hyperlink{index__pool_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DNSR\_INDEX\_POOL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DNSR\_INDEX\_POOL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queue_8h}{queue.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ INDEX\_POOL\_MAX\_SIZE\ 65535}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__}{index\_}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structindex___a2ed87ec15fc869a076b16468d9121095}{id}};\ }
+\DoxyCodeLine{00014\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structindex___a1f74bc47dccba4976cd83a08b76562f9}{prev\_id}};\ }
+\DoxyCodeLine{00015\ \}\ \mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__pool}{index\_pool}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structindex__}{Index}}\ *\ \mbox{\hyperlink{structindex__pool_a4c348dc48fe75dbd585f6b06f2c80488}{pool}}[\mbox{\hyperlink{index__pool_8h_ab4978b587ed2e3aec43e5b1a94d650a8}{INDEX\_POOL\_MAX\_SIZE}}];\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structindex__pool_a111772daaaddcee8e655c9bb6a7ec111}{count}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structqueue}{Queue}}\ *\ \mbox{\hyperlink{structindex__pool_a510933fa8aeeafb6cd8dedc0a5304302}{queue}};\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ bool\ (*\ \mbox{\hyperlink{structindex__pool_abe14a3acfbe0139b82824973ed37bc4a}{full}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__pool}{index\_pool}}\ *\ ipool);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ uint16\_t\ (*\ \mbox{\hyperlink{structindex__pool_ae7416f2d0cf3179a08d6b77ca5294f41}{insert}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__pool}{index\_pool}}\ *\ ipool,\ \mbox{\hyperlink{structindex__}{Index}}\ *\ req);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ bool\ (*\ \mbox{\hyperlink{structindex__pool_a85d5460293658354e5310f67e80a7d45}{query}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__pool}{index\_pool}}\ *\ ipool,\ uint16\_t\ index);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{structindex__}{Index}}\ *\ (*\ delete)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__pool}{index\_pool}}\ *\ ipool,\ uint16\_t\ index);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ void\ (*\ \mbox{\hyperlink{structindex__pool_abae05eee7fe94f0fb115992012c39c24}{destroy}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structindex__pool}{index\_pool}}\ *\ ipool);}
+\DoxyCodeLine{00060\ \}\ \mbox{\hyperlink{index__pool_8h_ab81c1ac5334273e44196a19a27a2bf20}{Index\_Pool}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \mbox{\hyperlink{structindex__pool}{Index\_Pool}}\ *\ \mbox{\hyperlink{index__pool_8h_a2a5451cc4036a0df832b3dcf990e96e6}{new\_ipool}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DNSR\_INDEX\_POOL\_H}}
+
+\end{DoxyCode}

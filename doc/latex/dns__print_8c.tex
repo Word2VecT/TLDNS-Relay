@@ -1,0 +1,293 @@
+\doxysection{src/dns\+\_\+print.c File Reference}
+\hypertarget{dns__print_8c}{}\label{dns__print_8c}\index{src/dns\_print.c@{src/dns\_print.c}}
+{\ttfamily \#include "{}../include/dns\+\_\+print.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+Include dependency graph for dns\+\_\+print.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dns__print_8c_aa26d00d719a693f6d7e0789bee44f22c}{print\+\_\+dns\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}pstring, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Print DNS message byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_ac21f9aaff6cb58fc94996ab28134dd4e}{print\+\_\+rr\+\_\+A}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}rdata)
+\begin{DoxyCompactList}\small\item\em Print the rdata field of an A type RR. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_a1762e54b4c8f5b77fd05f11a587c668e}{print\+\_\+rr\+\_\+\+AAAA}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}rdata)
+\begin{DoxyCompactList}\small\item\em Print the rdata field of an AAAA type RR. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_a51cb3312021d99b0f9d1f3f680750baf}{print\+\_\+rr\+\_\+\+CNAME}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}rdata)
+\begin{DoxyCompactList}\small\item\em Print the rdata field of a CNAME type RR. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_a5bc6e539fe23203d4a35b5ecba60fe7c}{print\+\_\+rr\+\_\+\+SOA}} (uint16\+\_\+t rdlength, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}rdata)
+\begin{DoxyCompactList}\small\item\em Print the rdata field of an SOA type RR. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_a7d2f7aadf05efe5e1736eeae47b4f9b7}{print\+\_\+rr\+\_\+\+MX}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}rdata)
+\begin{DoxyCompactList}\small\item\em Print the rdata field of an MX type RR. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_ac6e3eb285185ea15710afc5bd43296e9}{print\+\_\+dns\+\_\+header}} (const \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*}phead)
+\begin{DoxyCompactList}\small\item\em Print the Header Section. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_a81671f953008d8cae7d6401e26a2c529}{print\+\_\+dns\+\_\+question}} (const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}pque)
+\begin{DoxyCompactList}\small\item\em Print the Question Section. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__print_8c_a27420aa71c1505035590b710e06778ad}{print\+\_\+dns\+\_\+rr}} (const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}prr)
+\begin{DoxyCompactList}\small\item\em Print the Resource Record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__print_8c_a33a39397e0f2e1a98b86b6d85321ee79}{print\+\_\+dns\+\_\+message}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg)
+\begin{DoxyCompactList}\small\item\em Print the entire DNS message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__print_8c_ac6e3eb285185ea15710afc5bd43296e9}\index{dns\_print.c@{dns\_print.c}!print\_dns\_header@{print\_dns\_header}}
+\index{print\_dns\_header@{print\_dns\_header}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_header()}{print\_dns\_header()}}
+{\footnotesize\ttfamily \label{dns__print_8c_ac6e3eb285185ea15710afc5bd43296e9} 
+static void print\+\_\+dns\+\_\+header (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*}}]{phead}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the Header Section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phead} & The Header Section \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_ac6e3eb285185ea15710afc5bd43296e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a33a39397e0f2e1a98b86b6d85321ee79}\index{dns\_print.c@{dns\_print.c}!print\_dns\_message@{print\_dns\_message}}
+\index{print\_dns\_message@{print\_dns\_message}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_message()}{print\_dns\_message()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a33a39397e0f2e1a98b86b6d85321ee79} 
+void print\+\_\+dns\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{}\end{DoxyParamCaption})}
+
+
+
+Print the entire DNS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a33a39397e0f2e1a98b86b6d85321ee79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a33a39397e0f2e1a98b86b6d85321ee79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a81671f953008d8cae7d6401e26a2c529}\index{dns\_print.c@{dns\_print.c}!print\_dns\_question@{print\_dns\_question}}
+\index{print\_dns\_question@{print\_dns\_question}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_question()}{print\_dns\_question()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a81671f953008d8cae7d6401e26a2c529} 
+static void print\+\_\+dns\+\_\+question (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}}]{pque}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the Question Section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pque} & The Question Section \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a81671f953008d8cae7d6401e26a2c529_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a27420aa71c1505035590b710e06778ad}\index{dns\_print.c@{dns\_print.c}!print\_dns\_rr@{print\_dns\_rr}}
+\index{print\_dns\_rr@{print\_dns\_rr}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_rr()}{print\_dns\_rr()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a27420aa71c1505035590b710e06778ad} 
+static void print\+\_\+dns\+\_\+rr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{prr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the Resource Record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prr} & The Resource Record \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a27420aa71c1505035590b710e06778ad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a27420aa71c1505035590b710e06778ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_aa26d00d719a693f6d7e0789bee44f22c}\index{dns\_print.c@{dns\_print.c}!print\_dns\_string@{print\_dns\_string}}
+\index{print\_dns\_string@{print\_dns\_string}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_string()}{print\_dns\_string()}}
+{\footnotesize\ttfamily \label{dns__print_8c_aa26d00d719a693f6d7e0789bee44f22c} 
+void print\+\_\+dns\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Print DNS message byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & The byte stream \\
+\hline
+{\em len} & The length of the byte stream \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_aa26d00d719a693f6d7e0789bee44f22c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_ac21f9aaff6cb58fc94996ab28134dd4e}\index{dns\_print.c@{dns\_print.c}!print\_rr\_A@{print\_rr\_A}}
+\index{print\_rr\_A@{print\_rr\_A}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_rr\_A()}{print\_rr\_A()}}
+{\footnotesize\ttfamily \label{dns__print_8c_ac21f9aaff6cb58fc94996ab28134dd4e} 
+static void print\+\_\+rr\+\_\+A (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the rdata field of an A type RR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdata} & The rdata field \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_ac21f9aaff6cb58fc94996ab28134dd4e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a1762e54b4c8f5b77fd05f11a587c668e}\index{dns\_print.c@{dns\_print.c}!print\_rr\_AAAA@{print\_rr\_AAAA}}
+\index{print\_rr\_AAAA@{print\_rr\_AAAA}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_rr\_AAAA()}{print\_rr\_AAAA()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a1762e54b4c8f5b77fd05f11a587c668e} 
+static void print\+\_\+rr\+\_\+\+AAAA (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the rdata field of an AAAA type RR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdata} & The rdata field \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a1762e54b4c8f5b77fd05f11a587c668e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a51cb3312021d99b0f9d1f3f680750baf}\index{dns\_print.c@{dns\_print.c}!print\_rr\_CNAME@{print\_rr\_CNAME}}
+\index{print\_rr\_CNAME@{print\_rr\_CNAME}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_rr\_CNAME()}{print\_rr\_CNAME()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a51cb3312021d99b0f9d1f3f680750baf} 
+static void print\+\_\+rr\+\_\+\+CNAME (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the rdata field of a CNAME type RR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdata} & The rdata field \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a51cb3312021d99b0f9d1f3f680750baf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a7d2f7aadf05efe5e1736eeae47b4f9b7}\index{dns\_print.c@{dns\_print.c}!print\_rr\_MX@{print\_rr\_MX}}
+\index{print\_rr\_MX@{print\_rr\_MX}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_rr\_MX()}{print\_rr\_MX()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a7d2f7aadf05efe5e1736eeae47b4f9b7} 
+static void print\+\_\+rr\+\_\+\+MX (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the rdata field of an MX type RR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdata} & The rdata field \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{dns__print_8c_a7d2f7aadf05efe5e1736eeae47b4f9b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a7d2f7aadf05efe5e1736eeae47b4f9b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8c_a5bc6e539fe23203d4a35b5ecba60fe7c}\index{dns\_print.c@{dns\_print.c}!print\_rr\_SOA@{print\_rr\_SOA}}
+\index{print\_rr\_SOA@{print\_rr\_SOA}!dns\_print.c@{dns\_print.c}}
+\doxysubsubsection{\texorpdfstring{print\_rr\_SOA()}{print\_rr\_SOA()}}
+{\footnotesize\ttfamily \label{dns__print_8c_a5bc6e539fe23203d4a35b5ecba60fe7c} 
+static void print\+\_\+rr\+\_\+\+SOA (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{rdlength}{, }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{rdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Print the rdata field of an SOA type RR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rdlength} & The rdlength field \\
+\hline
+{\em rdata} & The rdata field \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{dns__print_8c_a5bc6e539fe23203d4a35b5ecba60fe7c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8c_a5bc6e539fe23203d4a35b5ecba60fe7c_icgraph}
+\end{center}
+\end{figure}

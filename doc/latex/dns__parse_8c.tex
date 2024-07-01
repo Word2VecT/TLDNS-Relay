@@ -1,0 +1,632 @@
+\doxysection{src/dns\+\_\+parse.c File Reference}
+\hypertarget{dns__parse_8c}{}\label{dns__parse_8c}\index{src/dns\_parse.c@{src/dns\_parse.c}}
+{\ttfamily \#include "{}../include/dns\+\_\+parse.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+Include dependency graph for dns\+\_\+parse.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint16\+\_\+t \mbox{\hyperlink{dns__parse_8c_a26eb64cb4cd82b2070e8fe7f000ff6ae}{read\+\_\+uint16}} (const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Read a 16-\/bit number in big-\/endian format from a byte stream. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{dns__parse_8c_a8bc6db15347c892e31a6e9162b25fc8b}{read\+\_\+uint32}} (const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Read a 32-\/bit number in big-\/endian format from a byte stream. \end{DoxyCompactList}\item 
+static unsigned \mbox{\hyperlink{dns__parse_8c_add1ca591f936273329c3e34668cc7913}{string\+\_\+to\+\_\+rrname}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pname, const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Read a NAME field from a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_aba15da5b80dcab3ce985bc3f2270d84b}{string\+\_\+to\+\_\+dnshead}} (\mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*}phead, const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Read a Header Section from a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_a05e0c813cb5f66334e4e27b7bd571698}{string\+\_\+to\+\_\+dnsque}} (\mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}pque, const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Read a Question Section from a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_a1cfb0c409e3ec519e218b7f8a709f8bd}{string\+\_\+to\+\_\+dnsrr}} (\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}prr, const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Read a Resource Record from a byte stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__parse_8c_a0f89102e256c499ffa19784791cb68f6}{string\+\_\+to\+\_\+dnsmsg}} (\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg, const char \texorpdfstring{$\ast$}{*}pstring)
+\begin{DoxyCompactList}\small\item\em Convert a byte stream to a DNS message structure. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_a892deea8e33cb7ce2c0f336d112abe4e}{write\+\_\+uint16}} (const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset, uint16\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Write a 16-\/bit number in little-\/endian format to a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_a803502b08c76912cbf1a675d1d3890a5}{write\+\_\+uint32}} (const char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset, uint32\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Write a 32-\/bit number in little-\/endian format to a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_a7b904ddd10df7128f7ec9b1aab19b85c}{rrname\+\_\+to\+\_\+string}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}pname, char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Write a NAME field to a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_ad51e454f1437c9575b97f84d3d77a1b9}{dnshead\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*}phead, char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Write a Header Section to a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_a2b54cf6f19477718d5286330d0cb0cae}{dnsque\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}pque, char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Write a Question Section to a byte stream. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{dns__parse_8c_aaf9a9b3814123fe16906c30643db1d59}{dnsrr\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}prr, char \texorpdfstring{$\ast$}{*}pstring, unsigned \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Write a Resource Record to a byte stream. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{dns__parse_8c_aa893e182a92c2ccf5644c1f8a12fba37}{dnsmsg\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg, char \texorpdfstring{$\ast$}{*}pstring)
+\begin{DoxyCompactList}\small\item\em Convert a DNS message structure to a byte stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__parse_8c_a70f17de617dc9a8a1a87e966b35bf273}{destroy\+\_\+dnsrr}} (\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}prr)
+\begin{DoxyCompactList}\small\item\em Release memory allocated for a Resource Record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__parse_8c_a014b4d840d6c7d7242d7b26ccd32bda8}{destroy\+\_\+dnsmsg}} (\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg)
+\begin{DoxyCompactList}\small\item\em Release memory allocated for a DNS message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dns__parse_8c_a04774941b5c9d0297b083fbf61c09196}{copy\+\_\+dnsrr}} (const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Copy a Resource Record. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dns__parse_8c_adf78a5bc6bcf96720bb91633701da6cd}{copy\+\_\+dnsmsg}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Copy a DNS message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__parse_8c_adf78a5bc6bcf96720bb91633701da6cd}\index{dns\_parse.c@{dns\_parse.c}!copy\_dnsmsg@{copy\_dnsmsg}}
+\index{copy\_dnsmsg@{copy\_dnsmsg}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{copy\_dnsmsg()}{copy\_dnsmsg()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_adf78a5bc6bcf96720bb91633701da6cd} 
+\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*} copy\+\_\+dnsmsg (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})}
+
+
+
+Copy a DNS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The DNS message to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the DNS message 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{dns__parse_8c_adf78a5bc6bcf96720bb91633701da6cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_adf78a5bc6bcf96720bb91633701da6cd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a04774941b5c9d0297b083fbf61c09196}\index{dns\_parse.c@{dns\_parse.c}!copy\_dnsrr@{copy\_dnsrr}}
+\index{copy\_dnsrr@{copy\_dnsrr}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{copy\_dnsrr()}{copy\_dnsrr()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a04774941b5c9d0297b083fbf61c09196} 
+\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*} copy\+\_\+dnsrr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})}
+
+
+
+Copy a Resource Record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The Resource Record to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the Resource Record 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a04774941b5c9d0297b083fbf61c09196_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a014b4d840d6c7d7242d7b26ccd32bda8}\index{dns\_parse.c@{dns\_parse.c}!destroy\_dnsmsg@{destroy\_dnsmsg}}
+\index{destroy\_dnsmsg@{destroy\_dnsmsg}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_dnsmsg()}{destroy\_dnsmsg()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a014b4d840d6c7d7242d7b26ccd32bda8} 
+void destroy\+\_\+dnsmsg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{}\end{DoxyParamCaption})}
+
+
+
+Release memory allocated for a DNS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message to release \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{dns__parse_8c_a014b4d840d6c7d7242d7b26ccd32bda8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a014b4d840d6c7d7242d7b26ccd32bda8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a70f17de617dc9a8a1a87e966b35bf273}\index{dns\_parse.c@{dns\_parse.c}!destroy\_dnsrr@{destroy\_dnsrr}}
+\index{destroy\_dnsrr@{destroy\_dnsrr}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_dnsrr()}{destroy\_dnsrr()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a70f17de617dc9a8a1a87e966b35bf273} 
+void destroy\+\_\+dnsrr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{prr}{}\end{DoxyParamCaption})}
+
+
+
+Release memory allocated for a Resource Record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prr} & The Resource Record to release \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a70f17de617dc9a8a1a87e966b35bf273_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_ad51e454f1437c9575b97f84d3d77a1b9}\index{dns\_parse.c@{dns\_parse.c}!dnshead\_to\_string@{dnshead\_to\_string}}
+\index{dnshead\_to\_string@{dnshead\_to\_string}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{dnshead\_to\_string()}{dnshead\_to\_string()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_ad51e454f1437c9575b97f84d3d77a1b9} 
+static void dnshead\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*}}]{phead}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a Header Section to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phead} & The Header Section \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases to the position after the Header Section 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{dns__parse_8c_ad51e454f1437c9575b97f84d3d77a1b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_ad51e454f1437c9575b97f84d3d77a1b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_aa893e182a92c2ccf5644c1f8a12fba37}\index{dns\_parse.c@{dns\_parse.c}!dnsmsg\_to\_string@{dnsmsg\_to\_string}}
+\index{dnsmsg\_to\_string@{dnsmsg\_to\_string}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{dnsmsg\_to\_string()}{dnsmsg\_to\_string()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_aa893e182a92c2ccf5644c1f8a12fba37} 
+unsigned dnsmsg\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{pstring}{}\end{DoxyParamCaption})}
+
+
+
+Convert a DNS message structure to a byte stream. 
+
+Write a NAME field to a byte stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message structure to convert \\
+\hline
+{\em pstring} & The byte stream to write to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total length of the byte stream 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_aa893e182a92c2ccf5644c1f8a12fba37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_aa893e182a92c2ccf5644c1f8a12fba37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a2b54cf6f19477718d5286330d0cb0cae}\index{dns\_parse.c@{dns\_parse.c}!dnsque\_to\_string@{dnsque\_to\_string}}
+\index{dnsque\_to\_string@{dnsque\_to\_string}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{dnsque\_to\_string()}{dnsque\_to\_string()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a2b54cf6f19477718d5286330d0cb0cae} 
+static void dnsque\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}}]{pque}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a Question Section to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pque} & The Question Section \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases to the position after the Question Section 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{dns__parse_8c_a2b54cf6f19477718d5286330d0cb0cae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a2b54cf6f19477718d5286330d0cb0cae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_aaf9a9b3814123fe16906c30643db1d59}\index{dns\_parse.c@{dns\_parse.c}!dnsrr\_to\_string@{dnsrr\_to\_string}}
+\index{dnsrr\_to\_string@{dnsrr\_to\_string}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{dnsrr\_to\_string()}{dnsrr\_to\_string()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_aaf9a9b3814123fe16906c30643db1d59} 
+static void dnsrr\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{prr}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a Resource Record to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prr} & The Resource Record \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases to the position after the Resource Record 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{dns__parse_8c_aaf9a9b3814123fe16906c30643db1d59_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_aaf9a9b3814123fe16906c30643db1d59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a26eb64cb4cd82b2070e8fe7f000ff6ae}\index{dns\_parse.c@{dns\_parse.c}!read\_uint16@{read\_uint16}}
+\index{read\_uint16@{read\_uint16}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{read\_uint16()}{read\_uint16()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a26eb64cb4cd82b2070e8fe7f000ff6ae} 
+static uint16\+\_\+t read\+\_\+uint16 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read a 16-\/bit number in big-\/endian format from a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 16-\/bit number starting from (pstring + \texorpdfstring{$\ast$}{*}offset) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+After reading, the offset increases by 2 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a26eb64cb4cd82b2070e8fe7f000ff6ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a8bc6db15347c892e31a6e9162b25fc8b}\index{dns\_parse.c@{dns\_parse.c}!read\_uint32@{read\_uint32}}
+\index{read\_uint32@{read\_uint32}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{read\_uint32()}{read\_uint32()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a8bc6db15347c892e31a6e9162b25fc8b} 
+static uint32\+\_\+t read\+\_\+uint32 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read a 32-\/bit number in big-\/endian format from a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 32-\/bit number starting from (pstring + \texorpdfstring{$\ast$}{*}offset) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+After reading, the offset increases by 4 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a8bc6db15347c892e31a6e9162b25fc8b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a7b904ddd10df7128f7ec9b1aab19b85c}\index{dns\_parse.c@{dns\_parse.c}!rrname\_to\_string@{rrname\_to\_string}}
+\index{rrname\_to\_string@{rrname\_to\_string}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{rrname\_to\_string()}{rrname\_to\_string()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a7b904ddd10df7128f7ec9b1aab19b85c} 
+static void rrname\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pname}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a NAME field to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pname} & The NAME field \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases to the position after the NAME field 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a7b904ddd10df7128f7ec9b1aab19b85c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_aba15da5b80dcab3ce985bc3f2270d84b}\index{dns\_parse.c@{dns\_parse.c}!string\_to\_dnshead@{string\_to\_dnshead}}
+\index{string\_to\_dnshead@{string\_to\_dnshead}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_dnshead()}{string\_to\_dnshead()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_aba15da5b80dcab3ce985bc3f2270d84b} 
+static void string\+\_\+to\+\_\+dnshead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}} \texorpdfstring{$\ast$}{*}}]{phead}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read a Header Section from a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phead} & The Header Section \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After reading, the offset increases to the position after the Header Section 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{dns__parse_8c_aba15da5b80dcab3ce985bc3f2270d84b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_aba15da5b80dcab3ce985bc3f2270d84b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a0f89102e256c499ffa19784791cb68f6}\index{dns\_parse.c@{dns\_parse.c}!string\_to\_dnsmsg@{string\_to\_dnsmsg}}
+\index{string\_to\_dnsmsg@{string\_to\_dnsmsg}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_dnsmsg()}{string\_to\_dnsmsg()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a0f89102e256c499ffa19784791cb68f6} 
+void string\+\_\+to\+\_\+dnsmsg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{}\end{DoxyParamCaption})}
+
+
+
+Convert a byte stream to a DNS message structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message structure to populate \\
+\hline
+{\em pstring} & The byte stream to read from \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a0f89102e256c499ffa19784791cb68f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a0f89102e256c499ffa19784791cb68f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a05e0c813cb5f66334e4e27b7bd571698}\index{dns\_parse.c@{dns\_parse.c}!string\_to\_dnsque@{string\_to\_dnsque}}
+\index{string\_to\_dnsque@{string\_to\_dnsque}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_dnsque()}{string\_to\_dnsque()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a05e0c813cb5f66334e4e27b7bd571698} 
+static void string\+\_\+to\+\_\+dnsque (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}}]{pque}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read a Question Section from a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pque} & The Question Section \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After reading, the offset increases to the position after the Question Section; space is allocated for the NAME field 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a05e0c813cb5f66334e4e27b7bd571698_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a05e0c813cb5f66334e4e27b7bd571698_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a1cfb0c409e3ec519e218b7f8a709f8bd}\index{dns\_parse.c@{dns\_parse.c}!string\_to\_dnsrr@{string\_to\_dnsrr}}
+\index{string\_to\_dnsrr@{string\_to\_dnsrr}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_dnsrr()}{string\_to\_dnsrr()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a1cfb0c409e3ec519e218b7f8a709f8bd} 
+static void string\+\_\+to\+\_\+dnsrr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{prr}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read a Resource Record from a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prr} & The Resource Record \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After reading, the offset increases to the position after the Resource Record; space is allocated for the NAME and RDATA fields 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a1cfb0c409e3ec519e218b7f8a709f8bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a1cfb0c409e3ec519e218b7f8a709f8bd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_add1ca591f936273329c3e34668cc7913}\index{dns\_parse.c@{dns\_parse.c}!string\_to\_rrname@{string\_to\_rrname}}
+\index{string\_to\_rrname@{string\_to\_rrname}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_rrname()}{string\_to\_rrname()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_add1ca591f936273329c3e34668cc7913} 
+static unsigned string\+\_\+to\+\_\+rrname (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pname}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read a NAME field from a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pname} & The NAME field \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total length of the NAME field 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+After reading, the offset increases to the position after the NAME field 
+\end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{dns__parse_8c_add1ca591f936273329c3e34668cc7913_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_add1ca591f936273329c3e34668cc7913_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a892deea8e33cb7ce2c0f336d112abe4e}\index{dns\_parse.c@{dns\_parse.c}!write\_uint16@{write\_uint16}}
+\index{write\_uint16@{write\_uint16}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{write\_uint16()}{write\_uint16()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a892deea8e33cb7ce2c0f336d112abe4e} 
+static void write\+\_\+uint16 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{, }\item[{uint16\+\_\+t}]{num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a 16-\/bit number in little-\/endian format to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+{\em num} & The number to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases by 2 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a892deea8e33cb7ce2c0f336d112abe4e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8c_a803502b08c76912cbf1a675d1d3890a5}\index{dns\_parse.c@{dns\_parse.c}!write\_uint32@{write\_uint32}}
+\index{write\_uint32@{write\_uint32}!dns\_parse.c@{dns\_parse.c}}
+\doxysubsubsection{\texorpdfstring{write\_uint32()}{write\_uint32()}}
+{\footnotesize\ttfamily \label{dns__parse_8c_a803502b08c76912cbf1a675d1d3890a5} 
+static void write\+\_\+uint32 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned \texorpdfstring{$\ast$}{*}}]{offset}{, }\item[{uint32\+\_\+t}]{num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Write a 32-\/bit number in little-\/endian format to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+{\em num} & The number to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases by 4 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8c_a803502b08c76912cbf1a675d1d3890a5_icgraph}
+\end{center}
+\end{figure}

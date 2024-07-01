@@ -1,0 +1,6 @@
+<map id="rbtree_value" name="rbtree_value">
+<area shape="rect" id="Node000001" title="Value of a Red&#45;Black Tree node&#39;s linked list, corresponding to an answer for a specific query." alt="" coords="5,94,98,120"/>
+<area shape="rect" id="Node000002" href="$structdns__rr.html" title="Resource Record structure of DNS message, represented as a linked list." alt="" coords="23,5,80,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,47,54,94,49,94,49,47"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="98,9,107,18,98,27,81,29,80,24,96,22,102,18,94,13"/>
+</map>

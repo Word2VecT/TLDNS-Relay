@@ -1,0 +1,80 @@
+\doxysection{include/dns\+\_\+print.h File Reference}
+\hypertarget{dns__print_8h}{}\label{dns__print_8h}\index{include/dns\_print.h@{include/dns\_print.h}}
+{\ttfamily \#include "{}dns.\+h"{}}\newline
+Include dependency graph for dns\+\_\+print.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{dns__print_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dns__print_8h_aa26d00d719a693f6d7e0789bee44f22c}{print\+\_\+dns\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}pstring, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Print DNS message byte stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__print_8h_a33a39397e0f2e1a98b86b6d85321ee79}{print\+\_\+dns\+\_\+message}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg)
+\begin{DoxyCompactList}\small\item\em Print the entire DNS message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__print_8h_a33a39397e0f2e1a98b86b6d85321ee79}\index{dns\_print.h@{dns\_print.h}!print\_dns\_message@{print\_dns\_message}}
+\index{print\_dns\_message@{print\_dns\_message}!dns\_print.h@{dns\_print.h}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_message()}{print\_dns\_message()}}
+{\footnotesize\ttfamily \label{dns__print_8h_a33a39397e0f2e1a98b86b6d85321ee79} 
+void print\+\_\+dns\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{}\end{DoxyParamCaption})}
+
+
+
+Print the entire DNS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8h_a33a39397e0f2e1a98b86b6d85321ee79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8h_a33a39397e0f2e1a98b86b6d85321ee79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__print_8h_aa26d00d719a693f6d7e0789bee44f22c}\index{dns\_print.h@{dns\_print.h}!print\_dns\_string@{print\_dns\_string}}
+\index{print\_dns\_string@{print\_dns\_string}!dns\_print.h@{dns\_print.h}}
+\doxysubsubsection{\texorpdfstring{print\_dns\_string()}{print\_dns\_string()}}
+{\footnotesize\ttfamily \label{dns__print_8h_aa26d00d719a693f6d7e0789bee44f22c} 
+void print\+\_\+dns\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{, }\item[{unsigned int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Print DNS message byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pstring} & The byte stream \\
+\hline
+{\em len} & The length of the byte stream \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__print_8h_aa26d00d719a693f6d7e0789bee44f22c_icgraph}
+\end{center}
+\end{figure}

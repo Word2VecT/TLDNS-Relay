@@ -1,0 +1,123 @@
+\doxysection{include/log.h File Reference}
+\hypertarget{log_8h}{}\label{log_8h}\index{include/log.h@{include/log.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+Include dependency graph for log.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{log_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{log_8h_aff8be7e5fd1fcb990ba969a2391f9f10}{log\+\_\+debug}}(args...)
+\item 
+\#define \mbox{\hyperlink{log_8h_a50af197751b746ed3151734549307e28}{log\+\_\+info}}(args...)
+\item 
+\#define \mbox{\hyperlink{log_8h_af8f805a98ad86a43d8b6019ff1423fcf}{log\+\_\+error}}(args...)
+\item 
+\#define \mbox{\hyperlink{log_8h_afc1a1e3aa839b3db0861c0e510415e2e}{log\+\_\+fatal}}(args...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\+\_\+file}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{log_8h_aff8be7e5fd1fcb990ba969a2391f9f10}\index{log.h@{log.h}!log\_debug@{log\_debug}}
+\index{log\_debug@{log\_debug}!log.h@{log.h}}
+\doxysubsubsection{\texorpdfstring{log\_debug}{log\_debug}}
+{\footnotesize\ttfamily \label{log_8h_aff8be7e5fd1fcb990ba969a2391f9f10} 
+\#define log\+\_\+debug(\begin{DoxyParamCaption}\item[{}]{args...}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{config_8h_a1ceaf97c18080fa36e2636b7c36b3999}{LOG\_MASK}}\ \&\ 1)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}}\ !=\ stderr)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}[DEBUG]\ \%s:\%d\ "{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)x1b[37m[DEBUG]\(\backslash\)x1b[36m\ \%s:\%d\ \(\backslash\)x1b[0m"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ args);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{log_8h_af8f805a98ad86a43d8b6019ff1423fcf}\index{log.h@{log.h}!log\_error@{log\_error}}
+\index{log\_error@{log\_error}!log.h@{log.h}}
+\doxysubsubsection{\texorpdfstring{log\_error}{log\_error}}
+{\footnotesize\ttfamily \label{log_8h_af8f805a98ad86a43d8b6019ff1423fcf} 
+\#define log\+\_\+error(\begin{DoxyParamCaption}\item[{}]{args...}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{config_8h_a1ceaf97c18080fa36e2636b7c36b3999}{LOG\_MASK}}\ \&\ 4)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}}\ !=\ stderr)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}[ERROR]\ \%s:\%d\ "{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)x1b[33m[ERROR]\(\backslash\)x1b[36m\ \%s:\%d\ \(\backslash\)x1b[0m"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ args);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{log_8h_afc1a1e3aa839b3db0861c0e510415e2e}\index{log.h@{log.h}!log\_fatal@{log\_fatal}}
+\index{log\_fatal@{log\_fatal}!log.h@{log.h}}
+\doxysubsubsection{\texorpdfstring{log\_fatal}{log\_fatal}}
+{\footnotesize\ttfamily \label{log_8h_afc1a1e3aa839b3db0861c0e510415e2e} 
+\#define log\+\_\+fatal(\begin{DoxyParamCaption}\item[{}]{args...}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{config_8h_a1ceaf97c18080fa36e2636b7c36b3999}{LOG\_MASK}}\ \&\ 8)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}}\ !=\ stderr)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}[FATAL]\ \%s:\%d\ "{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)x1b[31m[FATAL]\(\backslash\)x1b[36m\ \%s:\%d\ \(\backslash\)x1b[0m"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ args);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ exit(EXIT\_FAILURE);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{log_8h_a50af197751b746ed3151734549307e28}\index{log.h@{log.h}!log\_info@{log\_info}}
+\index{log\_info@{log\_info}!log.h@{log.h}}
+\doxysubsubsection{\texorpdfstring{log\_info}{log\_info}}
+{\footnotesize\ttfamily \label{log_8h_a50af197751b746ed3151734549307e28} 
+\#define log\+\_\+info(\begin{DoxyParamCaption}\item[{}]{args...}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{config_8h_a1ceaf97c18080fa36e2636b7c36b3999}{LOG\_MASK}}\ \&\ 2)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}}\ !=\ stderr)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}[INFO\ ]\ \%s:\%d\ "{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)x1b[34m[INFO\ ]\(\backslash\)x1b[36m\ \%s:\%d\ \(\backslash\)x1b[0m"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ args);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fprintf(\mbox{\hyperlink{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}},\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{log_8h_ab936051f5aaca44c6c3c41dee0d19c36}\index{log.h@{log.h}!log\_file@{log\_file}}
+\index{log\_file@{log\_file}!log.h@{log.h}}
+\doxysubsubsection{\texorpdfstring{log\_file}{log\_file}}
+{\footnotesize\ttfamily \label{log_8h_ab936051f5aaca44c6c3c41dee0d19c36} 
+FILE\texorpdfstring{$\ast$}{*} log\+\_\+file\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,79 @@
+\doxysection{src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+client.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+server.\+h"{}}\newline
+{\ttfamily \#include "{}../include/query\+\_\+pool.\+h"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}}
+\item 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}
+\item 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a72e226b504514a1ea5a74389ad36ece6}{qpool}}
+\begin{DoxyCompactList}\small\item\em Query pool. \end{DoxyCompactList}\item 
+FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_ab936051f5aaca44c6c3c41dee0d19c36}{log\+\_\+file}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a219405a7efb1068433bdef1efa916e8a}\index{main.c@{main.c}!cache@{cache}}
+\index{cache@{cache}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{cache}{cache}}
+{\footnotesize\ttfamily \label{main_8c_a219405a7efb1068433bdef1efa916e8a} 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}}\texorpdfstring{$\ast$}{*} cache}
+
+\Hypertarget{main_8c_ab936051f5aaca44c6c3c41dee0d19c36}\index{main.c@{main.c}!log\_file@{log\_file}}
+\index{log\_file@{log\_file}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{log\_file}{log\_file}}
+{\footnotesize\ttfamily \label{main_8c_ab936051f5aaca44c6c3c41dee0d19c36} 
+FILE\texorpdfstring{$\ast$}{*} log\+\_\+file}
+
+\Hypertarget{main_8c_add769cb3887f840e6e7be962492de960}\index{main.c@{main.c}!loop@{loop}}
+\index{loop@{loop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily \label{main_8c_add769cb3887f840e6e7be962492de960} 
+uv\+\_\+loop\+\_\+t\texorpdfstring{$\ast$}{*} loop}
+
+\Hypertarget{main_8c_a72e226b504514a1ea5a74389ad36ece6}\index{main.c@{main.c}!qpool@{qpool}}
+\index{qpool@{qpool}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{qpool}{qpool}}
+{\footnotesize\ttfamily \label{main_8c_a72e226b504514a1ea5a74389ad36ece6} 
+\mbox{\hyperlink{query__pool_8h_ab473e597588e70ec88aa19fa55ab6cae}{Query\+\_\+\+Pool}}\texorpdfstring{$\ast$}{*} qpool}
+
+
+
+Query pool. 
+

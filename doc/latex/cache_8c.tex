@@ -1,0 +1,178 @@
+\doxysection{src/cache.c File Reference}
+\hypertarget{cache_8c}{}\label{cache_8c}\index{src/cache.c@{src/cache.c}}
+{\ttfamily \#include "{}../include/cache.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+{\ttfamily \#include "{}../include/log.\+h"{}}\newline
+{\ttfamily \#include "{}../include/dns\+\_\+parse.\+h"{}}\newline
+Include dependency graph for cache.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{cache_8c_a3aa8d6fa65bbd42c0b6327c67362234d}{BKDRHash}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Compute the hash of a string using the BKDR hash algorithm. \end{DoxyCompactList}\item 
+static uint32\+\_\+t \mbox{\hyperlink{cache_8c_a8c6dd0d6aa6f172b089056e27c11e7da}{get\+\_\+min\+\_\+ttl}} (const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}prr)
+\begin{DoxyCompactList}\small\item\em Get the smallest TTL (Time-\/\+To-\/\+Live) value in a list of Resource Records (RRs). \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cache_8c_a6ced4e1f620d2e750fb0c2c049962fa8}{cache\+\_\+insert}} (\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}, const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Insert a DNS message into the cache. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cache_8c_a85397655f041915af32d1846796578a4}{cache\+\_\+query}} (\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a219405a7efb1068433bdef1efa916e8a}{cache}}, const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}que)
+\begin{DoxyCompactList}\small\item\em Query the cache for a DNS question. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{cache_8c_a558b15d81ce86a0a4afa5a64e6fd8055}{new\+\_\+cache}} (FILE \texorpdfstring{$\ast$}{*}hosts\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Create a new cache and initialize it with data from the hosts file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{cache_8c_a3aa8d6fa65bbd42c0b6327c67362234d}\index{cache.c@{cache.c}!BKDRHash@{BKDRHash}}
+\index{BKDRHash@{BKDRHash}!cache.c@{cache.c}}
+\doxysubsubsection{\texorpdfstring{BKDRHash()}{BKDRHash()}}
+{\footnotesize\ttfamily \label{cache_8c_a3aa8d6fa65bbd42c0b6327c67362234d} 
+static unsigned int BKDRHash (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compute the hash of a string using the BKDR hash algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The input string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed hash value. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8c_a3aa8d6fa65bbd42c0b6327c67362234d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cache_8c_a6ced4e1f620d2e750fb0c2c049962fa8}\index{cache.c@{cache.c}!cache\_insert@{cache\_insert}}
+\index{cache\_insert@{cache\_insert}!cache.c@{cache.c}}
+\doxysubsubsection{\texorpdfstring{cache\_insert()}{cache\_insert()}}
+{\footnotesize\ttfamily \label{cache_8c_a6ced4e1f620d2e750fb0c2c049962fa8} 
+static void cache\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}}]{cache}{, }\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insert a DNS message into the cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & The cache where the message will be inserted. \\
+\hline
+{\em msg} & The DNS message to be inserted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8c_a6ced4e1f620d2e750fb0c2c049962fa8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{cache_8c_a6ced4e1f620d2e750fb0c2c049962fa8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cache_8c_a85397655f041915af32d1846796578a4}\index{cache.c@{cache.c}!cache\_query@{cache\_query}}
+\index{cache\_query@{cache\_query}!cache.c@{cache.c}}
+\doxysubsubsection{\texorpdfstring{cache\_query()}{cache\_query()}}
+{\footnotesize\ttfamily \label{cache_8c_a85397655f041915af32d1846796578a4} 
+static \mbox{\hyperlink{linklist__rbtree_8h_a3ad9484222f2163212fb74af65a20935}{Rbtree\+\_\+\+Value}} \texorpdfstring{$\ast$}{*} cache\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*}}]{cache}{, }\item[{const \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}} \texorpdfstring{$\ast$}{*}}]{que}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Query the cache for a DNS question. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cache} & The cache to query. \\
+\hline
+{\em que} & The DNS question. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value found in the cache or NULL if not found. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8c_a85397655f041915af32d1846796578a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{cache_8c_a85397655f041915af32d1846796578a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cache_8c_a8c6dd0d6aa6f172b089056e27c11e7da}\index{cache.c@{cache.c}!get\_min\_ttl@{get\_min\_ttl}}
+\index{get\_min\_ttl@{get\_min\_ttl}!cache.c@{cache.c}}
+\doxysubsubsection{\texorpdfstring{get\_min\_ttl()}{get\_min\_ttl()}}
+{\footnotesize\ttfamily \label{cache_8c_a8c6dd0d6aa6f172b089056e27c11e7da} 
+static uint32\+\_\+t get\+\_\+min\+\_\+ttl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{prr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the smallest TTL (Time-\/\+To-\/\+Live) value in a list of Resource Records (RRs). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prr} & The head node of the RR linked list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum TTL value. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8c_a8c6dd0d6aa6f172b089056e27c11e7da_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{cache_8c_a558b15d81ce86a0a4afa5a64e6fd8055}\index{cache.c@{cache.c}!new\_cache@{new\_cache}}
+\index{new\_cache@{new\_cache}!cache.c@{cache.c}}
+\doxysubsubsection{\texorpdfstring{new\_cache()}{new\_cache()}}
+{\footnotesize\ttfamily \label{cache_8c_a558b15d81ce86a0a4afa5a64e6fd8055} 
+\mbox{\hyperlink{cache_8h_aacb3cd9ae53f433578c171271fb89409}{Cache}} \texorpdfstring{$\ast$}{*} new\+\_\+cache (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{hosts\+\_\+file}{}\end{DoxyParamCaption})}
+
+
+
+Create a new cache and initialize it with data from the hosts file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hosts\+\_\+file} & The file containing hosts data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created cache. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cache_8c_a558b15d81ce86a0a4afa5a64e6fd8055_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{cache_8c_a558b15d81ce86a0a4afa5a64e6fd8055_icgraph}
+\end{center}
+\end{figure}

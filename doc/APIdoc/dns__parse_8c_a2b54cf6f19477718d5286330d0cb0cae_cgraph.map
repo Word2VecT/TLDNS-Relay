@@ -1,0 +1,7 @@
+<map id="dnsque_to_string" name="dnsque_to_string">
+<area shape="rect" id="Node000001" title="Write a Question Section to a byte stream." alt="" coords="5,31,126,56"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a7b904ddd10df7128f7ec9b1aab19b85c" title="Write a NAME field to a byte stream." alt="" coords="174,5,292,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,32,158,27,159,32,127,37"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a892deea8e33cb7ce2c0f336d112abe4e" title="Write a 16&#45;bit number in little&#45;endian format to a byte stream." alt="" coords="187,55,279,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,50,172,56,171,61,126,55"/>
+</map>

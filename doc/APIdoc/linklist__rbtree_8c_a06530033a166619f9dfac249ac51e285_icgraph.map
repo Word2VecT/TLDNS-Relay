@@ -1,0 +1,14 @@
+<map id="uncle" name="uncle">
+<area shape="rect" id="Node000001" title="Get the uncle of a node." alt="" coords="649,29,701,55"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a2003ed64d170c0cf2c2b3a9899eb2557" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="513,29,601,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="634,45,601,45,601,40,634,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="576,16,569,10,557,8,545,10,539,14,537,20,541,28,536,30,532,21,534,11,543,5,557,3,572,5,580,12"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#ae46c23eec5c1ea21ebab9279843de3a3" title="Insert a key&#45;value pair into the red&#45;black tree." alt="" coords="371,29,465,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="497,45,465,45,465,40,497,40"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#a6223e88c82874af7ec915b7fe8240204" title="Initialize a new red&#45;black tree This function allocates memory for a new red&#45;black tree and its nil n..." alt="" coords="238,29,323,55"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="356,45,324,45,324,40,356,40"/>
+<area shape="rect" id="Node000005" href="$cache_8c.html#a558b15d81ce86a0a4afa5a64e6fd8055" title="Create a new cache and initialize it with data from the hosts file." alt="" coords="103,29,190,55"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="222,45,190,45,190,40,222,40"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,29,55,55"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="87,45,55,45,55,40,87,40"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="dnsmsg_to_string" name="dnsmsg_to_string">
+<area shape="rect" id="Node000001" title="Convert a DNS message structure to a byte stream." alt="" coords="5,55,130,80"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#ad51e454f1437c9575b97f84d3d77a1b9" title="Write a Header Section to a byte stream." alt="" coords="178,5,305,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,51,178,33,179,38,116,57"/>
+<area shape="rect" id="Node000004" href="$dns__parse_8c.html#a2b54cf6f19477718d5286330d0cb0cae" title="Write a Question Section to a byte stream." alt="" coords="181,55,302,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,65,166,65,166,70,130,70"/>
+<area shape="rect" id="Node000006" href="$dns__parse_8c.html#aaf9a9b3814123fe16906c30643db1d59" title="Write a Resource Record to a byte stream." alt="" coords="188,104,295,130"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="116,78,179,97,178,102,115,84"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a892deea8e33cb7ce2c0f336d112abe4e" title="Write a 16&#45;bit number in little&#45;endian format to a byte stream." alt="" coords="367,29,458,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,24,351,31,351,36,305,30"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="302,56,351,48,352,54,302,61"/>
+<area shape="rect" id="Node000005" href="$dns__parse_8c.html#a7b904ddd10df7128f7ec9b1aab19b85c" title="Write a NAME field to a byte stream." alt="" coords="353,79,471,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="302,73,338,78,337,84,302,79"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="279,101,304,90,352,64,362,59,364,64,354,69,306,95,281,106"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="295,106,337,100,338,105,296,112"/>
+<area shape="rect" id="Node000007" href="$dns__parse_8c.html#a803502b08c76912cbf1a675d1d3890a5" title="Write a 32&#45;bit number in little&#45;endian format to a byte stream." alt="" coords="367,128,458,154"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="296,122,352,130,351,135,295,127"/>
+</map>

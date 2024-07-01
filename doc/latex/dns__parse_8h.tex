@@ -1,0 +1,222 @@
+\doxysection{include/dns\+\_\+parse.h File Reference}
+\hypertarget{dns__parse_8h}{}\label{dns__parse_8h}\index{include/dns\_parse.h@{include/dns\_parse.h}}
+{\ttfamily \#include "{}dns.\+h"{}}\newline
+Include dependency graph for dns\+\_\+parse.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{dns__parse_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dns__parse_8h_a0f89102e256c499ffa19784791cb68f6}{string\+\_\+to\+\_\+dnsmsg}} (\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg, const char \texorpdfstring{$\ast$}{*}pstring)
+\begin{DoxyCompactList}\small\item\em Convert a byte stream to a DNS message structure. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{dns__parse_8h_aa893e182a92c2ccf5644c1f8a12fba37}{dnsmsg\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg, char \texorpdfstring{$\ast$}{*}pstring)
+\begin{DoxyCompactList}\small\item\em Write a NAME field to a byte stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__parse_8h_a70f17de617dc9a8a1a87e966b35bf273}{destroy\+\_\+dnsrr}} (\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}prr)
+\begin{DoxyCompactList}\small\item\em Release memory allocated for a Resource Record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__parse_8h_a014b4d840d6c7d7242d7b26ccd32bda8}{destroy\+\_\+dnsmsg}} (\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}pmsg)
+\begin{DoxyCompactList}\small\item\em Release memory allocated for a DNS message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dns__parse_8h_a04774941b5c9d0297b083fbf61c09196}{copy\+\_\+dnsrr}} (const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Copy a Resource Record. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dns__parse_8h_adf78a5bc6bcf96720bb91633701da6cd}{copy\+\_\+dnsmsg}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Copy a DNS message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__parse_8h_adf78a5bc6bcf96720bb91633701da6cd}\index{dns\_parse.h@{dns\_parse.h}!copy\_dnsmsg@{copy\_dnsmsg}}
+\index{copy\_dnsmsg@{copy\_dnsmsg}!dns\_parse.h@{dns\_parse.h}}
+\doxysubsubsection{\texorpdfstring{copy\_dnsmsg()}{copy\_dnsmsg()}}
+{\footnotesize\ttfamily \label{dns__parse_8h_adf78a5bc6bcf96720bb91633701da6cd} 
+\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*} copy\+\_\+dnsmsg (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})}
+
+
+
+Copy a DNS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The DNS message to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the DNS message 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{dns__parse_8h_adf78a5bc6bcf96720bb91633701da6cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_adf78a5bc6bcf96720bb91633701da6cd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8h_a04774941b5c9d0297b083fbf61c09196}\index{dns\_parse.h@{dns\_parse.h}!copy\_dnsrr@{copy\_dnsrr}}
+\index{copy\_dnsrr@{copy\_dnsrr}!dns\_parse.h@{dns\_parse.h}}
+\doxysubsubsection{\texorpdfstring{copy\_dnsrr()}{copy\_dnsrr()}}
+{\footnotesize\ttfamily \label{dns__parse_8h_a04774941b5c9d0297b083fbf61c09196} 
+\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*} copy\+\_\+dnsrr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})}
+
+
+
+Copy a Resource Record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The Resource Record to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A copy of the Resource Record 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_a04774941b5c9d0297b083fbf61c09196_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8h_a014b4d840d6c7d7242d7b26ccd32bda8}\index{dns\_parse.h@{dns\_parse.h}!destroy\_dnsmsg@{destroy\_dnsmsg}}
+\index{destroy\_dnsmsg@{destroy\_dnsmsg}!dns\_parse.h@{dns\_parse.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_dnsmsg()}{destroy\_dnsmsg()}}
+{\footnotesize\ttfamily \label{dns__parse_8h_a014b4d840d6c7d7242d7b26ccd32bda8} 
+void destroy\+\_\+dnsmsg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{}\end{DoxyParamCaption})}
+
+
+
+Release memory allocated for a DNS message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message to release \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{dns__parse_8h_a014b4d840d6c7d7242d7b26ccd32bda8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_a014b4d840d6c7d7242d7b26ccd32bda8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8h_a70f17de617dc9a8a1a87e966b35bf273}\index{dns\_parse.h@{dns\_parse.h}!destroy\_dnsrr@{destroy\_dnsrr}}
+\index{destroy\_dnsrr@{destroy\_dnsrr}!dns\_parse.h@{dns\_parse.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_dnsrr()}{destroy\_dnsrr()}}
+{\footnotesize\ttfamily \label{dns__parse_8h_a70f17de617dc9a8a1a87e966b35bf273} 
+void destroy\+\_\+dnsrr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}} \texorpdfstring{$\ast$}{*}}]{prr}{}\end{DoxyParamCaption})}
+
+
+
+Release memory allocated for a Resource Record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prr} & The Resource Record to release \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_a70f17de617dc9a8a1a87e966b35bf273_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8h_aa893e182a92c2ccf5644c1f8a12fba37}\index{dns\_parse.h@{dns\_parse.h}!dnsmsg\_to\_string@{dnsmsg\_to\_string}}
+\index{dnsmsg\_to\_string@{dnsmsg\_to\_string}!dns\_parse.h@{dns\_parse.h}}
+\doxysubsubsection{\texorpdfstring{dnsmsg\_to\_string()}{dnsmsg\_to\_string()}}
+{\footnotesize\ttfamily \label{dns__parse_8h_aa893e182a92c2ccf5644c1f8a12fba37} 
+unsigned dnsmsg\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{pstring}{}\end{DoxyParamCaption})}
+
+
+
+Write a NAME field to a byte stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pname} & The NAME field \\
+\hline
+{\em pstring} & The start of the byte stream \\
+\hline
+{\em offset} & The offset in the byte stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+After writing, the offset increases to the position after the NAME field
+\end{DoxyNote}
+Write a NAME field to a byte stream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message structure to convert \\
+\hline
+{\em pstring} & The byte stream to write to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total length of the byte stream 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_aa893e182a92c2ccf5644c1f8a12fba37_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_aa893e182a92c2ccf5644c1f8a12fba37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__parse_8h_a0f89102e256c499ffa19784791cb68f6}\index{dns\_parse.h@{dns\_parse.h}!string\_to\_dnsmsg@{string\_to\_dnsmsg}}
+\index{string\_to\_dnsmsg@{string\_to\_dnsmsg}!dns\_parse.h@{dns\_parse.h}}
+\doxysubsubsection{\texorpdfstring{string\_to\_dnsmsg()}{string\_to\_dnsmsg()}}
+{\footnotesize\ttfamily \label{dns__parse_8h_a0f89102e256c499ffa19784791cb68f6} 
+void string\+\_\+to\+\_\+dnsmsg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{pmsg}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pstring}{}\end{DoxyParamCaption})}
+
+
+
+Convert a byte stream to a DNS message structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pmsg} & The DNS message structure to populate \\
+\hline
+{\em pstring} & The byte stream to read from \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_a0f89102e256c499ffa19784791cb68f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__parse_8h_a0f89102e256c499ffa19784791cb68f6_icgraph}
+\end{center}
+\end{figure}

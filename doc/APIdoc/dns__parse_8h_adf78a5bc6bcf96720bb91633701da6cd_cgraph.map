@@ -1,0 +1,5 @@
+<map id="copy_dnsmsg" name="copy_dnsmsg">
+<area shape="rect" id="Node000001" title="Copy a DNS message." alt="" coords="5,5,108,31"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a04774941b5c9d0297b083fbf61c09196" title="Copy a Resource Record." alt="" coords="156,5,241,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,16,140,16,140,21,108,21"/>
+</map>

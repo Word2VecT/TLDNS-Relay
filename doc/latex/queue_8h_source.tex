@@ -1,0 +1,29 @@
+\doxysection{queue.\+h}
+\hypertarget{queue_8h_source}{}\label{queue_8h_source}\index{include/queue.h@{include/queue.h}}
+\mbox{\hyperlink{queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ DNSR\_QUEUE\_H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ DNSR\_QUEUE\_H}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ QUEUE\_MAX\_SIZE\ 65536}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structqueue}{queue}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structqueue_a9cd43dd08eae37941b48653d00637fdd}{q}}[\mbox{\hyperlink{queue_8h_a4b56a6f23e044affca38eed1834e98dc}{QUEUE\_MAX\_SIZE}}];\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structqueue_a35f118a404c9585731eac3a3b1753b3a}{head}};\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structqueue_af5074b278737ee3c37cb7c32836bd8d5}{tail}};\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \ \ \ \ void\ (*\ \mbox{\hyperlink{structqueue_ab47a00835dd6f04dc90d516e5579ec2e}{push}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structqueue}{queue}}\ *\ \mbox{\hyperlink{structqueue}{queue}},\ uint16\_t\ num);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ uint16\_t\ (*\ \mbox{\hyperlink{structqueue_a6eb893221e4955c0e2691095144c0ec2}{pop}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structqueue}{queue}}\ *\ \mbox{\hyperlink{structqueue}{queue}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ void\ (*\ \mbox{\hyperlink{structqueue_a466d795749101c9e1e6cb9497ff6f35a}{destroy}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structqueue}{queue}}\ *\ \mbox{\hyperlink{structqueue}{queue}});}
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{queue_8h_a8560ae2ddf510ea6643f85a929bffa48}{Queue}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \mbox{\hyperlink{structqueue}{Queue}}\ *\ \mbox{\hyperlink{queue_8h_ac456192d36cbce97dc2b2c1356ab31f2}{new\_queue}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DNSR\_QUEUE\_H}}
+
+\end{DoxyCode}

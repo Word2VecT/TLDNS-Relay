@@ -1,0 +1,11 @@
+<map id="new_linklist" name="new_linklist">
+<area shape="rect" id="Node000001" title="Create a new linked list." alt="" coords="5,55,95,80"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a8e0bfadc9752f04f500905a85c47e74e" title="Delete the next element in the linked list." alt="" coords="143,5,275,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,51,150,34,151,39,95,57"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#a41e95176ba82f906d4ecc38a385f66f7" title="Insert a new element into the linked list." alt="" coords="160,55,258,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="95,65,145,65,145,70,95,70"/>
+<area shape="rect" id="Node000005" href="$linklist__rbtree_8c.html#afec00073759abba4629e2fa2dcaf9d2e" title="Query the next element in the linked list." alt="" coords="144,104,274,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="95,78,151,96,150,101,93,84"/>
+<area shape="rect" id="Node000003" href="$dns__parse_8c.html#a70f17de617dc9a8a1a87e966b35bf273" title="Release memory allocated for a Resource Record." alt="" coords="323,5,423,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,16,308,16,308,21,275,21"/>
+</map>

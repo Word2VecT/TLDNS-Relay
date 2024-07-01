@@ -1,0 +1,173 @@
+\doxysection{index\+\_\+pool Struct Reference}
+\hypertarget{structindex__pool}{}\label{structindex__pool}\index{index\_pool@{index\_pool}}
+
+
+Index pool.  
+
+
+
+
+{\ttfamily \#include $<$index\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for index\+\_\+pool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{structindex__pool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_a4c348dc48fe75dbd585f6b06f2c80488}{pool}} \mbox{[}\mbox{\hyperlink{index__pool_8h_ab4978b587ed2e3aec43e5b1a94d650a8}{INDEX\+\_\+\+POOL\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Index pool. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{structindex__pool_a111772daaaddcee8e655c9bb6a7ec111}{count}}
+\begin{DoxyCompactList}\small\item\em Number of indices in the pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{queue_8h_a8560ae2ddf510ea6643f85a929bffa48}{Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_a510933fa8aeeafb6cd8dedc0a5304302}{queue}}
+\begin{DoxyCompactList}\small\item\em Queue of unallocated indices. \end{DoxyCompactList}\item 
+bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_abe14a3acfbe0139b82824973ed37bc4a}{full}} )(struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool)
+\begin{DoxyCompactList}\small\item\em Check if the index pool is full. \end{DoxyCompactList}\item 
+uint16\+\_\+t(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_ae7416f2d0cf3179a08d6b77ca5294f41}{insert}} )(struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool, \mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*}req)
+\begin{DoxyCompactList}\small\item\em Insert an index into the pool. \end{DoxyCompactList}\item 
+bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_a85d5460293658354e5310f67e80a7d45}{query}} )(struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool, uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Query if an index exists in the pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_a39a0a6cb391a1ee27c43a8485107a645}{delete}} )(struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool, uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Delete an index from the pool. \end{DoxyCompactList}\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structindex__pool_abae05eee7fe94f0fb115992012c39c24}{destroy}} )(struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool)
+\begin{DoxyCompactList}\small\item\em Destroy the index pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Index pool. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structindex__pool_a111772daaaddcee8e655c9bb6a7ec111}\index{index\_pool@{index\_pool}!count@{count}}
+\index{count@{count}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{structindex__pool_a111772daaaddcee8e655c9bb6a7ec111} 
+unsigned short index\+\_\+pool\+::count}
+
+
+
+Number of indices in the pool. 
+
+\Hypertarget{structindex__pool_a39a0a6cb391a1ee27c43a8485107a645}\index{index\_pool@{index\_pool}!delete@{delete}}
+\index{delete@{delete}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{delete}{delete}}
+{\footnotesize\ttfamily \label{structindex__pool_a39a0a6cb391a1ee27c43a8485107a645} 
+\mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::delete) (struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool, uint16\+\_\+t index)}
+
+
+
+Delete an index from the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+{\em index} & The index to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The deleted index 
+\end{DoxyReturn}
+\Hypertarget{structindex__pool_abae05eee7fe94f0fb115992012c39c24}\index{index\_pool@{index\_pool}!destroy@{destroy}}
+\index{destroy@{destroy}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{destroy}{destroy}}
+{\footnotesize\ttfamily \label{structindex__pool_abae05eee7fe94f0fb115992012c39c24} 
+void(\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::destroy) (struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool)}
+
+
+
+Destroy the index pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool to destroy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structindex__pool_abe14a3acfbe0139b82824973ed37bc4a}\index{index\_pool@{index\_pool}!full@{full}}
+\index{full@{full}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily \label{structindex__pool_abe14a3acfbe0139b82824973ed37bc4a} 
+bool(\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::full) (struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool)}
+
+
+
+Check if the index pool is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the index pool is full, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{structindex__pool_ae7416f2d0cf3179a08d6b77ca5294f41}\index{index\_pool@{index\_pool}!insert@{insert}}
+\index{insert@{insert}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \label{structindex__pool_ae7416f2d0cf3179a08d6b77ca5294f41} 
+uint16\+\_\+t(\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::insert) (struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool, \mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}} \texorpdfstring{$\ast$}{*}req)}
+
+
+
+Insert an index into the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+{\em req} & The index to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the inserted index 
+\end{DoxyReturn}
+\Hypertarget{structindex__pool_a4c348dc48fe75dbd585f6b06f2c80488}\index{index\_pool@{index\_pool}!pool@{pool}}
+\index{pool@{pool}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \label{structindex__pool_a4c348dc48fe75dbd585f6b06f2c80488} 
+\mbox{\hyperlink{index__pool_8h_acacb8bfe1719d7d63449974fd7d8c01f}{Index}}\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::pool\mbox{[}\mbox{\hyperlink{index__pool_8h_ab4978b587ed2e3aec43e5b1a94d650a8}{INDEX\+\_\+\+POOL\+\_\+\+MAX\+\_\+\+SIZE}}\mbox{]}}
+
+
+
+Index pool. 
+
+\Hypertarget{structindex__pool_a85d5460293658354e5310f67e80a7d45}\index{index\_pool@{index\_pool}!query@{query}}
+\index{query@{query}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily \label{structindex__pool_a85d5460293658354e5310f67e80a7d45} 
+bool(\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::query) (struct \mbox{\hyperlink{structindex__pool}{index\+\_\+pool}} \texorpdfstring{$\ast$}{*}ipool, uint16\+\_\+t index)}
+
+
+
+Query if an index exists in the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ipool} & The index pool \\
+\hline
+{\em index} & The index to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the index exists, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{structindex__pool_a510933fa8aeeafb6cd8dedc0a5304302}\index{index\_pool@{index\_pool}!queue@{queue}}
+\index{queue@{queue}!index\_pool@{index\_pool}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily \label{structindex__pool_a510933fa8aeeafb6cd8dedc0a5304302} 
+\mbox{\hyperlink{queue_8h_a8560ae2ddf510ea6643f85a929bffa48}{Queue}}\texorpdfstring{$\ast$}{*} index\+\_\+pool\+::queue}
+
+
+
+Queue of unallocated indices. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{index__pool_8h}{index\+\_\+pool.\+h}}\end{DoxyCompactItemize}

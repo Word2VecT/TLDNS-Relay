@@ -1,0 +1,5 @@
+<map id="string_to_dnshead" name="string_to_dnshead">
+<area shape="rect" id="Node000001" title="Read a Header Section from a byte stream." alt="" coords="5,5,133,31"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a26eb64cb4cd82b2070e8fe7f000ff6ae" title="Read a 16&#45;bit number in big&#45;endian format from a byte stream." alt="" coords="181,5,269,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,16,165,16,165,21,133,21"/>
+</map>

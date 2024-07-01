@@ -1,0 +1,29 @@
+<map id="rbtree_insert" name="rbtree_insert">
+<area shape="rect" id="Node000001" title="Insert a key&#45;value pair into the red&#45;black tree." alt="" coords="5,124,99,149"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a2003ed64d170c0cf2c2b3a9899eb2557" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="147,74,235,100"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,121,137,103,139,108,91,126"/>
+<area shape="rect" id="Node000007" href="$linklist__rbtree_8c.html#a9e27afd2a9929b02687afda68d8a68b5" title="Initialize a node and allocate memory." alt="" coords="154,148,228,173"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="100,142,139,149,138,154,99,147"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="167,75,163,66,165,56,175,50,191,48,208,50,217,57,214,61,206,55,191,53,177,55,170,59,168,65,172,73"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#ad1b052785e6b7bcc62cba39a7402a1b6" title="Get the grandparent of a node." alt="" coords="442,49,531,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,72,234,39,257,23,282,10,305,4,328,3,373,9,416,22,451,39,449,44,414,27,372,14,327,8,305,10,284,15,260,27,238,43,205,76"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#ab62e652e4fc283a274b30e1f1f08c211" title="Rotate a node to the left." alt="" coords="288,25,367,51"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="228,71,274,54,276,59,230,76"/>
+<area shape="rect" id="Node000005" href="$linklist__rbtree_8c.html#aef6fab1149a4f11067237f95c7bdb41f" title="Rotate a node to the right." alt="" coords="285,74,371,100"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="235,85,269,85,269,90,235,90"/>
+<area shape="rect" id="Node000006" href="$linklist__rbtree_8c.html#a06530033a166619f9dfac249ac51e285" title="Get the uncle of a node." alt="" coords="302,124,354,149"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="230,98,288,120,286,125,228,103"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="368,41,427,50,426,56,367,46"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="371,78,426,69,427,74,372,83"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="353,122,442,79,445,84,356,127"/>
+<area shape="rect" id="Node000008" href="$linklist__rbtree_8c.html#ac1e7b55e2083949b45865ea07af04f9b" title="Create a new linked list." alt="" coords="283,173,372,199"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="229,165,268,172,267,177,228,170"/>
+<area shape="rect" id="Node000009" href="$linklist__rbtree_8c.html#a8e0bfadc9752f04f500905a85c47e74e" title="Delete the next element in the linked list." alt="" coords="420,124,553,149"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="371,170,427,152,429,157,372,175"/>
+<area shape="rect" id="Node000011" href="$linklist__rbtree_8c.html#a41e95176ba82f906d4ecc38a385f66f7" title="Insert a new element into the linked list." alt="" coords="438,173,535,199"/>
+<area shape="poly" id="edge14_Node000008_Node000011" title=" " alt="" coords="373,183,422,183,422,189,373,189"/>
+<area shape="rect" id="Node000012" href="$linklist__rbtree_8c.html#afec00073759abba4629e2fa2dcaf9d2e" title="Query the next element in the linked list." alt="" coords="422,222,551,248"/>
+<area shape="poly" id="edge15_Node000008_Node000012" title=" " alt="" coords="372,197,429,215,427,220,371,202"/>
+<area shape="rect" id="Node000010" href="$dns__parse_8c.html#a70f17de617dc9a8a1a87e966b35bf273" title="Release memory allocated for a Resource Record." alt="" coords="601,124,701,149"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="553,134,585,134,585,139,553,139"/>
+</map>

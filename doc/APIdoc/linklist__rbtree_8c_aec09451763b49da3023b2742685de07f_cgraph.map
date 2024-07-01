@@ -1,0 +1,25 @@
+<map id="rbtree_query" name="rbtree_query">
+<area shape="rect" id="Node000001" title="Query the red&#45;black tree for a key." alt="" coords="5,141,99,167"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#a787a8de67855978e27d86ddcc1dfc2fc" title="Delete a node from the red&#45;black tree." alt="" coords="147,104,243,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,139,131,131,132,136,100,145"/>
+<area shape="rect" id="Node000010" href="$linklist__rbtree_8c.html#a7a4895b028aba0f94b5b640e085c548e" title="Recursively search for a node with a given key starting from a given node." alt="" coords="154,177,236,203"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="100,163,139,173,138,179,99,169"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#ac734d64a69533759abbc046c6266e951" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="298,55,389,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,101,287,83,289,88,237,106"/>
+<area shape="rect" id="Node000008" href="$linklist__rbtree_8c.html#a05ef0ed79d24a2628b928224a4139c3b" title="Destroy a node in the red&#45;black tree." alt="" coords="294,104,393,130"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="243,114,278,114,278,120,243,120"/>
+<area shape="rect" id="Node000009" href="$linklist__rbtree_8c.html#aa763522130715b07d70cdbcff94c1d2e" title="Get the smallest child node in a subtree." alt="" coords="291,177,395,203"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="224,128,303,168,301,172,222,133"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="318,55,314,46,317,37,327,30,343,28,361,31,370,37,367,42,359,36,343,33,328,35,321,40,319,46,323,53"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#ab62e652e4fc283a274b30e1f1f08c211" title="Rotate a node to the left." alt="" coords="447,5,526,31"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="382,52,432,34,434,39,384,57"/>
+<area shape="rect" id="Node000006" href="$linklist__rbtree_8c.html#aef6fab1149a4f11067237f95c7bdb41f" title="Rotate a node to the right." alt="" coords="443,55,530,80"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="389,65,428,65,428,70,389,70"/>
+<area shape="rect" id="Node000007" href="$linklist__rbtree_8c.html#afcb59301147f1364f3eaf43fe11430fa" title="Get the sibling of a node." alt="" coords="457,104,516,130"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="384,78,444,99,442,104,382,83"/>
+<area shape="rect" id="Node000005" href="$linklist__rbtree_8c.html#ad1b052785e6b7bcc62cba39a7402a1b6" title="Get the grandparent of a node." alt="" coords="578,31,667,56"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="527,23,563,30,562,35,526,28"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="529,57,562,51,563,57,530,63"/>
+<area shape="poly" id="edge11_Node000009_Node000009" title=" " alt="" coords="318,178,314,169,317,159,327,153,343,151,361,153,370,160,367,164,359,158,343,156,328,158,321,162,319,168,323,176"/>
+<area shape="poly" id="edge13_Node000010_Node000010" title=" " alt="" coords="170,178,165,169,168,159,178,153,195,151,212,153,222,160,219,164,210,158,195,156,180,158,173,162,171,168,175,176"/>
+</map>

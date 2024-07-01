@@ -1,0 +1,86 @@
+\doxysection{include/dns\+\_\+client.h File Reference}
+\hypertarget{dns__client_8h}{}\label{dns__client_8h}\index{include/dns\_client.h@{include/dns\_client.h}}
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+{\ttfamily \#include "{}dns.\+h"{}}\newline
+Include dependency graph for dns\+\_\+client.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{dns__client_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dns__client_8h_a4976b0d7477e15d42c27429fe3138598}{init\+\_\+client}} (uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_add769cb3887f840e6e7be962492de960}{loop}})
+\begin{DoxyCompactList}\small\item\em Initialize the DNS client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dns__client_8h_a83db4163d6fd4b94b1e5e983dd042b28}{send\+\_\+to\+\_\+remote}} (const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Send a DNS query message to the remote server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dns__client_8h_a4976b0d7477e15d42c27429fe3138598}\index{dns\_client.h@{dns\_client.h}!init\_client@{init\_client}}
+\index{init\_client@{init\_client}!dns\_client.h@{dns\_client.h}}
+\doxysubsubsection{\texorpdfstring{init\_client()}{init\_client()}}
+{\footnotesize\ttfamily \label{dns__client_8h_a4976b0d7477e15d42c27429fe3138598} 
+void init\+\_\+client (\begin{DoxyParamCaption}\item[{uv\+\_\+loop\+\_\+t \texorpdfstring{$\ast$}{*}}]{loop}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the DNS client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loop} & The libuv event loop \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8h_a4976b0d7477e15d42c27429fe3138598_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{dns__client_8h_a4976b0d7477e15d42c27429fe3138598_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dns__client_8h_a83db4163d6fd4b94b1e5e983dd042b28}\index{dns\_client.h@{dns\_client.h}!send\_to\_remote@{send\_to\_remote}}
+\index{send\_to\_remote@{send\_to\_remote}!dns\_client.h@{dns\_client.h}}
+\doxysubsubsection{\texorpdfstring{send\_to\_remote()}{send\_to\_remote()}}
+{\footnotesize\ttfamily \label{dns__client_8h_a83db4163d6fd4b94b1e5e983dd042b28} 
+void send\+\_\+to\+\_\+remote (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Send a DNS query message to the remote server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The DNS message to be sent \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8h_a83db4163d6fd4b94b1e5e983dd042b28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns__client_8h_a83db4163d6fd4b94b1e5e983dd042b28_icgraph}
+\end{center}
+\end{figure}

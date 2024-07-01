@@ -1,0 +1,38 @@
+<map id="query_pool" name="query_pool">
+<area shape="rect" id="Node000001" title="DNS query pool." alt="" coords="325,602,409,627"/>
+<area shape="rect" id="Node000002" href="$structdns__query.html" title="DNS query structure." alt="" coords="126,237,208,262"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,278,170,369,169,527,174,549,185,567,203,581,225,592,276,605,325,610,324,616,275,611,223,597,200,586,181,571,169,551,164,527,164,369,164,278"/>
+<area shape="rect" id="Node000003" href="$structdns__msg.html" title="DNS message structure." alt="" coords="130,94,204,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,135,170,236,164,236,164,135"/>
+<area shape="rect" id="Node000004" href="$structdns__header.html" title="Header Section structure of DNS message." alt="" coords="5,5,94,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="80,38,152,91,149,96,76,43"/>
+<area shape="rect" id="Node000005" href="$structdns__question.html" title="Question Section structure of DNS message, represented as a linked list." alt="" coords="118,5,216,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="170,47,170,94,164,94,164,47"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="233,10,243,18,234,26,217,29,216,24,232,22,237,18,230,14"/>
+<area shape="rect" id="Node000006" href="$structdns__rr.html" title="Resource Record structure of DNS message, represented as a linked list." alt="" coords="293,5,350,31"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="288,41,190,96,187,91,285,36"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="368,9,377,18,368,27,351,29,350,24,366,22,372,18,364,13"/>
+<area shape="rect" id="Node000012" href="$structrbtree__value.html" title="Value of a Red&#45;Black Tree node&#39;s linked list, corresponding to an answer for a specific query." alt="" coords="275,94,368,120"/>
+<area shape="poly" id="edge15_Node000012_Node000006" title=" " alt="" coords="324,47,324,94,319,94,319,47"/>
+<area shape="rect" id="Node000007" href="$structqueue.html" title="Circular queue." alt="" coords="465,409,522,435"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="470,447,440,478,411,514,387,562,373,602,368,600,382,560,407,512,436,474,466,444"/>
+<area shape="rect" id="Node000008" href="$structindex__pool.html" title="Index pool." alt="" coords="460,513,543,539"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="498,450,503,512,498,513,493,451"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="472,549,387,603,384,599,469,545"/>
+<area shape="rect" id="Node000009" href="$structindex__.html" title="Index structure." alt="" coords="545,409,605,435"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="567,451,544,491,519,514,516,511,539,487,562,448"/>
+<area shape="rect" id="Node000010" href="$structcache__.html" title="Cash struct." alt="" coords="279,513,343,539"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="326,551,341,576,358,599,354,603,336,579,321,554"/>
+<area shape="rect" id="Node000011" href="$structdns__rr__linklist.html" title="Linked list of Red&#45;Black Tree nodes." alt="" coords="306,185,407,211"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="355,226,315,513,310,512,350,226"/>
+<area shape="poly" id="edge16_Node000011_Node000011" title=" " alt="" coords="424,189,433,198,425,206,408,209,407,204,423,201,428,198,421,193"/>
+<area shape="rect" id="Node000013" href="$structlinklist__rbtree.html" title="Red&#45;Black Tree." alt="" coords="343,409,441,435"/>
+<area shape="poly" id="edge21_Node000013_Node000011" title=" " alt="" coords="363,225,393,408,388,409,358,226"/>
+<area shape="rect" id="Node000014" href="$structrbtree__node.html" title="Node of the Red&#45;Black Tree." alt="" coords="428,296,517,322"/>
+<area shape="poly" id="edge19_Node000014_Node000011" title=" " alt="" coords="382,219,461,293,457,297,378,223"/>
+<area shape="poly" id="edge22_Node000010_Node000012" title=" " alt="" coords="284,130,250,158,239,176,235,197,235,423,241,451,256,475,275,495,294,510,291,515,272,499,252,478,236,453,230,424,230,196,234,174,246,155,280,126"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="334,133,354,184,349,186,329,135"/>
+<area shape="poly" id="edge17_Node000010_Node000013" title=" " alt="" coords="367,447,354,461,334,489,319,514,314,511,329,486,349,457,363,444"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="457,336,403,410,399,407,453,333"/>
+<area shape="poly" id="edge20_Node000014_Node000014" title=" " alt="" coords="533,298,540,302,543,309,535,319,518,323,517,317,533,315,538,308,536,305,531,302"/>
+</map>

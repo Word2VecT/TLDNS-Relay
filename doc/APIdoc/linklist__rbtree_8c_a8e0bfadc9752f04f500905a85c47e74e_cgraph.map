@@ -1,0 +1,5 @@
+<map id="linklist_delete_next" name="linklist_delete_next">
+<area shape="rect" id="Node000001" title="Delete the next element in the linked list." alt="" coords="5,5,138,31"/>
+<area shape="rect" id="Node000002" href="$dns__parse_8c.html#a70f17de617dc9a8a1a87e966b35bf273" title="Release memory allocated for a Resource Record." alt="" coords="186,5,286,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,16,170,16,170,21,138,21"/>
+</map>

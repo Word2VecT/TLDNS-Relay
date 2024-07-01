@@ -1,0 +1,256 @@
+\doxysection{include/dns.h File Reference}
+\hypertarget{dns_8h}{}\label{dns_8h}\index{include/dns.h@{include/dns.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for dns.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{dns_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dns_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdns__header}{dns\+\_\+header}}
+\begin{DoxyCompactList}\small\item\em Header Section structure of DNS message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdns__question}{dns\+\_\+question}}
+\begin{DoxyCompactList}\small\item\em Question Section structure of DNS message, represented as a linked list. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdns__rr}{dns\+\_\+rr}}
+\begin{DoxyCompactList}\small\item\em Resource Record structure of DNS message, represented as a linked list. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdns__msg}{dns\+\_\+msg}}
+\begin{DoxyCompactList}\small\item\em DNS message structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dns_8h_a2bd5802847beb235c76918125853b8b7}{DNS\+\_\+\+STRING\+\_\+\+MAX\+\_\+\+SIZE}}~8192
+\item 
+\#define \mbox{\hyperlink{dns_8h_a65ec07c77bc0fd3047ae31f28e57f12f}{DNS\+\_\+\+RR\+\_\+\+NAME\+\_\+\+MAX\+\_\+\+SIZE}}~512
+\item 
+\#define \mbox{\hyperlink{dns_8h_aaf915a2fdac4c684ca586ab7e5eb6493}{DNS\+\_\+\+QR\+\_\+\+QUERY}}~0
+\item 
+\#define \mbox{\hyperlink{dns_8h_a2cb3a611448b9b455237c49d10c11f1f}{DNS\+\_\+\+QR\+\_\+\+ANSWER}}~1
+\item 
+\#define \mbox{\hyperlink{dns_8h_ae60a6af0e581d7b126763e92bb3a16e9}{DNS\+\_\+\+OPCODE\+\_\+\+QUERY}}~0
+\item 
+\#define \mbox{\hyperlink{dns_8h_a3e78a72fd4b728fd9b3d197906062eda}{DNS\+\_\+\+OPCODE\+\_\+\+IQUERY}}~1
+\item 
+\#define \mbox{\hyperlink{dns_8h_a3505ec1c6b5e896532baa146b5f12778}{DNS\+\_\+\+OPCODE\+\_\+\+STATUS}}~2
+\item 
+\#define \mbox{\hyperlink{dns_8h_afe9f7ff23f3feba2776dcfa366f53c3f}{DNS\+\_\+\+TYPE\+\_\+A}}~1
+\item 
+\#define \mbox{\hyperlink{dns_8h_a76921a21844be80847aaccde77bb7d75}{DNS\+\_\+\+TYPE\+\_\+\+NS}}~2
+\item 
+\#define \mbox{\hyperlink{dns_8h_a71d717fd39f72756ba00a61bc0279e76}{DNS\+\_\+\+TYPE\+\_\+\+CNAME}}~5
+\item 
+\#define \mbox{\hyperlink{dns_8h_a794df4821da86953f8b5448f3962ac04}{DNS\+\_\+\+TYPE\+\_\+\+SOA}}~6
+\item 
+\#define \mbox{\hyperlink{dns_8h_a3afdb36ca805590d57ace8cee38a1b01}{DNS\+\_\+\+TYPE\+\_\+\+PTR}}~12
+\item 
+\#define \mbox{\hyperlink{dns_8h_a169ea4755db82670fbe2ad186a3acd50}{DNS\+\_\+\+TYPE\+\_\+\+HINFO}}~13
+\item 
+\#define \mbox{\hyperlink{dns_8h_a0dc8fca3beb07776d91f57e6bf34c819}{DNS\+\_\+\+TYPE\+\_\+\+MINFO}}~15
+\item 
+\#define \mbox{\hyperlink{dns_8h_a1a854d4623c4a82c242773058be7612c}{DNS\+\_\+\+TYPE\+\_\+\+MX}}~15
+\item 
+\#define \mbox{\hyperlink{dns_8h_a031f145dfe0b1498c03e07af10be3c23}{DNS\+\_\+\+TYPE\+\_\+\+TXT}}~16
+\item 
+\#define \mbox{\hyperlink{dns_8h_acfb2eb201eadb88b54ae795a01fd34cd}{DNS\+\_\+\+TYPE\+\_\+\+AAAA}}~28
+\item 
+\#define \mbox{\hyperlink{dns_8h_a9cc84b120d830f184e7249db81ed1736}{DNS\+\_\+\+CLASS\+\_\+\+IN}}~1
+\item 
+\#define \mbox{\hyperlink{dns_8h_ab4b25630f59f33b736e58109da9eba2a}{DNS\+\_\+\+RCODE\+\_\+\+OK}}~0
+\item 
+\#define \mbox{\hyperlink{dns_8h_a0140dcc3668721e92cde4e81ed9e66f1}{DNS\+\_\+\+RCODE\+\_\+\+NXDOMAIN}}~3
+\item 
+\#define \mbox{\hyperlink{dns_8h_a1aaa43f011a7ef4c608e0721a04ba10b}{DNS\+\_\+\+RCODE\+\_\+\+SERVFAIL}}~2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdns__header}{dns\+\_\+header}} \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}}
+\begin{DoxyCompactList}\small\item\em Header Section structure of DNS message. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structdns__question}{dns\+\_\+question}} \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}}
+\begin{DoxyCompactList}\small\item\em Question Section structure of DNS message, represented as a linked list. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structdns__rr}{dns\+\_\+rr}} \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}}
+\begin{DoxyCompactList}\small\item\em Resource Record structure of DNS message, represented as a linked list. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structdns__msg}{dns\+\_\+msg}} \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}}
+\begin{DoxyCompactList}\small\item\em DNS message structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{dns_8h_a9cc84b120d830f184e7249db81ed1736}\index{dns.h@{dns.h}!DNS\_CLASS\_IN@{DNS\_CLASS\_IN}}
+\index{DNS\_CLASS\_IN@{DNS\_CLASS\_IN}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_CLASS\_IN}{DNS\_CLASS\_IN}}
+{\footnotesize\ttfamily \label{dns_8h_a9cc84b120d830f184e7249db81ed1736} 
+\#define DNS\+\_\+\+CLASS\+\_\+\+IN~1}
+
+\Hypertarget{dns_8h_a3e78a72fd4b728fd9b3d197906062eda}\index{dns.h@{dns.h}!DNS\_OPCODE\_IQUERY@{DNS\_OPCODE\_IQUERY}}
+\index{DNS\_OPCODE\_IQUERY@{DNS\_OPCODE\_IQUERY}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_OPCODE\_IQUERY}{DNS\_OPCODE\_IQUERY}}
+{\footnotesize\ttfamily \label{dns_8h_a3e78a72fd4b728fd9b3d197906062eda} 
+\#define DNS\+\_\+\+OPCODE\+\_\+\+IQUERY~1}
+
+\Hypertarget{dns_8h_ae60a6af0e581d7b126763e92bb3a16e9}\index{dns.h@{dns.h}!DNS\_OPCODE\_QUERY@{DNS\_OPCODE\_QUERY}}
+\index{DNS\_OPCODE\_QUERY@{DNS\_OPCODE\_QUERY}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_OPCODE\_QUERY}{DNS\_OPCODE\_QUERY}}
+{\footnotesize\ttfamily \label{dns_8h_ae60a6af0e581d7b126763e92bb3a16e9} 
+\#define DNS\+\_\+\+OPCODE\+\_\+\+QUERY~0}
+
+\Hypertarget{dns_8h_a3505ec1c6b5e896532baa146b5f12778}\index{dns.h@{dns.h}!DNS\_OPCODE\_STATUS@{DNS\_OPCODE\_STATUS}}
+\index{DNS\_OPCODE\_STATUS@{DNS\_OPCODE\_STATUS}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_OPCODE\_STATUS}{DNS\_OPCODE\_STATUS}}
+{\footnotesize\ttfamily \label{dns_8h_a3505ec1c6b5e896532baa146b5f12778} 
+\#define DNS\+\_\+\+OPCODE\+\_\+\+STATUS~2}
+
+\Hypertarget{dns_8h_a2cb3a611448b9b455237c49d10c11f1f}\index{dns.h@{dns.h}!DNS\_QR\_ANSWER@{DNS\_QR\_ANSWER}}
+\index{DNS\_QR\_ANSWER@{DNS\_QR\_ANSWER}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_QR\_ANSWER}{DNS\_QR\_ANSWER}}
+{\footnotesize\ttfamily \label{dns_8h_a2cb3a611448b9b455237c49d10c11f1f} 
+\#define DNS\+\_\+\+QR\+\_\+\+ANSWER~1}
+
+\Hypertarget{dns_8h_aaf915a2fdac4c684ca586ab7e5eb6493}\index{dns.h@{dns.h}!DNS\_QR\_QUERY@{DNS\_QR\_QUERY}}
+\index{DNS\_QR\_QUERY@{DNS\_QR\_QUERY}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_QR\_QUERY}{DNS\_QR\_QUERY}}
+{\footnotesize\ttfamily \label{dns_8h_aaf915a2fdac4c684ca586ab7e5eb6493} 
+\#define DNS\+\_\+\+QR\+\_\+\+QUERY~0}
+
+\Hypertarget{dns_8h_a0140dcc3668721e92cde4e81ed9e66f1}\index{dns.h@{dns.h}!DNS\_RCODE\_NXDOMAIN@{DNS\_RCODE\_NXDOMAIN}}
+\index{DNS\_RCODE\_NXDOMAIN@{DNS\_RCODE\_NXDOMAIN}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_RCODE\_NXDOMAIN}{DNS\_RCODE\_NXDOMAIN}}
+{\footnotesize\ttfamily \label{dns_8h_a0140dcc3668721e92cde4e81ed9e66f1} 
+\#define DNS\+\_\+\+RCODE\+\_\+\+NXDOMAIN~3}
+
+\Hypertarget{dns_8h_ab4b25630f59f33b736e58109da9eba2a}\index{dns.h@{dns.h}!DNS\_RCODE\_OK@{DNS\_RCODE\_OK}}
+\index{DNS\_RCODE\_OK@{DNS\_RCODE\_OK}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_RCODE\_OK}{DNS\_RCODE\_OK}}
+{\footnotesize\ttfamily \label{dns_8h_ab4b25630f59f33b736e58109da9eba2a} 
+\#define DNS\+\_\+\+RCODE\+\_\+\+OK~0}
+
+\Hypertarget{dns_8h_a1aaa43f011a7ef4c608e0721a04ba10b}\index{dns.h@{dns.h}!DNS\_RCODE\_SERVFAIL@{DNS\_RCODE\_SERVFAIL}}
+\index{DNS\_RCODE\_SERVFAIL@{DNS\_RCODE\_SERVFAIL}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_RCODE\_SERVFAIL}{DNS\_RCODE\_SERVFAIL}}
+{\footnotesize\ttfamily \label{dns_8h_a1aaa43f011a7ef4c608e0721a04ba10b} 
+\#define DNS\+\_\+\+RCODE\+\_\+\+SERVFAIL~2}
+
+\Hypertarget{dns_8h_a65ec07c77bc0fd3047ae31f28e57f12f}\index{dns.h@{dns.h}!DNS\_RR\_NAME\_MAX\_SIZE@{DNS\_RR\_NAME\_MAX\_SIZE}}
+\index{DNS\_RR\_NAME\_MAX\_SIZE@{DNS\_RR\_NAME\_MAX\_SIZE}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_RR\_NAME\_MAX\_SIZE}{DNS\_RR\_NAME\_MAX\_SIZE}}
+{\footnotesize\ttfamily \label{dns_8h_a65ec07c77bc0fd3047ae31f28e57f12f} 
+\#define DNS\+\_\+\+RR\+\_\+\+NAME\+\_\+\+MAX\+\_\+\+SIZE~512}
+
+\Hypertarget{dns_8h_a2bd5802847beb235c76918125853b8b7}\index{dns.h@{dns.h}!DNS\_STRING\_MAX\_SIZE@{DNS\_STRING\_MAX\_SIZE}}
+\index{DNS\_STRING\_MAX\_SIZE@{DNS\_STRING\_MAX\_SIZE}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_STRING\_MAX\_SIZE}{DNS\_STRING\_MAX\_SIZE}}
+{\footnotesize\ttfamily \label{dns_8h_a2bd5802847beb235c76918125853b8b7} 
+\#define DNS\+\_\+\+STRING\+\_\+\+MAX\+\_\+\+SIZE~8192}
+
+\Hypertarget{dns_8h_afe9f7ff23f3feba2776dcfa366f53c3f}\index{dns.h@{dns.h}!DNS\_TYPE\_A@{DNS\_TYPE\_A}}
+\index{DNS\_TYPE\_A@{DNS\_TYPE\_A}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_A}{DNS\_TYPE\_A}}
+{\footnotesize\ttfamily \label{dns_8h_afe9f7ff23f3feba2776dcfa366f53c3f} 
+\#define DNS\+\_\+\+TYPE\+\_\+A~1}
+
+\Hypertarget{dns_8h_acfb2eb201eadb88b54ae795a01fd34cd}\index{dns.h@{dns.h}!DNS\_TYPE\_AAAA@{DNS\_TYPE\_AAAA}}
+\index{DNS\_TYPE\_AAAA@{DNS\_TYPE\_AAAA}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_AAAA}{DNS\_TYPE\_AAAA}}
+{\footnotesize\ttfamily \label{dns_8h_acfb2eb201eadb88b54ae795a01fd34cd} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+AAAA~28}
+
+\Hypertarget{dns_8h_a71d717fd39f72756ba00a61bc0279e76}\index{dns.h@{dns.h}!DNS\_TYPE\_CNAME@{DNS\_TYPE\_CNAME}}
+\index{DNS\_TYPE\_CNAME@{DNS\_TYPE\_CNAME}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_CNAME}{DNS\_TYPE\_CNAME}}
+{\footnotesize\ttfamily \label{dns_8h_a71d717fd39f72756ba00a61bc0279e76} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+CNAME~5}
+
+\Hypertarget{dns_8h_a169ea4755db82670fbe2ad186a3acd50}\index{dns.h@{dns.h}!DNS\_TYPE\_HINFO@{DNS\_TYPE\_HINFO}}
+\index{DNS\_TYPE\_HINFO@{DNS\_TYPE\_HINFO}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_HINFO}{DNS\_TYPE\_HINFO}}
+{\footnotesize\ttfamily \label{dns_8h_a169ea4755db82670fbe2ad186a3acd50} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+HINFO~13}
+
+\Hypertarget{dns_8h_a0dc8fca3beb07776d91f57e6bf34c819}\index{dns.h@{dns.h}!DNS\_TYPE\_MINFO@{DNS\_TYPE\_MINFO}}
+\index{DNS\_TYPE\_MINFO@{DNS\_TYPE\_MINFO}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_MINFO}{DNS\_TYPE\_MINFO}}
+{\footnotesize\ttfamily \label{dns_8h_a0dc8fca3beb07776d91f57e6bf34c819} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+MINFO~15}
+
+\Hypertarget{dns_8h_a1a854d4623c4a82c242773058be7612c}\index{dns.h@{dns.h}!DNS\_TYPE\_MX@{DNS\_TYPE\_MX}}
+\index{DNS\_TYPE\_MX@{DNS\_TYPE\_MX}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_MX}{DNS\_TYPE\_MX}}
+{\footnotesize\ttfamily \label{dns_8h_a1a854d4623c4a82c242773058be7612c} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+MX~15}
+
+\Hypertarget{dns_8h_a76921a21844be80847aaccde77bb7d75}\index{dns.h@{dns.h}!DNS\_TYPE\_NS@{DNS\_TYPE\_NS}}
+\index{DNS\_TYPE\_NS@{DNS\_TYPE\_NS}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_NS}{DNS\_TYPE\_NS}}
+{\footnotesize\ttfamily \label{dns_8h_a76921a21844be80847aaccde77bb7d75} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+NS~2}
+
+\Hypertarget{dns_8h_a3afdb36ca805590d57ace8cee38a1b01}\index{dns.h@{dns.h}!DNS\_TYPE\_PTR@{DNS\_TYPE\_PTR}}
+\index{DNS\_TYPE\_PTR@{DNS\_TYPE\_PTR}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_PTR}{DNS\_TYPE\_PTR}}
+{\footnotesize\ttfamily \label{dns_8h_a3afdb36ca805590d57ace8cee38a1b01} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+PTR~12}
+
+\Hypertarget{dns_8h_a794df4821da86953f8b5448f3962ac04}\index{dns.h@{dns.h}!DNS\_TYPE\_SOA@{DNS\_TYPE\_SOA}}
+\index{DNS\_TYPE\_SOA@{DNS\_TYPE\_SOA}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_SOA}{DNS\_TYPE\_SOA}}
+{\footnotesize\ttfamily \label{dns_8h_a794df4821da86953f8b5448f3962ac04} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+SOA~6}
+
+\Hypertarget{dns_8h_a031f145dfe0b1498c03e07af10be3c23}\index{dns.h@{dns.h}!DNS\_TYPE\_TXT@{DNS\_TYPE\_TXT}}
+\index{DNS\_TYPE\_TXT@{DNS\_TYPE\_TXT}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{DNS\_TYPE\_TXT}{DNS\_TYPE\_TXT}}
+{\footnotesize\ttfamily \label{dns_8h_a031f145dfe0b1498c03e07af10be3c23} 
+\#define DNS\+\_\+\+TYPE\+\_\+\+TXT~16}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}\index{dns.h@{dns.h}!Dns\_Header@{Dns\_Header}}
+\index{Dns\_Header@{Dns\_Header}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{Dns\_Header}{Dns\_Header}}
+{\footnotesize\ttfamily \label{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd} 
+typedef struct \mbox{\hyperlink{structdns__header}{dns\+\_\+header}} \mbox{\hyperlink{dns_8h_aa4f1febe6cb2e2e716f373385a3566dd}{Dns\+\_\+\+Header}}}
+
+
+
+Header Section structure of DNS message. 
+
+\Hypertarget{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}\index{dns.h@{dns.h}!Dns\_Msg@{Dns\_Msg}}
+\index{Dns\_Msg@{Dns\_Msg}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{Dns\_Msg}{Dns\_Msg}}
+{\footnotesize\ttfamily \label{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741} 
+typedef struct \mbox{\hyperlink{structdns__msg}{dns\+\_\+msg}} \mbox{\hyperlink{dns_8h_af9793e5f9c4dc6b1a90865331e9fe741}{Dns\+\_\+\+Msg}}}
+
+
+
+DNS message structure. 
+
+\Hypertarget{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}\index{dns.h@{dns.h}!Dns\_Que@{Dns\_Que}}
+\index{Dns\_Que@{Dns\_Que}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{Dns\_Que}{Dns\_Que}}
+{\footnotesize\ttfamily \label{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c} 
+typedef struct \mbox{\hyperlink{structdns__question}{dns\+\_\+question}} \mbox{\hyperlink{dns_8h_a06e3c3727e6fc5c1df11c165d649df5c}{Dns\+\_\+\+Que}}}
+
+
+
+Question Section structure of DNS message, represented as a linked list. 
+
+\Hypertarget{dns_8h_aaa587ac980f7833500ee4367842bda36}\index{dns.h@{dns.h}!Dns\_RR@{Dns\_RR}}
+\index{Dns\_RR@{Dns\_RR}!dns.h@{dns.h}}
+\doxysubsubsection{\texorpdfstring{Dns\_RR}{Dns\_RR}}
+{\footnotesize\ttfamily \label{dns_8h_aaa587ac980f7833500ee4367842bda36} 
+typedef struct \mbox{\hyperlink{structdns__rr}{dns\+\_\+rr}} \mbox{\hyperlink{dns_8h_aaa587ac980f7833500ee4367842bda36}{Dns\+\_\+\+RR}}}
+
+
+
+Resource Record structure of DNS message, represented as a linked list. 
+

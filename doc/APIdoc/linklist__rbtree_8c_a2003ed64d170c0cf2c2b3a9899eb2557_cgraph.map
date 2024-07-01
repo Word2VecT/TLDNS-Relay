@@ -1,0 +1,15 @@
+<map id="insert_case" name="insert_case">
+<area shape="rect" id="Node000001" title="Adjust the shape of the red&#45;black tree to keep it balanced." alt="" coords="5,50,94,76"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="26,51,22,42,24,32,34,26,50,24,66,26,75,33,72,37,64,31,49,29,36,31,29,35,27,41,31,49"/>
+<area shape="rect" id="Node000002" href="$linklist__rbtree_8c.html#ad1b052785e6b7bcc62cba39a7402a1b6" title="Get the grandparent of a node." alt="" coords="276,50,365,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,48,100,27,141,10,185,3,229,10,262,23,290,39,288,44,259,27,227,15,185,8,142,15,102,32,70,52"/>
+<area shape="rect" id="Node000003" href="$linklist__rbtree_8c.html#ab62e652e4fc283a274b30e1f1f08c211" title="Rotate a node to the left." alt="" coords="145,25,225,51"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="94,52,129,46,130,51,95,58"/>
+<area shape="rect" id="Node000004" href="$linklist__rbtree_8c.html#aef6fab1149a4f11067237f95c7bdb41f" title="Rotate a node to the right." alt="" coords="142,74,228,100"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="95,68,127,74,126,80,94,74"/>
+<area shape="rect" id="Node000005" href="$linklist__rbtree_8c.html#a06530033a166619f9dfac249ac51e285" title="Get the uncle of a node." alt="" coords="159,124,211,149"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="76,74,147,114,145,118,74,79"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="226,43,261,49,260,55,225,48"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="228,77,260,71,261,76,229,82"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="209,121,280,82,283,86,212,125"/>
+</map>
