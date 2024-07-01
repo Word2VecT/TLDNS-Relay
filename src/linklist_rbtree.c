@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include "../include/dns_parse.h"
-#include "../include/util.h"
+#include "../include/log.h"
 
 static Rbtree_Node *NIL; ///< Leaf node
 
@@ -289,10 +289,10 @@ void rbtree_insert(Rbtree *tree, unsigned int key, Dns_RR_LinkList *list) {
  */
 static Rbtree_Node *rbtree_find(Rbtree_Node *node, unsigned int key) {
 	if (node->key > key) {
-		if (node->left == NIL)return NULL;
+		if (node->left == NIL) return NULL;
 		return rbtree_find(node->left, key);
 	} else if (node->key < key) {
-		if (node->right == NIL)return NULL;
+		if (node->right == NIL) return NULL;
 		return rbtree_find(node->right, key);
 	} else return node;
 }

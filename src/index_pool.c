@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 
-#include "../include/util.h"
+#include "../include/log.h"
 
 /**
  * @brief Check if the index pool is full

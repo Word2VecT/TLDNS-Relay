@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <uv.h>
 
-#include "../include/util.h"
+#include "../include/log.h"
 
 char *REMOTE_HOST = "8.8.8.8";
 int LOG_MASK = 15;

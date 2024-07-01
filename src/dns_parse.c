@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../include/util.h"
+#include "../include/log.h"
 
 #ifdef _WIN32
 #include <winsock2.h>

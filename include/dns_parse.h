@@ -1,7 +1,7 @@
 #ifndef DNSR_DNS_PARSE_H
 #define DNSR_DNS_PARSE_H
 
-#include "dns_structure.h"
+#include "dns.h"
 
 /**
  * @brief Convert a byte stream to a DNS message structure

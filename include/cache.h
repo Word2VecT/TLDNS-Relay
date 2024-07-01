@@ -8,8 +8,7 @@
 #define CACHE_SIZE 30
 
 /// Cash struct
-typedef struct cache_
-{
+typedef struct cache_ {
     Dns_RR_LinkList * head; ///< LRU header node
     Dns_RR_LinkList * tail; ///< LRU tail node
     int size; ///< LRU size

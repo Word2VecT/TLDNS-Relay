@@ -3,7 +3,7 @@
 
 #include <time.h>
 
-#include "dns_structure.h"
+#include "dns.h"
 
 /// Red-Black Tree color
 typedef enum {

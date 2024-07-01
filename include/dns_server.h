@@ -3,7 +3,7 @@
 
 #include <uv.h>
 
-#include "dns_structure.h"
+#include "dns.h"
 
 /**
  * @brief Initialize the DNS server

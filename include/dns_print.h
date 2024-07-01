@@ -1,7 +1,7 @@
 #ifndef DNSR_DNS_PRINT_H
 #define DNSR_DNS_PRINT_H
 
-#include "dns_structure.h"
+#include "dns.h"
 
 /**
  * @brief Print DNS message byte stream

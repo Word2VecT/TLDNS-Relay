@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <uv.h>
 
-#include "../include/util.h"
+#include "../include/log.h"
 #include "../include/dns_client.h"
 #include "../include/dns_server.h"
 #include "../include/query_pool.h"

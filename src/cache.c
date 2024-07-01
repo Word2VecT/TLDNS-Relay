@@ -4,7 +4,7 @@
 #include <string.h>
 #include <uv.h>
 
-#include "../include/util.h"
+#include "../include/log.h"
 #include "../include/dns_parse.h"
 
 /**

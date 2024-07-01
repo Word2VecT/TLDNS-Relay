@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../include/util.h"
+#include "../include/log.h"
 
 /**
  * @brief Print DNS message byte stream

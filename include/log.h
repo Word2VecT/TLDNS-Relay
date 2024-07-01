@@ -1,5 +1,5 @@
-#ifndef DNSR_UTIL_H
-#define DNSR_UTIL_H
+#ifndef DNSR_LOG_H
+#define DNSR_LOG_H
 
 #include <stdio.h>
 
@@ -52,4 +52,4 @@ extern FILE * log_file;
         exit(EXIT_FAILURE); \
     }
 
-#endif //DNSR_UTIL_H
+#endif //DNSR_LOG_H

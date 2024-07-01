@@ -10,10 +10,10 @@ include_directories(${UV_DIR}/include/)
 
 add_executable(main
         src/main.c
-        include/util.h
+        include/log.h
         src/config.c
         include/config.h
-        include/dns_structure.h
+        include/dns.h
         src/dns_parse.c
         include/dns_parse.h
         src/dns_client.c

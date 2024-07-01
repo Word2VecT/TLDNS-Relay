@@ -1,5 +1,5 @@
-#ifndef DNSR_DNS_STRUCTURE_H
-#define DNSR_DNS_STRUCTURE_H
+#ifndef DNSR_DNS_H
+#define DNSR_DNS_H
 
 #include <stdint.h>
 
@@ -73,4 +73,4 @@ typedef struct dns_msg {
 	Dns_RR * rr; ///< Pointer to the head node of the Resource Record linked list
 } Dns_Msg;
 
-#endif //DNSR_DNS_STRUCTURE_H
+#endif //DNSR_DNS_H
