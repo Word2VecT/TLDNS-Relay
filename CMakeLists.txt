@@ -3,7 +3,11 @@ project(dnsr C)
 
 set(CMAKE_C_STANDARD 23)
 
-set(UV_DIR /opt/homebrew/Cellar/libuv/1.48.0)
+if (APPLE)
+    set(UV_DIR /opt/homebrew/Cellar/libuv/1.48.0)
+elseif (WIN32)
+    set(UV_DIR D:/libuv/libuv-1.48.0/libuv-install/)
+endif ()
 
 link_directories(${UV_DIR}/lib/)
 include_directories(${UV_DIR}/include/)
